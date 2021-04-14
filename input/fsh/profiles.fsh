@@ -149,7 +149,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[annotation].entry.reference 1..
 * section[annotation].section 0..0
 
-/*
+
 Profile: CHAllergyIntoleranceDocumentEPR
 Parent: CHCoreDocumentEPR
 Id: ch-allergyintolerance-document-epr
@@ -177,5 +177,4 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * entry[Composition] 1..1
 * entry[Composition] ^short = "Allergy Intolerance composition"
 * entry[Composition].resource 1..1
-* entry[Composition].resource only CHAllergyIntoleranceCompositionEPR
-*/
+* entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
