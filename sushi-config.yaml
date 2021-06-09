@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: ch-allergyintolerance
+id: ch.fhir.ig.ch-allergyintolerance
 canonical: http://fhir.ch/ig/ch-allergyintolerance
 name: CH-AllergyIntolerance
 title: "CH-AllergyIntolerance (R4)"
