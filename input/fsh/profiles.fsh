@@ -13,11 +13,9 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
-/*
 * extension contains AbatementDateTimeUvIps named abatement-datetime ..1 MS
 * extension[abatement-datetime] ^short = "Abatement datetime"
 * extension[abatement-datetime] ^definition = "The date or estimated date that the condition resolved or went into remission."
-*/
 * clinicalStatus only CodeableConceptIPS
 * clinicalStatus MS
 * verificationStatus only CodeableConceptIPS
@@ -26,8 +24,8 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * criticality MS
 * code 1..1 MS
 * code only CodeableConceptIPS
-* code from CHAllergyIntoleranceSubstanceCondition (preferred)
-* patient only Reference(CHCoreCompositionPatientEPR or CHCorePatient)
+* code from CHAllergyIntoleranceValueSet (preferred)
+* patient only Reference(CHCorePatientEPR or CHCorePatient)
 * onsetDateTime only dateTime
 * onsetDateTime MS
 * reaction MS
@@ -50,6 +48,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * reaction.extension[management] ^short = "Text description about the clinical management provided."
 * reaction.substance MS
 * reaction.substance only CodeableConceptIPS
+* reaction.substance from CHAllergyIntoleranceSubstanceValueSet (preferred)
 * reaction.manifestation only CodeableConceptIPS
 * reaction.manifestation MS
 * reaction.onset MS
@@ -74,7 +73,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "url"
 * extension ^slicing.rules = #open
-* extension[setId] ^short = "Set ID"
+/* * extension[setId] ^short = "Set ID" */
 * extension[versionNumber] ^short = "Version number"
 * extension[informationRecipient] ^short = "A recipient of this document (person or organization)"
 * extension[dataEnterer] ^short = "Person who entered information into this document if it is a person other than the author"
@@ -124,7 +123,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranza' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
 * section[allergyIntolerance].code 1..
 * section[allergyIntolerance].code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or CHCorePractitionerRole or Device or CHCoreCompositionPatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole-epr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
 * section[allergyIntolerance].author ^short = "The author of the section (person or device) if different from the author/timestamp of the document"
 * section[allergyIntolerance].author.extension 0..1
 * section[allergyIntolerance].author.extension only EPRTime
