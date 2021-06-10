@@ -1,4 +1,4 @@
-/*
+
 Extension: AbatementDateTimeUvIps
 Id: abatement-dateTime-uv-ips
 Title: "Condition abatement date"
@@ -14,4 +14,3 @@ Description: "Extension defined by the IPS project to describe the abatement dat
 * url MS
 * valueDateTime only dateTime
 * valueDateTime MS
-*/
