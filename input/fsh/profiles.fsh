@@ -16,14 +16,14 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * extension contains AbatementDateTimeUvIps named abatement-datetime ..1 MS
 * extension[abatement-datetime] ^short = "Abatement datetime"
 * extension[abatement-datetime] ^definition = "The date or estimated date that the condition resolved or went into remission."
-* clinicalStatus only CodeableConceptIPS
+/* clinicalStatus only CodeableConceptIPS */
 * clinicalStatus MS
-* verificationStatus only CodeableConceptIPS
+/* verificationStatus only CodeableConceptIPS */
 * verificationStatus MS
 * type MS
 * criticality MS
 * code 1..1 MS
-* code only CodeableConceptIPS
+/* code only CodeableConceptIPS */
 * code from CHAllergyIntoleranceValueSet (preferred)
 * patient only Reference(CHCorePatient)
 * onsetDateTime only dateTime
@@ -47,9 +47,9 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * reaction.extension contains $ext-openEHR-management named management 0..1
 * reaction.extension[management] ^short = "Text description about the clinical management provided."
 * reaction.substance MS
-* reaction.substance only CodeableConceptIPS
+/* reaction.substance only CodeableConceptIPS */
 * reaction.substance from CHAllergyIntoleranceSubstanceValueSet (preferred)
-* reaction.manifestation only CodeableConceptIPS
+/* reaction.manifestation only CodeableConceptIPS */
 * reaction.manifestation MS
 * reaction.onset MS
 * reaction.severity MS
@@ -177,3 +177,27 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * entry[Composition] ^short = "Allergy Intolerance composition"
 * entry[Composition].resource 1..1
 * entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
+
+Profile: CHAllergyIntoleranceCondition
+Parent: Condition
+Id: ch-allergyintolerance-condition
+Title: "CH Allergy Intolerance Condition"
+Description: """This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance in the Swiss realm - in adaption of the respective examples provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance.
+
+It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."""
+* ^version = "0.1.0"
+* ^status = #draft
+* ^publisher = "HL7 Switzerland"
+* ^contact[0].telecom[0].system = #url
+* ^contact[0].telecom[0].value = "https://www.hl7.ch"
+* ^jurisdiction[0] = urn:iso:std:iso:3166#CH
+* ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
+* . MS
+* clinicalStatus 0..1 MS
+* verificationStatus 0..1 MS
+* category 0.. MS
+* severity 0..1 MS
+* code 1..1 MS
+* code from CHAllergyIntoleranceValueSet (preferred)
+* bodySite 0..* MS
+* subject only Reference(CHCorePatient)
