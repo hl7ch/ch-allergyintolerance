@@ -1,5 +1,7 @@
 ### CH-AllergyIntolerance
 
+This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+
 Swiss Implementation Guide for Allergy & Intolerance based on the recommendations of the interprofessional working group EPR (IPAG), as well on Allergy Intolerance IPS as near as reasonable and influenced further on the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance.
 
 The Must Support flags have been set as in AllergyIntolerance IPS plus reaction.substance which has its own value set for substances, whereas the value set for AllergyIntolerance.code is based on the corresponding findings, which can be used also to document conditions with relation to allergies or intolerances.
@@ -14,4 +16,4 @@ The value sets for coding of allergies, intolerances and hypersensities and rela
 
 Whereas this is explicitly desired by the professional representatives it is different than stated in IPS for example, where the binding is based on expanded value sets, but which has had very little real world feedback until to date. Experience and feedback is welcome therefore in this respect.
 
-The actual value set in the ci-build is an example and will be completed asap with the first full version still in  review as to date.
+The actual value set AllergyIntolerance.code doesn't yet include codes which exist only as post coordinated SNOMED CT expressions. They will be suggested to SNOMED CT by eHealth Suisse and added to the ci-build as soon as available as precoodinated SNOMEC CT codes and added to a future publication of this IG.

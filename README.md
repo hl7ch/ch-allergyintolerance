@@ -48,16 +48,7 @@ dependencies:
 	
 PatientUvIps replaced by CHCoreCompositionPatientEPR
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    8     │     1      │     7     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ You've proven any-fin is possible.     0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 
 Note: this stage eventually could be used for a later mapping from CH-AllergyIntolerance to IPS AllergyIntolerance
 
@@ -94,16 +85,7 @@ Description: "CH Allergy intolerance substance condition value set. This value s
 * ^immutable = false
 * ^copyright = ....
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    8     │     1      │     7     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ FSHing for compliments? Super job!     0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 backups:
 valueSets.fsh.backup-before-alternative-for-codes.txt
 profiles.fsh.backup-before-alternative-for-codes.txt
@@ -132,16 +114,7 @@ Renaming allergyIntoleranceGPSCode allergyIntoleranceCHCode
 
 AllergyintolerancesubstanceconditionGPS removed.
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    8     │     1      │     8     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ Valedictorian of the School of FSH!    0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 
 Note: both ValuSets point to the same codes sets at the moment, but the intension is, that the dedicated SNOMED CT AllergyIntolerance CH code Set is later available on 
 * ^identifier[0].system = "http://art-decor.org/ns/oids/vs"
@@ -184,16 +157,7 @@ removed:
 * reaction.manifestation[allergyIntoleranceReactionManifestationGPSCode] ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * reaction.manifestation[allergyIntoleranceReactionManifestationGPSCode] ^binding.extension[0].valueString = "ReactionManifestationGPS"
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    8     │     1      │     7     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ O-fish-ally error free!                0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 
 inserted:
 * reaction.extension contains $ext-allergyintolerance-duration named duration 0..1
@@ -208,31 +172,14 @@ inserted:
 * reaction.extension[exposureDescription] ^short = "Beschreibung der Exposition"
 * reaction.extension contains $ext-openEHR-management named management 0..1
 * reaction.extension[management] ^short = "Klinisches Management"
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    8     │     1      │     7     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ Well hooked and landed!                0 Errors      0 Warnings ║
+
 
 Removed the following profiles:
 SimpleQuantityIPS
 RatioIPS
 RangeIPS
 QuantityIPS
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    4     │     1      │     7     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ Valedictorian of the School of FSH!    0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 Removing the following value sets:
 ProblemSeverityUvIps
 HealthcareProfessionalRolesUvIps
@@ -240,15 +187,6 @@ PersonalRelationshipUvIps
 
 leaving AllergyReactionGpsUvIps just in case (decision to be taken - t.b.d.)
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    4     │     1      │     4     │      0      │     4     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ FSHing for compliments? Super job!     0 Errors      0 Warnings ║
 
 fsh.backup-after-completing-all-fields-of-IPAG-recommendations.zip
 CH-AllergyIntolerance.backup-after-completing-all-fields-of-IPAG-recommendations.zip
@@ -286,16 +224,6 @@ Title: "CH AllergyIntolerance Example based on IPAG Recommendation Table 1"
 Description: "CH AllergyIntolerance Example based on Table 1 of the Swiss Interprofessional Working Group (IPAG) recommendations for the Electronic Patient Record (EPR) from 2019-12-18"
 Usage: #inline
 
-
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    4     │     1      │     1     │      0      │     1     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ Cool and So-fish-ticated!              0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
 
 Composition copied from CHEMEDMedicationDispenseCompostion
 
@@ -346,16 +274,6 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * entry[Composition].resource 1..
 * entry[Composition].resource only CHAllergyIntoleranceCompositionEPR
 
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    3     │     1      │     1     │      0      │     1     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ Some-fin went wrong...                  1 Error      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
 
 error The type "CHAllergyIntoleranceCompositionEPR" does not match any of the allowed types: http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-epr
   File: C:\Workspace\Sushi\CH\CH-AllergyIntolerance\input\fsh\profiles.fsh
@@ -398,16 +316,7 @@ trying also with
 problem persists...
 
 commenting out CHAllergyIntoleranceDocumentEPR
-╔════════════════════════ SUSHI RESULTS ══════════════════════════╗
-║ ╭──────────┬────────────┬───────────┬─────────────┬───────────╮ ║
-║ │ Profiles │ Extensions │ ValueSets │ CodeSystems │ Instances │ ║
-║ ├──────────┼────────────┼───────────┼─────────────┼───────────┤ ║
-║ │    2     │     0      │     1     │      0      │     1     │ ║
-║ ╰──────────┴────────────┴───────────┴─────────────┴───────────╯ ║
-║                                                                 ║
-╠═════════════════════════════════════════════════════════════════╣
-║ You swim with the sharks!              0 Errors      0 Warnings ║
-╚═════════════════════════════════════════════════════════════════╝
+
 
 Solution thanks to Michaele Ziegler, ahdis: using Canonical:
 * entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
@@ -455,6 +364,10 @@ Title: "CH Allergy Intolerance Substance Value Set"
 Description: "CH Allergy intolerance substance value set. This value set includes codes from SNOMED Clinical Terms® substances for the documentation of substancies of allergy or intolerance reactions"
 
 * reaction.substance from CHAllergyIntoleranceSubstanceValueSet (preferred)
+
+pre coordinated values added to reaction.substance and code, but no post coodinated values (awwaiting them to be added as precoordinated o^codes by SNOMED CT)
+
+fixing some minor instance (expamples) issues.
 
 
 

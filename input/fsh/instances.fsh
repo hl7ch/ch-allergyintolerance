@@ -6,7 +6,7 @@ Usage: #example
 * type = #allergy
 * category = #medication
 * criticality = #low
-* code = urn:oid:2.16.756.5.30.1.1.11.8#764146007 "Penicillin (substance)"
+* code = $sct#764146007 "Penicillin (substance)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
 * onsetDateTime = "2019-01-06"
 * lastOccurrence = "2019-01-05"
@@ -20,14 +20,14 @@ Usage: #example
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDuration"
 * reaction.extension[=].valueDuration = 10 'min' "min"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
-* reaction.extension[=].valueCodeableConcept = #likely "Likely"
+* reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#likely "Likely"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
 * reaction.extension[=].valueString = "taking 1000 mg of Amoxicillin"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-management"
 * reaction.extension[=].valueString = "antihistamine"
-* reaction.substance = urn:oid:2.16.840.1.113883.11.22.65#372687004 "Amoxicillin (substance)"
+* reaction.substance = $sct#372687004 "Amoxicillin (substance)"
 * reaction.manifestation[0] = $sct#2919008 "Nausea, vomiting and diarrhea"
-* reaction.manifestation[+] = $sct#418363000 " Itching of skin (finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching of skin (finding)"
 * reaction.description = "Itching of Skin during 24hours, 3 times vomitus"
 * reaction.onset = "2019-01-05"
 * reaction.severity = #moderate
