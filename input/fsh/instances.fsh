@@ -63,3 +63,214 @@ Usage: #example
 * identifier.value = "7601000050717"
 * name.family = "Agpar"
 * name.given = "Marc"
+
+Instance: allergyintolerance-clinical-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-clinical-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceClinicalStatus"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance clinical status"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-clinical
+* concept[0].code = #active
+* concept[=].display = "Active"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Aktiv"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Actif"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Attiva"
+* concept[+].code = #inactive
+* concept[=].display = "Inactive"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Inaktiv"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Inactif"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Inattiva"
+* concept[+].code = #resolved
+* concept[=].display = "Resolved"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Behoben"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Résolu"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Risolta"
+
+Instance: allergyintolerance-verification-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-verification-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceVerificationStatus"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance verification status"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-verification
+* concept[0].code = #unconfirmed
+* concept[=].display = "Unconfirmed"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Unbestätigt"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Pas confirmé"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Non confermata"
+* concept[+].code = #confirmed
+* concept[=].display = "Confirmed"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Bestätigt"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Confirmé"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Confermata"
+* concept[+].code = #refuted
+* concept[=].display = "Refuted"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Widerlegt"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Réfuté"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Contestata"
+* concept[+].code = #entered-in-error
+* concept[=].display = "Entered in Error"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Irrtümlich eingegeben"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Saisie erronée"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Immessa per errore"
+
+Instance: allergyintolerance-type-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-type-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceType"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance type"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-type
+* concept[0].code = #allergy
+* concept[=].display = "Allergy"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Allergie"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Allergie"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Allergia"
+* concept[+].code = #intolerance
+* concept[=].display = "Intolerance"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Intoleranz"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Intolérance"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Intolleranza"
+
+Instance: allergyintolerance-criticality-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-criticality-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceCriticalityStatus"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance criticality status"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-criticality
+* concept[0].code = #low
+* concept[=].display = "Low Risk"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Geringes Risiko"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Risque faible"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Basso rischio"
+* concept[+].code = #high
+* concept[=].display = "High Risk"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Hohes Risiko"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Risque élevé"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Alto rischio"
+* concept[+].code = #unable-to-assess
+* concept[=].display = "Unable to Assess Risk"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Risikobewertung nicht möglich"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Impossible d’évaluer le risque"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Rischio non valutabile"
+
+Instance: allergyintolerance-severity-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-severity-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceSeverityStatus"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance severity status"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-severity
+* concept[0].code = #mild
+* concept[=].display = "Mild"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Mild"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Faible"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Lieve"
+* concept[+].code = #moderate
+* concept[=].display = "Moderate"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Moderat"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Moyen"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Moderata"
+* concept[+].code = #severe
+* concept[=].display = "Severe"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Schwer"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "Grave"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "Grave"
+

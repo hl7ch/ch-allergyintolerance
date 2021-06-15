@@ -17,3 +17,5 @@ The value sets for coding of allergies, intolerances and hypersensities and rela
 Whereas this is explicitly desired by the professional representatives it is different than stated in IPS for example, where the binding is based on expanded value sets, but which has had very little real world feedback until to date. Experience and feedback is welcome therefore in this respect.
 
 The actual value set AllergyIntolerance.code doesn't yet include codes which exist only as post coordinated SNOMED CT expressions. They will be suggested to SNOMED CT by eHealth Suisse and added to the ci-build as soon as available as precoodinated SNOMEC CT codes and added to a future publication of this IG.
+
+Respective examples provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance regarding the use of the artifacts - especially whether the AllergyIntolerance resource or the condition resource is to be used in different use cases will be provided asap in the ci-build. 
