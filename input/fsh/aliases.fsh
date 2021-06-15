@@ -41,3 +41,4 @@ Alias: $codesystem-allergyintolerance-clinical = http://hl7.org/fhir/R4/codesyst
 Alias: $codesystem-allergyintolerance-verification = http://hl7.org/fhir/R4/codesystem-allergyintolerance-verification
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $allergyintolerance-certainty = http://terminology.hl7.org/CodeSystem/reaction-event-certainty

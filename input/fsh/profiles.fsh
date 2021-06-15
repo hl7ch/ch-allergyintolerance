@@ -25,7 +25,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * code 1..1 MS
 * code only CodeableConceptIPS
 * code from CHAllergyIntoleranceValueSet (preferred)
-* patient only Reference(CHCorePatientEPR or CHCorePatient)
+* patient only Reference(CHCorePatient)
 * onsetDateTime only dateTime
 * onsetDateTime MS
 * reaction MS
@@ -140,7 +140,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[annotation].title 1..1
 * section[annotation].title ^short = "'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english                         or titles in other languages are also allowed"
 * section[annotation].code 1..
-* section[annotation].code = $loinc#48767-8 "Annotation comment Interpretation Narrative"
+* section[annotation].code = $loinc#48767-8 "Annotation comment Imp"
 * section[annotation].text 1..1
 * section[annotation].text ^short = "Human readable text of this section"
 * section[annotation].entry 0..*
