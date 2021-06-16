@@ -30,7 +30,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * onsetDateTime MS
 * reaction MS
 * reaction.extension contains $ext-allergyintolerance-certainty named certainty 0..1
-  * /*reaction.extension[certainty]*/ ^short = "certainty: Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event."
+* reaction.extension[certainty] ^short = "certainty: Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event."
 /* reaction.extension[certainty] ^binding.extension.url = $vs-allergyintolerance-certainty
 * reaction.extension[certainty] ^binding.extension.valueString = "CertaintyAllergyIntolerance" 
 */
