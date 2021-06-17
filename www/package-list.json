@@ -1,0 +1,15 @@
+{
+  "package-id": "ch.fhir.ig.ch-allergyintolerance",
+  "title": "CH Allergyintolerance (R4)",
+  "introduction": "CH Allergyintolerance FHIR profiles for Switzerland in development by the HL7 Switzerland FHIR workgroup",
+  "canonical": "http://fhir.ch/ig/ch-allergyintolerance",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/hl7ch/ch-allergyintolerance",
+      "status": "ci-build",
+      "current": true
+    } ],
+  "category": "National Base"
+}
