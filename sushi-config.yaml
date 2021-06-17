@@ -6,16 +6,16 @@ id: ch.fhir.ig.ch-allergyintolerance
 canonical: http://fhir.ch/ig/ch-allergyintolerance
 name: CH-AllergyIntolerance
 title: "CH-AllergyIntolerance (R4)"
-description: Implementation guide CH CH-AllergyIntolerance (R4)
-status: draft
+description: Implementation guide CH-AllergyIntolerance (R4)
+status: active
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2021-03-31
+date: 2021-06-17
 version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ci-build
+releaseLabel: STU 1 Ballot
 publisher:
   name: HL7 Switzerland
 contact:
@@ -26,7 +26,6 @@ contact:
 dependencies:
   ch.fhir.ig.ch-core: 2.0.0
   hl7.fhir.uv.ips: 1.0.0
-  ch.fhir.ig.ch-epr-term: 2.0.5
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
