@@ -30,7 +30,24 @@ dependencies:
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Artifacts: artifacts.html
+#menu:
+#  Home: index.html
+#  Artifacts: artifacts.html
+pages:
+  index.md:
+    title: Home
+  document.md:
+    title: Document
+  usecase-english.md:
+    title: Use cases
+  usecase-french.md:
+    title: Les cas d’utilisation 
+  usecase-german.md:
+    title: Anwendungsfälle   
+  profiles.md:
+    title: Profiles
+  terminology.md:
+    title: Terminology
+  extensions.md:
+    title: Extensions
   
