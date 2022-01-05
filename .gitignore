@@ -5,3 +5,7 @@ Thumbs.db
 /output
 /temp
 /template
+www/*   
+!www/package-list.json   
+!www/publish.ini
+**.jar

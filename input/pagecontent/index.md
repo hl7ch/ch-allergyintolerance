@@ -1,6 +1,8 @@
-### CH-AllergyIntolerance
+<div markdown="1" class="stu-note">
+This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/) until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+</div>
 
-This implementation guide is under STU ballot by HL7 Switzerland until September 24th, 2021 midnight. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+### CH-AllergyIntolerance
 
 Swiss Implementation Guide for Allergy & Intolerance based on the recommendations of the interprofessional working group EPR (IPAG), as well on Allergy Intolerance IPS as near as reasonable and influenced further on the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance.
 
