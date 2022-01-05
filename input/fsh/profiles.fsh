@@ -13,7 +13,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
-* extension contains AbatementDateTimeUvIps named abatement-datetime ..1 MS
+* extension contains $ext-abatement-dateTime-uv-ips named abatement-datetime ..1 MS
 * extension[abatement-datetime] ^short = "Abatement datetime"
 * extension[abatement-datetime] ^definition = "The date or estimated date that the condition resolved or went into remission."
 /* clinicalStatus only CodeableConceptIPS */
