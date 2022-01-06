@@ -369,8 +369,40 @@ pre coordinated values added to reaction.substance and code, but no post coodina
 
 fixing some minor instance (expamples) issues.
 
+==========================================
+After Balloting
+==========================================
+feature/extend-menu#11
+added menu.xml, document.md, profiles.md, extensions.md, usecase.english.md, uescase-french.md, usecase-german.md, terminology.md
+menu in sushi-config.yaml commented out
 
+feature/remove-extension-definitions#16
+change in profiles.fsh
+* extension contains $ext-abatement-dateTime-uv-ips named abatement-datetime ..1 MS
+instead of 
+* extension contains AbatementDateTimeUvIps named abatement-datetime ..1 MS
+extensions.fsh deleted
+¨
+merged with master branch
 
+feature/home-issues#12#13#18#19
+index.md:
+Home - Add Links to referred specifications, copyright (Oliver Egger, ahdis) #12
+Home - Goal of Implementation Guide? (Oliver Egger, ahdis) #13
+Just typos (Michaela Ziegler, ahdis ag) #18
+Home: Download link for npm package (Michaela Ziegler, ahdis ag) #19
+
+feature/recorder#21
+ recorder set as in CH-VACD, issue#21
+profiles.fsh
+* recorder only Reference(CHCorePractitionerRole or CHCorePatient)
+
+feature/must-support#30
+profiles.fsh
+* category MS
+
+feature/readme
+this
 
 
 
