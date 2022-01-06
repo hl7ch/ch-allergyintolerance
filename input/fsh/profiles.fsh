@@ -21,6 +21,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 /* verificationStatus only CodeableConceptIPS */
 * verificationStatus MS
 * type MS
+* category MS
 * criticality MS
 * code 1..1 MS
 /* code only CodeableConceptIPS */
