@@ -2,7 +2,7 @@ Profile: CHAllergyIntolerance
 Parent: AllergyIntolerance
 Id: ch-allergyintolerance
 Title: "CH Allergy Intolerance"
-Description: """This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransistionOfCare Document or similar as an instance of an AllergyIntolerance resource constrained by this profile.
+Description: """This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare Document or similar as an instance of an AllergyIntolerance resource constrained by this profile.
 
 It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."""
 * ^version = "0.1.0"
