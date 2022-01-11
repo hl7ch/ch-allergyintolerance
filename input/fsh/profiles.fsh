@@ -24,7 +24,7 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * criticality MS
 * code 1..1 MS
 /* code only CodeableConceptIPS */
-* code from CHAllergyIntoleranceValueSet (preferred)
+* code from CHAllergyIntoleranceValueSet (extensible)
 * patient only Reference(CHCorePatient)
 * onsetDateTime only dateTime
 * onsetDateTime MS
@@ -48,8 +48,9 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * reaction.extension[management] ^short = "Text description about the clinical management provided."
 * reaction.substance MS
 /* reaction.substance only CodeableConceptIPS */
-* reaction.substance from CHAllergyIntoleranceSubstanceValueSet (preferred)
+* reaction.substance from CHAllergyIntoleranceReactionSubstanceValueSet (extensible)
 /* reaction.manifestation only CodeableConceptIPS */
+* reaction.manifestation from CHAllergyIntoleranceReactionManifestationValueSet (extensible)
 * reaction.manifestation MS
 * reaction.onset MS
 * reaction.severity MS
@@ -198,6 +199,6 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * category 0.. MS
 * severity 0..1 MS
 * code 1..1 MS
-* code from CHAllergyIntoleranceValueSet (preferred)
+* code from CHAllergyIntoleranceConditionValueSet (extensible)
 * bodySite 0..* MS
 * subject only Reference(CHCorePatient)
