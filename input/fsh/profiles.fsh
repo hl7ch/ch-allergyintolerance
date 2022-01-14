@@ -28,7 +28,8 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * patient only Reference(CHCorePatient)
 * onsetDateTime only dateTime
 * onsetDateTime MS
-* recorder only Reference(CHCorePractitionerRole or CHCorePatient)
+* recorder only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
+* asserter only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
 * reaction MS
 * reaction.extension contains $ext-allergyintolerance-certainty named certainty 0..1
 * reaction.extension[certainty] ^short = "certainty: Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event."
@@ -202,3 +203,5 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * code from CHAllergyIntoleranceValueSet (preferred)
 * bodySite 0..* MS
 * subject only Reference(CHCorePatient)
+* recorder only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
+* asserter only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
