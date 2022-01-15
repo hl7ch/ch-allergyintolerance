@@ -1,4 +1,4 @@
-ValueSet: CHAllergyIntoleranceConditionValueSet
+/*ValueSet: CHAllergyIntoleranceConditionValueSet
 Id: ch-allergy-intolerance-condition-value-set
 Title: "CH Allergy Intolerance Condition Value Set"
 Description: "CH Allergy intolerance condition value set. This value set includes codes from SNOMED Clinical Terms®  values  for values from the manifestation of reactions value set PLUS findings for the documentation of allergy or intolerances in conditions as problem-list or as encounter-diagnosis as well as its absence (no know allergies)"
@@ -639,7 +639,7 @@ Description: "CH Allergy intolerance condition value set. This value set include
 * SNOMED_CT#23171000122102 "Allergy to kiwi fruit (finding)"
 * SNOMED_CT#23181000122104 "Allergy to mango fruit (finding)"
 * SNOMED_CT#151201000119107 "Allergy to insect venom (finding)"
-
+*/
 /*ValueSet: CHAllergyIntoleranceReactionSubstanceValueSet
 Id: ch-allergy-intolerance-reaction-substance-value-set
 Title: "CH Allergy Intolerance Reaction Substance Value Set"
