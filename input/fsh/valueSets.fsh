@@ -4016,7 +4016,7 @@ Description: "CH Allergy intolerance codng value set. This value set includes co
 * SNOMED_CT#18751000122108 "Dropropizine (substance)"
 * SNOMED_CT#20741000122103 "Tiropramide (substance)"
 
-/*ValueSet: CHAllergyIntoleranceReactionManifestationValueSet
+ValueSet: CHAllergyIntoleranceReactionManifestationValueSet
 Id: ch-allergy-intolerance-reaction-manifestation-value-set
 Title: "CH Allergy Intolerance Reaction Manifestation Value Set"
 Description: "CH Allergy intolerance manifestation value set. This value set includes codes values  from SNOMED Clinical Terms®  for the documentation of manifestation of allergy or intolerance reactions"
@@ -4064,4 +4064,3 @@ Description: "CH Allergy intolerance manifestation value set. This value set inc
 * SNOMED_CT#698247007 "Cardiac arrhythmia (disorder)"
 * SNOMED_CT#702809001 "Drug reaction with eosinophilia and systemic symptoms (disorder)"
 * SNOMED_CT#768962006 "Lyell syndrome (disorder)"
-*/
