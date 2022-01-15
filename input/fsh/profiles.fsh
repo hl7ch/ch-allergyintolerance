@@ -51,8 +51,8 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 /* reaction.substance only CodeableConceptIPS */
 * reaction.substance from CHAllergyIntoleranceReactionSubstanceValueSet (extensible)
 /* reaction.manifestation only CodeableConceptIPS */
-* reaction.manifestation from CHAllergyIntoleranceReactionManifestationValueSet (extensible)
-* reaction.manifestation MS
+* reaction.manifestation from $CHAllergyIntoleranceReactionManifestationValueSet (extensible)
+* reaction.manifestation MS 
 * reaction.onset MS
 * reaction.severity MS
 

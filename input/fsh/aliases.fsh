@@ -45,3 +45,4 @@ Alias: $allergyintolerance-criticality = http://hl7.org/fhir/allergy-intolerance
 Alias: $allergyintolerance-severity = http://hl7.org/fhir/reaction-event-severity
 Alias: $allergyintolerance-category = http://hl7.org/fhir/ValueSet/allergy-intolerance-category
 Alias: $shareablevalueset = http://hl7.org/fhir/StructureDefinition/shareablevalueset
+Alias: $CHAllergyIntoleranceReactionManifestationValueSet = http://fhir.ch/ig/ch-allergyintolerance/ValueSet/http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet

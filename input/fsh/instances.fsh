@@ -324,13 +324,15 @@ Usage: #definition
 * concept[=].designation[+].language = #it-CH
 * concept[=].designation[=].value = "biologico"
 
-Instance: allergyintolerance-reaction-manifestation-translations
+Instance: CHAllergyIntoleranceReactionManifestationValueSet
 InstanceOf: $shareablevalueset
+Title: "CHAllergyIntoleranceReactionManifestationValueSet"
+Description: "CH Allergy intolerance reaction manifestation value set, including codes values according to the Allergy Reaction (GPS) - IPS value set from SNOMED Clinical Terms®  for the documentation of manifestation of allergy or intolerance reactions"
 Usage: #definition
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.1.11.82--20200925110235"
-* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-reaction-manifestation-supplement"
+* url = "http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet"
 * version = "20220111"
-* name = "CH Allergy Intolerance Reaction Manifestation Value Set"
+* name = "CHAllergyIntoleranceReactionManifestationValueSet"
 * status = #draft
 * experimental = true
 * date = "2022-01-11"
@@ -338,38 +340,38 @@ Usage: #definition
 * contact.name = "FHIR project team"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.hl7.ch/" 
-* description = "Code supplement with translations of CHAllergyIntolerance reaction manifestation"
+* description = "Value set including translations of CHAllergyIntolerance reaction manifestation"
 * jurisdiction = urn:iso:std:iso:3166#CH
 /* content = #supplement
 * supplements = CHAllergyIntoleranceReactionManifestationValueSet*/
 * compose.include.system = "http://snomed.info/sct"
 * compose.include.concept[0].code = #422400008
 * compose.include.concept[=].display = "Vomiting (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Vomiting"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "vomissement"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Erbrechen"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "vomito"
 * compose.include.concept[+].code = #4386001
 * compose.include.concept[=].display = "Bronchospasm (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Bronchospasm"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "bronchospasme"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Bronchospasmus"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "broncospasmo"
 * compose.include.concept[+].code = #9826008
 * compose.include.concept[=].display = "Conjunctivitis (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Conjunctivitis"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "conjonctivite"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Konjunktivitis"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "congiuntivite"
@@ -385,11 +387,11 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "oppressione toracica"
 * compose.include.concept[+].code = #24079001
 * compose.include.concept[=].display = "Atopic dermatitis (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Atopic dermatitis"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "dermite atopique"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Atopische Dermatitis"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "dermatite atopica"
@@ -405,61 +407,61 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "vasculite"
 * compose.include.concept[+].code = #39579001
 * compose.include.concept[=].display = "Anaphylaxis (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Anaphylaxis"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "anaphylaxie"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Anaphylaxie"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "anafilassi"
 * compose.include.concept[+].code = #41291007
 * compose.include.concept[=].display = "Angioedema (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Angioedema"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "angio-œdème"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Angioödem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "angioedema"
 * compose.include.concept[+].code = #43116000
 * compose.include.concept[=].display = "Eczema (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Eczema"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "eczéma"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Ekzem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "eczema"
 * compose.include.concept[+].code = #49727002
 * compose.include.concept[=].display = "Cough (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Cough"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "toux"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Husten"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "tosse"
 * compose.include.concept[+].code = #51599000
 * compose.include.concept[=].display = "Edema of larynx "
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Edema of larynx"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "œdème du larynx"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Kehlkopfödem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "edema della laringe"
 * compose.include.concept[+].code = #62315008
 * compose.include.concept[=].display = "Diarrhea (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Diarrhea"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "diarrhée"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Diarrhöe"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "diarrea"
@@ -475,157 +477,157 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "rinite"
 * compose.include.concept[+].code = #73442001
 * compose.include.concept[=].display = "Stevens-Johnson syndrome"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Stevens-Johnson syndrome"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "syndrome de Stevens-Johnson"
-* compose.include.concept[=].designation[0].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Stevens-Johnson Syndrom"
+* compose.include.concept[=].designation[+].language = #de-CH
+* compose.include.concept[=].designation[=].value = "Stevens-Johnson-Syndrom"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "sindrome di Stevens-Johnson"
 * compose.include.concept[+].code = #76067001
 * compose.include.concept[=].display = "Sneezing (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Sneezing"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "éternuement"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Niesen"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "starnuto"
 * compose.include.concept[+].code = #91175000
 * compose.include.concept[=].display = "Seizure (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Seizure"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "convulsion"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Konvulsion"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "convulsione"
 * compose.include.concept[+].code = #126485001
 * compose.include.concept[=].display = "Urticaria (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Urticaria"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "urticaire"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Urtikaria"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "orticaria"
 * compose.include.concept[+].code = #162290004
 * compose.include.concept[=].display = "Dry eyes (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Dry eyes"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "sècheresse oculaire"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Trockene Augen"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "secchezza oculare"
 * compose.include.concept[+].code = #195967001
 * compose.include.concept[=].display = "Asthma (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Asthma"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "asthme"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Asthma"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "asma"
 * compose.include.concept[+].code = #247472004
 * compose.include.concept[=].display = "Wheal (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Wheal"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "éruption urticaire"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Urtikarielles Exanthem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "eruzione orticaria"
 * compose.include.concept[+].code = #267036007
 * compose.include.concept[=].display = "Dyspnea (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Dyspnea"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "dyspnée"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Dyspnoe"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "dispnea"
 * compose.include.concept[+].code = #271757001
 * compose.include.concept[=].display = "Papular eruption (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Papular eruption"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "éruption papuleuse"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Papulöses Exanthem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "eruzione papulare"
 * compose.include.concept[+].code = #271759003
 * compose.include.concept[=].display = "Bullous eruption (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Bullous eruption"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "éruption bulleuse"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Bullöses Exanthem"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "eruzione bollosa"
 * compose.include.concept[+].code = #271807003
 * compose.include.concept[=].display = "Eruption of skin (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Eruption of skin"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "éruption cutanée"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Hautausschlag"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "eruzione cutanea"
 * compose.include.concept[+].code = #359610006
 * compose.include.concept[=].display = "Ocular hyperemia (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Ocular hyperemia"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "hyperémie oculaire"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Okuläre Hyperämie"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "iperemia oculare"
 * compose.include.concept[+].code = #410430005
 * compose.include.concept[=].display = "Cardiorespiratory arrest (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Cardiorespiratory arrest"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "arrêt cardiorespiratoire"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Kardiorespiratorischer Stillstand"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "arresto cardiorespiratorio"
 * compose.include.concept[+].code = #418363000
 * compose.include.concept[=].display = "Itching of skin (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Itching of skin"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "prurit de la peau"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Pruritus"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "prurito cutaneo"
 * compose.include.concept[+].code = #422587007
 * compose.include.concept[=].display = "Nausea (finding)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Nausea"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "nausées"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Nausea"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "nausea"
 * compose.include.concept[+].code = #698247007
 * compose.include.concept[=].display = "Cardiac arrhythmia (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Cardiac arrhythmia"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "arythmie cardiaque"
@@ -639,17 +641,17 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "Drug reaction with eosinophilia and systemic symptoms"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "réaction médicamenteuse avec éosinophilie et symptômes systémiques"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Medikamentenreaktion mit Eosinophilie und systemischen Symptomen"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "reazione al medicamento con eosinofilia e sintomi sistemici"
 * compose.include.concept[+].code = #768962006
 * compose.include.concept[=].display = "Lyell syndrome (disorder)"
-* compose.include.concept[=].designation[+].language = #en-US
+* compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Lyell syndrome"
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "syndrome de Lyell"
-* compose.include.concept[=].designation[0].language = #de-CH
+* compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Lyell-Syndrom"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "sindrome di Lyell"
