@@ -2,9 +2,8 @@ Profile: CHAllergyIntolerance
 Parent: AllergyIntolerance
 Id: ch-allergyintolerance
 Title: "CH Allergy Intolerance"
-Description: """This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare Document or similar as an instance of an AllergyIntolerance resource constrained by this profile.
-
-It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."""
+Description: "This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare Document or similar as an instance of an AllergyIntolerance resource constrained by this profile.
+It documents the relevant allergies or intolerances for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."
 * ^version = "0.1.0"
 * ^status = #draft
 * ^publisher = "HL7 Switzerland"
@@ -186,9 +185,7 @@ Profile: CHAllergyIntoleranceCondition
 Parent: Condition
 Id: ch-allergyintolerance-condition
 Title: "CH Allergy Intolerance Condition"
-Description: """This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance in the Swiss realm - in adaption of the respective examples provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance.
-
-It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."""
+Description: "This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance as a problem-list item or a encounter-diagnosis entry in the Swiss realm - in adaption of the respective usecases provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance."
 * ^version = "0.1.0"
 * ^status = #draft
 * ^publisher = "HL7 Switzerland"
