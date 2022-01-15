@@ -206,4 +206,26 @@ It documents the relevant allergies or intolerances (conditions) for a patient, 
 * bodySite 0..* MS
 * subject only Reference(CHCorePatient)
 * recorder only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
+* onset[x] MS
+* onset[x] ^slicing.discriminator.type = #type
+* onset[x] ^slicing.discriminator.path = "$this"
+* onset[x] ^slicing.rules = #closed
+* onsetDateTime[onsetDateTime] only dateTime
+* onsetDateTime[onsetDateTime] ^sliceName = "onsetDateTime"
+* onsetDateTime[onsetDateTime] ^mustSupport = true
+* onsetPeriod[onsetPeriod] only Period
+* onsetPeriod[onsetPeriod] ^sliceName = "onsetPeriod"
+* onsetPeriod[onsetPeriod] ^mustSupport = false
+* abatement[x] MS
+* abatement[x] ^slicing.discriminator.type = #type
+* abatement[x] ^slicing.discriminator.path = "$this"
+* abatement[x] ^slicing.rules = #closed
+* abatementDateTime only dateTime
+* abatementDateTime MS
+* abatementDateTime ^sliceName = "abatementDateTime"
+* abatementPeriod only Period
+* abatementPeriod ^sliceName = "abatementPeriod"
+* abatementPeriod ^mustSupport = false
 * asserter only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
+* asserter MS
+* asserter ^definition = "Individual who is making the condition statement.\r\nInformation source."
