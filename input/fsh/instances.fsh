@@ -274,6 +274,56 @@ Usage: #definition
 * concept[=].designation[+].language = #it-CH
 * concept[=].designation[=].value = "Grave"
 
+Instance: allergyintolerance-category-supplement
+InstanceOf: CodeSystem
+Usage: #definition
+* url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-category-supplement"
+* version = "20210615"
+* name = "AllergyIntoleranceCategory"
+* status = #draft
+* experimental = true
+* date = "2021-06-15"
+* publisher = "HL7 Switzerland"
+* contact.name = "FHIR project team"
+* contact.telecom.system = #url
+* contact.telecom.value = "https://www.hl7.ch/" 
+* description = "Code supplement with translations of CHAllergyIntolerance category"
+* jurisdiction = urn:iso:std:iso:3166#CH
+* content = #supplement
+* supplements = $allergyintolerance-severity
+* concept[0].code = #food
+* concept[=].display = "Food"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Lebensmittel"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "aliment"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "alimento"
+* concept[+].code = #medication
+* concept[=].display = "Medication"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Arzneimittel"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "médicament"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "medicamento"
+* concept[+].code = #environment
+* concept[=].display = "Environment"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Umweltstoffe"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "environnement"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "ambiente"
+* concept[+].code = #biologic
+* concept[=].display = "Biologic"
+* concept[=].designation[0].language = #de-CH
+* concept[=].designation[=].value = "Biologische Präparate"
+* concept[=].designation[+].language = #fr-CH
+* concept[=].designation[=].value = "biologique"
+* concept[=].designation[+].language = #it-CH
+* concept[=].designation[=].value = "biologico"
+
 Instance: allergyintolerance-reaction-manifestation-translations
 InstanceOf: $shareablevalueset
 Usage: #definition
