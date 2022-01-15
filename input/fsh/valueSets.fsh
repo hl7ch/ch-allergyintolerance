@@ -640,7 +640,7 @@ Description: "CH Allergy intolerance condition value set. This value set include
 * SNOMED_CT#23181000122104 "Allergy to mango fruit (finding)"
 * SNOMED_CT#151201000119107 "Allergy to insect venom (finding)"
 
-ValueSet: CHAllergyIntoleranceReactionSubstanceValueSet
+/*ValueSet: CHAllergyIntoleranceReactionSubstanceValueSet
 Id: ch-allergy-intolerance-reaction-substance-value-set
 Title: "CH Allergy Intolerance Reaction Substance Value Set"
 Description: "CH Allergy intolerance reation substance value set. This value set includes codes from SNOMED Clinical Terms® substances for the documentation of substancies of allergy or intolerance reactions"
@@ -2323,9 +2323,9 @@ Description: "CH Allergy intolerance reation substance value set. This value set
 * SNOMED_CT#1031000221108 "Vaccine product containing Human poliovirus antigen (medicinal product)"
 * SNOMED_CT#18751000122108 "Dropropizine (substance)"
 * SNOMED_CT#20741000122103 "Tiropramide (substance)"
+*/
 
-
-ValueSet: CHAllergyIntoleranceValueSet
+/*ValueSet: CHAllergyIntoleranceValueSet
 Id: ch-allergy-intolerance-value-set
 Title: "CH Allergy Intolerance Value Set"
 Description: "CH Allergy intolerance codng value set. This value set includes codes values  from SNOMED Clinical Terms® for no known [xy] allergies PLUS substances for the documentation of allergy or intolerance"
@@ -4015,7 +4015,7 @@ Description: "CH Allergy intolerance codng value set. This value set includes co
 * SNOMED_CT#1031000221108 "Vaccine product containing Human poliovirus antigen (medicinal product)"
 * SNOMED_CT#18751000122108 "Dropropizine (substance)"
 * SNOMED_CT#20741000122103 "Tiropramide (substance)"
-
+*/
 /*
 ValueSet: CHAllergyIntoleranceReactionManifestationValueSet
 Id: ch-allergy-intolerance-reaction-manifestation-value-set

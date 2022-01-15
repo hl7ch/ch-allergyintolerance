@@ -46,3 +46,6 @@ Alias: $allergyintolerance-severity = http://hl7.org/fhir/reaction-event-severit
 Alias: $allergyintolerance-category = http://hl7.org/fhir/ValueSet/allergy-intolerance-category
 Alias: $shareablevalueset = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 Alias: $CHAllergyIntoleranceReactionManifestationValueSet = http://fhir.ch/ig/ch-allergyintolerance/ValueSet/http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet
+Alias: $CHAllergyIntoleranceConditionValueSet = http://fhir.ch/ig/ch-allergyintolerance/ValueSet/http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceConditionValueSet
+Alias: $CHAllergyIntoleranceReactionSubstanceValueSet = http://fhir.ch/ig/ch-allergyintolerance/ValueSet/http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionSubstanceValueSet
+Alias: $CHAllergyIntoleranceValueSet = http://fhir.ch/ig/ch-allergyintolerance/ValueSet/http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceValueSet
