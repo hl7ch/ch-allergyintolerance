@@ -290,7 +290,7 @@ Usage: #definition
 * description = "Code supplement with translations of CHAllergyIntolerance category"
 * jurisdiction = urn:iso:std:iso:3166#CH
 * content = #supplement
-* supplements = $allergyintolerance-severity
+* supplements = $allergyintolerance-category
 * concept[0].code = #food
 * concept[=].display = "Food"
 * concept[=].designation[0].language = #de-CH
