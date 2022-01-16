@@ -104,18 +104,10 @@ Description: "Definition of the composition for the allergy intolerance document
 * attester[legalAuthenticator].time ^short = "Timestamp of the signature"
 * attester[legalAuthenticator].party ^short = "Who attested the composition"
 * custodian ^short = "The organization in whose name the document has been created"
-* section 1..
-* section ^slicing.discriminator[0].type = #pattern
-* section ^slicing.discriminator[0].path = "code"
+* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
-* section[originalRepresentation] 1..1
-* section[originalRepresentation] ^short = "Original representation"
-* section[originalRepresentation].title ^short = "Original representation"
-* section[originalRepresentation].code = $loinc#55108-5 "Clinical presentation"
-* section[originalRepresentation].text ^short = "Representation of the original view"
-* section[originalRepresentation].entry only Reference(Binary)
-* section[originalRepresentation].entry ^short = "PDF"
 * section contains
     allergyIntolerance 1..1 and
     annotation 0..1
@@ -147,10 +139,11 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[annotation].code = $loinc#48767-8 "Annotation comment Imp"
 * section[annotation].text 1..1
 * section[annotation].text ^short = "Human readable text of this section"
-* section[annotation].entry 0..*
+/* section[annotation].entry 0..*
 * section[annotation].entry ^short = "General comments"
 * section[annotation].entry.reference 1..
 * section[annotation].section 0..0
+*/
 
 
 Profile: CHAllergyIntoleranceDocumentEPR
