@@ -33,6 +33,159 @@ Usage: #example
 * reaction.severity = #moderate
 * reaction.note.text = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <span id=\"co1\">\n\t\t\t\t\t\trespiratory tract infection whilst taking\n        </span>\n      </div>"
 
+Instance: CH-AllergyIntolerance-Condition-Visit1-Usecase-1
+InstanceOf: ch-allergyintolerance-condition
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#provisional
+* category = $condition-category#problem-list-item
+* severity = $sct#6736007 "Moderate"
+* code = $sct#126485001 "Urticaria (disorder)"
+* subject.reference = "Patient/ElisabethBroennimannByBFH"
+* onsetDateTime = "2021-12"
+
+Instance: CH-AllergyIntolerance-Condition-Visit2-Usecase-1
+InstanceOf: ch-allergyintolerance-condition
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#provisional
+* category = $condition-category#problem-list-item
+* severity = $sct#6736007 "Moderate"
+* code = $sct#860765003 "Allergy to thiazide (finding)"
+* subject.reference = "Patient/ElisabethBroennimannByBFH"
+* abatementDateTime  = "2022-02-07"
+
+Instance: CH-AllergyIntolerance-Usecase-2
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* extension.url = "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips"
+* extension.valueDateTime = "2022-02-07"
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#unconfirmed "Unconfirmed"
+* type = #allergy
+* category = #medication
+* criticality = #low
+* code = $sct#860765003 "Allergy to thiazide (finding)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "taking diuretic"
+* reaction.substance = $sct#387525002 "Hydrochlorothiazide (substance)"
+* reaction.manifestation[0] = $sct#126485001 "Urticaria (disorder)"
+* reaction.severity = #moderate
+
+Instance: CH-AllergyIntolerance-Condition-Usecase-3
+InstanceOf: ch-allergyintolerance-condition
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#differential
+* category = $condition-category#encounter-diagnosis
+* severity = $sct#255604002 "Mild"
+* code = $sct#292044008 "Aspirin adverse reaction (disorder)"
+* subject.reference = "Patient/ElisabethBroennimannByBFH"
+
+Instance: CH-AllergyIntolerance-Usecase-3
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* type = #intolerance
+* category = #medication
+* criticality = #low
+* code = $sct#292044008 "Aspirin adverse reaction (disorder)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
+* reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
+* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "oral taken diuretic"
+* reaction.substance = $sct#387458008 "Aspirin (substance)"
+* reaction.manifestation[0] = $sct#60862001 "Tinnitus (finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
+* reaction.severity = #mild
+
+Instance: CH-AllergyIntolerance-Usecase-5
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* type = #allergy
+* category = #biologic
+* criticality = #low
+* code = $sct#232346004 "Allergy to cat dander (finding)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
+* reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
+* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "Animal shelter"
+* reaction.substance = $sct#2600152009 "Cat dander (substance)"
+* reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
+* reaction.severity = #mild
+
+Instance: CH-AllergyIntolerance-Usecase-6
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* type = #allergy
+* category = #food
+* criticality = #high
+* code = $sct#91935009 "Allergy to peanut (finding)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "per os"
+* reaction.substance = $sct#417889008 "Arachis oil (substance)"
+* reaction.manifestation[0] = $sct#39579001 "Anaphylaxis (disorder)"
+* reaction.severity = #severe
+
+/*Instance: CH-AllergyIntolerance-Observation-Usecase-7
+InstanceOf: Observation
+Usage: #example
+* status = #final
+* category = $observation-category#laboratory
+* code = $loinc#58778-2 "Peanut recombinant (rAra h) 2 IgE Ab [Units/volume] in Serum"
+* subject.reference = "Patient/ElisabethBroennimannByBFH"
+* effectiveDateTime = "2017-11-10T08:20:00+01:00"
+* performer = Reference(Organization/45a5c5b1-4ec1-4d60-b4b2-ff5a84a41fd7)
+* valueQuantity = >100 'k[IU]/L' "k[IU]/L"
+* interpretation = $sct#119364003 "Serum specimen"*/
+
+Instance: CH-AllergyIntolerance-Condition-Usecase-7
+InstanceOf: ch-allergyintolerance-condition
+Usage: #example
+* clinicalStatus = $condition-clinical#active
+* verificationStatus = $condition-ver-status#confirmed
+* category = $condition-category#problem-list-item
+* severity = $sct#2556046736007 "Moderate (qualifier)"
+* code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
+* subject.reference = "Patient/ElisabethBroennimannByBFH"
+
+Instance: CH-AllergyIntolerance-Usecase-7
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* type = #allergy
+* category = #environment
+* criticality = #low
+* code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
+* reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
+* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "Works in ICU"
+* reaction.substance = $sct#1003751008 "Hevea barasiliensis latex (substance)"
+* reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
+* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
+* reaction.severity = #mild
+
+Instance: CH-AllergyIntolerance-Usecase-8
+InstanceOf: $ch-allergyintolerance
+Usage: #example
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* code = $sct#716186003 "No known allergy (situation)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+
+
 Instance: ElisabethBroennimannByBFH
 InstanceOf: $ch-core-patient
 Usage: #example
