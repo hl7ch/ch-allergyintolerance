@@ -5,16 +5,15 @@ The use cases are adapted from the "Implementation Guide for Use of SNOMED CT in
 ## Usecase 1: Documentation of an adverse reaction to a drug substance
 Szenario: A physician sees a patient in clinic for routine outpatient care.  The patient has been receiving care for diabetes and hypertension.  Recently the patient was prescribed 25mg hydrochlorothiazide for his blood pressure.  He tells the physician that he has developed hives weeks previously and on examination, the physician confirms the presence of generalized hives.  A review of systems fails to reveal any other causes and the physician believes that the patient may be having an urticarial reaction to hydrochlorothiazide.  He has lingering uncertainty about this and tells the patient to stop the thiazide and employ diphenhydramine for relief.  The physician advances the patient dose of losartan for blood pressure control.  He schedules him back in a week for follow-up and when recording his note for the visit, he adds to his assessment in the problem list: “Urticarial reaction, possible thiazide allergy”. A week later the patient returns for follow-up with the itching and rash entirely resolved.  He reports that the reaction subsided within days after stopping the thiazide.  The physician adds “Hydrochlorothiazide allergy:reaction of hives; moderate criticality, probable” to the problem list.
 
-**FHIR Condition resource query from patient record** (Entry of urticaria due to possible thiazide allergy in problem list)
+**FHIR Condition resource query from patient record** ([Entry of urticaria due to possible thiazide allergy in problem list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit1-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -34,7 +33,7 @@ Szenario: A physician sees a patient in clinic for routine outpatient care.  The
   </tr>
   <tr>
     <td class="tg-cly1">verificationStatus</td>
-    <td class="tg-cly1">provisional</td>
+    <td class="tg-cly1">unconfirmed</td>
   </tr>
   <tr>
     <td class="tg-cly1">category</td>
@@ -51,7 +50,7 @@ Szenario: A physician sees a patient in clinic for routine outpatient care.  The
 </tbody>
 </table>
 
-**FHIR Condition resource query from patient record** (Entry of urticaria due to probable thiazide allergy in problem list)
+**FHIR Condition resource query from patient record** ([Entry of urticaria due to probable thiazide allergy in problem list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit2-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -59,8 +58,7 @@ Szenario: A physician sees a patient in clinic for routine outpatient care.  The
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -90,10 +88,6 @@ Szenario: A physician sees a patient in clinic for routine outpatient care.  The
     <td class="tg-cly1">severity</td>
     <td class="tg-cly1">6736007 Moderate (qualifier)</td>
   </tr>
-  <tr>
-    <td class="tg-cly1">abatement[x]:abatementDateTime</td>
-    <td class="tg-cly1">2022-02-07</td>
-  </tr>
 </tbody>
 </table>
 
@@ -102,16 +96,15 @@ Scenario: The clinic nurse calls the patient from scenario 4.1 a week later with
 Years later the patient is seeing another physician within the organization for consultation on treatment of resistant hypertension.  The second physician decides that an ACE inhibitor/thiazide medication is appropriate for the patient.  When the physician creates an order for “Lisinopril-hydrochlorothiazide 20/25” and commits to the electronic prescription, an alert appears which requires a response by the physician warning him of an allergy history to hydrochlorothiazide which is an ingredient in the drug he is about to order.  The alert is generated by the EHR software which uses the Allergy list as reference.   The physician retracts the order and chooses another antihypertensive.
 
 
-**FHIR AllergyIntolerance resource query of patient record** (Entry of a probable thiazide allergy in allergy list)
+**FHIR AllergyIntolerance  resource query of patient record** ([Entry of a probable thiazide allergy in allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-2.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-i8ls{background-color:#ffffff;border-color:#000000;color:#333333;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-xxl9{background-color:#ffffff;border-color:#000000;color:#333333;text-align:left;vertical-align:middle}
-.tg .tg-0a7q{border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -124,10 +117,6 @@ Years later the patient is seeing another physician within the organization for 
   <tr>
     <td class="tg-xxl9">abatement-dateTime-uv-ips</td>
     <td class="tg-xxl9">2022-02-07</td>
-  </tr>
-  <tr>
-    <td class="tg-xxl9">substance</td>
-    <td class="tg-xxl9">387525002 Hydrochlorothiazide (substance)</td>
   </tr>
   <tr>
     <td class="tg-xxl9">clinicalStatus</td>
@@ -166,8 +155,8 @@ Years later the patient is seeing another physician within the organization for 
     <td class="tg-0a7q">moderate</td>
   </tr>
   <tr>
-    <td class="tg-0a7q">openEHR-exposureDescription</td>
-    <td class="tg-0a7q">taking diuretic</td>
+    <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -176,15 +165,15 @@ Years later the patient is seeing another physician within the organization for 
 
 Scenario: A patient enters the urgent care with complaints of ringing, clanging and whistling in his ears. The patient cannot distinctly state when the noises initiated and has not been exposed to any high noise environments. The patient has a history of chronic back pain, congestive heart failure and arthritis. Upon reviewing the patient’s medication list, the physician notices that the patient has been taking 12 tablets of aspirin each day. The physician suspects that the patient is suffering from aspirin induced tinnitus. The patient is encouraged to decrease his aspirin dose and follow up with his rheumatologist who prescribed the aspirin. In the patient’s electronic medical record the urgent care specialist documents in the encounter diagnosis and allergy list that the patient has a drug intolerance to aspirin.
 
-**FHIR Condition resource query from patient record** (Entry of an aspirin intolerance in problem list)
+**FHIR Condition resource query from patient record** ([Entry of an aspirin intolerance in problem list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Usecase-3.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-i8ls{background-color:#ffffff;border-color:#000000;color:#333333;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-xxl9{background-color:#ffffff;border-color:#000000;color:#333333;text-align:left;vertical-align:middle}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -217,14 +206,15 @@ Scenario: A patient enters the urgent care with complaints of ringing, clanging 
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Entry of aspirin intolerance in allergy list)
+**FHIR AllergyIntolerance resource query of patient record** ([Entry of aspirin intolerance in allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-3.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -275,8 +265,8 @@ Scenario: A patient enters the urgent care with complaints of ringing, clanging 
     <td class="tg-0lax">mild</td>
   </tr>
   <tr>
-    <td class="tg-0lax">openEHR-exposureDescription</td>
-    <td class="tg-0lax">oral taken diuretic</td>
+    <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -286,14 +276,13 @@ Scenario: A patient enters the urgent care with complaints of ringing, clanging 
 Scenario: The patient from scenario 1 is planning a vacation with his family consisting of a cross-country camping trip.  In preparation for travels, he speaks to his physician and obtains an electronic summary of his healthcare record on a flash drive for himself, his wife and children. His physician informs him that the summary software includes an electronic ‘reader’ as well as a standard format that can be imported into another EHR for patient care.  Their vacation unfolds happily until, many miles from home the patient experiences an episode of chest pain while hiking and is taken to a local emergency room.  He provides the flash drive with his electronic record summary to the emergency room physician whose hospital employs an EHR which can accept FHIR extracted electronic record summaries for integration into the on-site health record system.  The emergency room nurse loads the flash drive and accepts the electronic copy of the problem list, allergies and medication list into the on-site record.  The software extract manages the differences in information model design between EHR vendors by cross-checking the allergy list with information in the problem list and encounter diagnoses.
 Later, the attending physician is writing admission orders for the patient, admitting him to the ward for observation.  The physician notices that the patient blood pressure is high at 195/100.  The physician does not want to take aggressive action but decides that the blood pressure should be brought down slowly.  Noting that the patient medication list already includes two types of blood pressure medicine, he enters an electronic order for “Hygroton 50mg po daily”, a favorite choice for hypertension with slow onset of action.  When the physician presses ‘Enter’ to commit the order, a pop-up alert is generated by the EHR with warning that this patient has had an allergic reaction to a thiazide diuretic consisting of hives and that Chlorthalidone(Hygroton) has a high likelihood of cross reacting.  While studying the alert, the physician notes that the supporting information was gleaned from the problem list and allergy list.  While the earlier record from the problem list was provisional, the later allergy list record is notable for probable status and moderate risk as an allergy.  The EHR drug interaction software has cross-referenced the chemical composition of Hydrochlorothiazide and Hygroton(Chlorthalidone) and noted them to be similar.  He decides that the information is credible and changes his order to a medicine not likely to lead to an allergic reaction.
 
-**FHIR AllergyIntolerance resource query of patient record** (Query probable thiazide allergy from allergy list.)
+**FHIR AllergyIntolerance resource query of patient record** ([Query probable thiazide allergy from allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-2.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -341,10 +330,14 @@ Later, the attending physician is writing admission orders for the patient, admi
     <td class="tg-cly1">reaction.severity</td>
     <td class="tg-cly1">moderate</td>
   </tr>
+  <tr>
+      <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
+  </tr>
 </tbody>
 </table>
 
-**FHIR Condition resource query from imported patient record** (Query of possible thiazide allergy from the problem list.)
+**FHIR Condition resource query from imported patient record** ([Query of possible thiazide allergy from the problem list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit2-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -352,8 +345,7 @@ Later, the attending physician is writing admission orders for the patient, admi
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -398,7 +390,7 @@ Scenario: A physician sees a patient for the first time in clinic for routine ou
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -439,14 +431,13 @@ Scenario: A physician sees a patient for the first time in clinic for routine ou
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource** (Entry of confirmed allergic tendency to Dermatophagoides farinae protein in the allergy list.)
+**FHIR AllergyIntolerance resource** ([Entry of confirmed allergic tendency to cat dander in the allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-5.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -484,7 +475,7 @@ Scenario: A physician sees a patient for the first time in clinic for routine ou
   </tr>
   <tr>
     <td class="tg-cly1">reaction.substance</td>
-    <td class="tg-cly1">2600152009 Cat dander (substance)</td>
+    <td class="tg-cly1">260152009 Cat dander (substance)</td>
   </tr>
   <tr>
     <td class="tg-cly1">reaction.allergyintolerance-certainty</td>
@@ -522,8 +513,7 @@ Years later the youngster is seen by a dermatologist for treatment of acne.  As 
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -560,16 +550,15 @@ Years later the youngster is seen by a dermatologist for treatment of acne.  As 
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Entry of a confirmed peanut oil allergy in allergy list)
+**FHIR AllergyIntolerance resource** ([Entry of a confirmed peanut oil allergy in allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-6.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -620,8 +609,8 @@ Years later the youngster is seen by a dermatologist for treatment of acne.  As 
     <td class="tg-cly1">severe</td>
   </tr>
   <tr>
-    <td class="tg-cly1">reaction.openEHR-exposureDescription</td>
-    <td class="tg-cly1">per os</td>
+      <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -638,7 +627,6 @@ The EHR software supports selection of foods, chemicals and animal biological pr
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -677,7 +665,7 @@ The EHR software supports selection of foods, chemicals and animal biological pr
 </tbody>
 </table>
 
-**FHIR Condition resource query from patient record** (Entry of latex allergy in problem list)
+**FHIR Condition resource query from patient record** ([Entry of latex allergy in problem list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Usecase-7.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -685,7 +673,7 @@ The EHR software supports selection of foods, chemicals and animal biological pr
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -718,7 +706,7 @@ The EHR software supports selection of foods, chemicals and animal biological pr
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Entry of latex allergy in allergy list)
+**FHIR AllergyIntolerance resource query of patient record** ([Entry of latex allergy in allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-7.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -726,8 +714,7 @@ The EHR software supports selection of foods, chemicals and animal biological pr
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -785,6 +772,10 @@ The EHR software supports selection of foods, chemicals and animal biological pr
     <td class="tg-cly1">reaction.openEHR-exposureDescription</td>
     <td class="tg-cly1">Works in ICU</td>
   </tr>
+  <tr>
+    <td class="tg-cly1">reaction.exposureRoute</td>
+    <td class="tg-cly1">6064005 Topical route (qualifier)</td>
+  </tr>
 </tbody>
 </table>
 
@@ -792,16 +783,15 @@ The EHR software supports selection of foods, chemicals and animal biological pr
 
 Scenario:  A nurse is performing an intake examination on a patient that is new to the clinical practice.  As part of the clinical interview he inquires about medication and other allergies.  The patient reports that she is not allergic to any medications, foods, chemicals or animals.  The nurse opens the ‘allergy list’ in the EHR and documents ‘No known allergies’ which electronically validates that the nurse inquired of the patient and that the history was confirmed negative at the date and time recorded.  This satisfies decision support criteria that allergies be documented before medication orders are written and is encoded in the EHR allergy list as confirmed absence of dispositions to adverse reactions.
 
-**FHIR AllergyIntolerance resource query of patient record** (Entry no known allergy in allergy list)
+**FHIR AllergyIntolerance resource query of patient record** ([Entry no known allergy in allergy list](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-8.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -834,26 +824,6 @@ Scenario:  A nurse is performing an intake examination on a patient that is new 
   <tr>
     <td class="tg-lboi">category</td>
     <td class="tg-lboi">--</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.substance</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.certainty</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.manifestation</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.severity</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.exposureRoute</td>
-    <td class="tg-cly1">---</td>
   </tr>
 </tbody>
 </table>
