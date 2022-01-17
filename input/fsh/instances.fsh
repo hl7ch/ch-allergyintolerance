@@ -1,3 +1,72 @@
+
+Instance: CH-AllergyIntolerance-Composition-Example
+InstanceOf: CHAllergyIntoleranceCompositionEPR
+Title: "CH-AllergyIntolerance-Composition-Example"
+Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
+Usage: #example
+* id = "ch-allergyintolerance-composition-example"
+* language = #de-CH
+* extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
+* extension.valueReference = Reference(ElisabethBroennimannByBFH)
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"
+* status = #final
+* type.coding[0] = $sct#722446000 "Allergy record (record artifact)"
+* subject = Reference(ElisabethBroennimannByBFH)
+* date = "2012-02-04T14:00:00+01:00"
+* author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
+* author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
+* author[=] = Reference(FamilienHausarzt)
+* author[+] = Reference(Hausarzt)
+* title = "Allergies and adverse reactions Document"
+* confidentiality = #N
+* confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
+* custodian = Reference(Custodian)
+* section.title = "Allergy Intolerance"
+* section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
+/*
+* section.text.status = #generated
+* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table>\n          <thead>\n            <tr>\n              <th>Präpartename</th>\n              <th>Wirkstoffname</th>\n              <th>Galenische Form</th>\n              <th>Dosis pro Einheit</th>\n              <th>Dosierung</th>\n              <th>Dos.Morgen</th>\n              <th>Dos.Mittag</th>\n              <th>Dos.Abend</th>\n              <th>Dos.Nacht</th>\n              <th>Verabreichungsweg</th>\n              <th>Kommentar</th>\n              <th>Anwendungsdauer</th>\n              <th>Behandlungsgrund</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr id=\"mtp.1\">\n              <td id=\"mtp.1.brandedmedication\">Norvasc</td>\n              <td id=\"mtp.1.ingredient\">Amlodipin</td>\n              <td id=\"mtp.1.packageform\">Tbl</td>\n              <td id=\"mtp.1.dosequantity\">10 mg</td>\n              <td id=\"mtp.1.dosageintakemode\">Morgens und abends je 1 Tablette nehmen</td>\n              <td id=\"mtp.1.dosagemorning\">1</td>\n              <td id=\"mtp.1.dosagelunch\">0</td>\n              <td id=\"mtp.1.dosageevening\">1</td>\n              <td id=\"mtp.1.dosagenight\">0</td>\n              <td id=\"mtp.1.routecode\">oral</td>\n              <td id=\"mtp.1.note\"/>\n              <td id=\"mtp.1.datefromto\"/>\n              <td id=\"mtp.1.reason\">Bluthochdruck</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
+*/
+* section.entry = Reference(CH-AllergyIntolerance-IPAG-Recommendation-Table-1)
+
+Instance: Hausarzt
+InstanceOf: CHCoreOrganizationEPR
+Title: "Hausarzt"
+Description: "Example for Organization"
+Usage: #definition
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name = "Hausarzt"
+* address.line = "Krankenstrasse 2"
+* address.city = "Zürich"
+* address.postalCode = "8005"
+* address.country = "CH"
+
+Instance: FamilienHausarzt
+InstanceOf: CHCorePractitionerEPR
+Title: "Familien Hausarzt"
+Description: "Example for Practitioner"
+Usage: #example
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name.family = "Hausarzt"
+* name.given = "Familien"
+* address.line = "Krankenstrasse 2"
+* address.city = "Zürich"
+* address.postalCode = "8005"
+* address.country = "CH"
+
+Instance: Custodian
+InstanceOf: CHCoreOrganizationEPR
+Title: "Custodian"
+Description: "Example for Organization"
+Usage: #definition
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name = "Hausarzt"
+
 Instance: CH-AllergyIntolerance-IPAG-Recommendation-Table-1
 InstanceOf: $ch-allergyintolerance
 Usage: #example

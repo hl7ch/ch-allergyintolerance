@@ -125,7 +125,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].author.extension only EPRTime
 * section[allergyIntolerance].author.extension ^short = "Timestamp of the authorship/data input"
 * section[allergyIntolerance].author.reference 1..
-* section[allergyIntolerance].text 1..1
+* section[allergyIntolerance].text 0..1
 * section[allergyIntolerance].text ^short = "Human readable text of this section"
 * section[allergyIntolerance].entry 0..*
 * section[allergyIntolerance].entry only Reference(CHAllergyIntolerance)
