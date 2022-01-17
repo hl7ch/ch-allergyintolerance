@@ -37,7 +37,7 @@ Instance: CH-AllergyIntolerance-Condition-Visit1-Usecase-1
 InstanceOf: ch-allergyintolerance-condition
 Usage: #example
 * clinicalStatus = $condition-clinical#active
-* verificationStatus = $condition-ver-status#provisional
+* verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#problem-list-item
 * severity = $sct#6736007 "Moderate"
 * code = $sct#126485001 "Urticaria (disorder)"
@@ -53,7 +53,9 @@ Usage: #example
 * severity = $sct#6736007 "Moderate"
 * code = $sct#860765003 "Allergy to thiazide (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
-* abatementDateTime  = "2022-02-07"
+/* build error: con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Rule 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed
+abatementDateTime  = "2022-02-07"
+*/
 
 Instance: CH-AllergyIntolerance-Usecase-2
 InstanceOf: $ch-allergyintolerance
@@ -67,11 +69,12 @@ Usage: #example
 * criticality = #low
 * code = $sct#860765003 "Allergy to thiazide (finding)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
-* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
-* reaction.extension[=].valueString = "taking diuretic"
+/* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "taking diuretic" */
 * reaction.substance = $sct#387525002 "Hydrochlorothiazide (substance)"
 * reaction.manifestation[0] = $sct#126485001 "Urticaria (disorder)"
 * reaction.severity = #moderate
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Condition-Usecase-3
 InstanceOf: ch-allergyintolerance-condition
@@ -95,12 +98,13 @@ Usage: #example
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
 * reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
 * reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
-* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
-* reaction.extension[=].valueString = "oral taken diuretic"
+/* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "oral taken diuretic"*/
 * reaction.substance = $sct#387458008 "Aspirin (substance)"
 * reaction.manifestation[0] = $sct#60862001 "Tinnitus (finding)"
 * reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
 * reaction.severity = #mild
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Usecase-5
 InstanceOf: $ch-allergyintolerance
@@ -116,7 +120,7 @@ Usage: #example
 * reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
 * reaction.extension[=].valueString = "Animal shelter"
-* reaction.substance = $sct#2600152009 "Cat dander (substance)"
+* reaction.substance = $sct#260152009 "Cat dander (substance)"
 * reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
 * reaction.severity = #mild
 
@@ -130,11 +134,12 @@ Usage: #example
 * criticality = #high
 * code = $sct#91935009 "Allergy to peanut (finding)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
-* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
-* reaction.extension[=].valueString = "per os"
+/* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "per os"*/
 * reaction.substance = $sct#417889008 "Arachis oil (substance)"
 * reaction.manifestation[0] = $sct#39579001 "Anaphylaxis (disorder)"
 * reaction.severity = #severe
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 /*Instance: CH-AllergyIntolerance-Observation-Usecase-7
 InstanceOf: Observation
@@ -154,7 +159,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#2556046736007 "Moderate (qualifier)"
+* severity = $sct#6736007 "Moderate (qualifier)"
 * code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
@@ -176,6 +181,7 @@ Usage: #example
 * reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
 * reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
 * reaction.severity = #mild
+* reaction.exposureRoute = $sct#6064005 "Topical route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Usecase-8
 InstanceOf: $ch-allergyintolerance
@@ -16523,7 +16529,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "aespletare"
 */
-* compose.include.concept[+].code = #2600152009
+* compose.include.concept[+].code = #260152009
 * compose.include.concept[=].display = "Cat dander (substance)"
 /*
 * compose.include.concept[=].designation[0].language = #en-US
@@ -40548,7 +40554,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "aespletare"
 */
-* compose.include.concept[+].code = #2600152009
+* compose.include.concept[+].code = #260152009
 * compose.include.concept[=].display = "Cat dander (substance)"
 /*
 * compose.include.concept[=].designation[0].language = #en-US

@@ -5,16 +5,15 @@ Die Usecases sind adaptiert vom "Implementation Guide for Use of SNOMED CT in Do
 ## Usecase 1: Dokumentation einer unerwünschten Reaktion auf einen Medikamentenwirkstoff
 Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routineversorgung.  Der Patient wurde bereits wegen Diabetes und Bluthochdruck behandelt.  Kürzlich wurden dem Patienten 25 mg Hydrochlorothiazid gegen seinen Bluthochdruck verschrieben. Er teilt dem Arzt mit, dass er vor einigen Wochen eine Nesselsucht entwickelt habe, und bei der Untersuchung bestätigt der Arzt das Vorhandensein einer generalisierten Urtikaria.  Eine Überprüfung des Systems ergibt keine anderen Ursachen und der Arzt glaubt, dass der Patient möglicherweise eine urtikarielle Reaktion auf Hydrochlorothiazid zeigt.  Er ist sich dessen nicht ganz sicher und rät dem Patienten, das Thiazid abzusetzen und Diphenhydramin (Antihistaminikum) zur Linderung einzusetzen.  Der Arzt gibt dem Patienten eine höhere Dosis Losartan zur Blutdruckkontrolle.  Er meldet den Patienten in einer Woche zur Nachuntersuchung an und fügt seine Einschätzung in der Problemliste hinzu: "Urtikarielle Reaktion, mögliche Thiazid-Allergie". Eine Woche später kommt der Patient zur Nachuntersuchung, wobei der Juckreiz und der Ausschlag vollständig verschwunden sind.  Er berichtet, dass die Reaktion innerhalb weniger Tage nach Absetzen des Thiazids abgeklungen ist.  Der Arzt fügt der Problemliste den Vermerk "Hydrochlorothiazid-Allergie: Urtikaria; mässig kritisch, wahrscheinlich" hinzu.
 
-**FHIR Condition resource query from patient record** (Eintrag einer Urtikaria wegen einer möglichen Thiazidallergie in Problemliste)
+**FHIR Condition resource query from patient record** ([Eintrag einer Urtikaria wegen einer möglichen Thiazidallergie in Problemliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit1-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -34,7 +33,7 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
   </tr>
   <tr>
     <td class="tg-cly1">verificationStatus</td>
-    <td class="tg-cly1">provisional</td>
+    <td class="tg-cly1">unconfirmed</td>
   </tr>
   <tr>
     <td class="tg-cly1">category</td>
@@ -52,7 +51,7 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
 </table>
 
 
-**FHIR Condition resource query from patient record** (Eintrag einer Urtikaria wegen einer wahrscheinlichen Thiazidallergie in Problemliste)
+**FHIR Condition resource query from patient record** ([Eintrag einer Urtikaria wegen einer wahrscheinlichen Thiazidallergie in Problemliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit2-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -60,8 +59,7 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -91,10 +89,6 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
     <td class="tg-cly1">severity</td>
     <td class="tg-cly1">6736007 Moderate (qualifier)</td>
   </tr>
-  <tr>
-    <td class="tg-cly1">abatement[x]:abatementDateTime</td>
-    <td class="tg-cly1">2022-02-07</td>
-  </tr>
 </tbody>
 </table>
 
@@ -102,16 +96,15 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
 Szenario: Die Krankenschwester der Klinik ruft den Patienten aus Szenario 1 eine Woche später an und teilt ihm die Testergebnisse seines Besuchs mit.  Sie erkundigt sich nach der Urtikaria, und der Patient bestätigt, dass diese mit dem Absetzen des Diuretikums verschwunden ist.  Gemäss den Klinikprotokollen greift sie auf die elektronische Patientenakte zu und nimmt einen neuen Eintrag in der Allergieliste vor, die vom KIS für die Ausgabe von klinischen Verordnungswarnungen verwendet wird.  Die Software durchläuft eine Reihe von Fragen: Was war der auslösende Wirkstoff, welche Symptome oder Befunde traten bei der Reaktion auf, welche Art von Reaktion trat auf, wie hoch war der Schweregrad, die Kritikalität und wie der Verifizierungsstatus.  Die Krankenschwester beantwortet die Fragen, und in der Liste erscheint ein Allergieeintrag: "Hydrochlorothiazid; Allergie; mittlerer Schweregrad; geringer Kritikalitätsgrad; Symptome - Urtikaria".
 Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation auf, um sich über die Behandlung einer resistenten Hypertonie beraten zu lassen.  Der zweite Arzt entscheidet, dass ein ACE-Hemmer/Thiazid-Medikament für den Patienten geeignet ist.  Als der Arzt eine Verordnung für " CO-LISINOPRIL Mepha Tabl 20/12.5" erstellt und die elektronische Verordnung bestätigt, erscheint eine Warnmeldung, die eine Reaktion des Arztes erfordert und ihn vor einer Allergie gegen Hydrochlorothiazid warnt, das ein Bestandteil des Medikaments ist, das er verordnen will.  Die Warnung wird von der KIS-Software generiert, die die Allergieliste als Referenz verwendet. Der Arzt zieht die Bestellung zurück und wählt ein anderes blutdrucksenkendes Mittel.
 
-**FHIR AllergyIntolerance resource query of patient record** (Eintrag einer wahrscheinblichen Thiazidallergie in Allergieliste)
+**FHIR AllergyIntolerance resource query of patient record** ([Eintrag einer wahrscheinblichen Thiazidallergie in Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-2.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-i8ls{background-color:#ffffff;border-color:#000000;color:#333333;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-xxl9{background-color:#ffffff;border-color:#000000;color:#333333;text-align:left;vertical-align:middle}
-.tg .tg-0a7q{border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -124,10 +117,6 @@ Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation au
   <tr>
     <td class="tg-xxl9">abatement-dateTime-uv-ips</td>
     <td class="tg-xxl9">2022-02-07</td>
-  </tr>
-  <tr>
-    <td class="tg-xxl9">substance</td>
-    <td class="tg-xxl9">387525002 Hydrochlorothiazide (substance)</td>
   </tr>
   <tr>
     <td class="tg-xxl9">clinicalStatus</td>
@@ -166,8 +155,8 @@ Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation au
     <td class="tg-0a7q">moderate</td>
   </tr>
   <tr>
-    <td class="tg-0a7q">openEHR-exposureDescription</td>
-    <td class="tg-0a7q">Einnahme Diuretikum</td>
+    <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -176,15 +165,15 @@ Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation au
 
 Szenario: Ein Patient kommt in die Notaufnahme und klagt über Klingeln, Klirren und Pfeifen in seinen Ohren. Der Patient kann nicht genau sagen, wann die Geräusche entstanden sind, und er war keiner lauten Umgebung ausgesetzt. Der Patient hat eine Vorgeschichte mit chronischen Rückenschmerzen, Herzinsuffizienz und Arthritis. Bei der Durchsicht der Medikamentenliste des Patienten stellt der Arzt fest, dass der Patient täglich 12 Tabletten Aspirin einnimmt. Der Arzt vermutet, dass der Patient an einem aspirininduzierten Tinnitus leidet. Der Patient wird aufgefordert, seine Aspirindosis zu verringern und sich mit seinem Rheumatologen, der das Aspirin verschrieben hat, in Verbindung zu setzen. Im KIS vermerkt der Notfallarzt in der Diagnose- und Allergieliste, dass der Patient eine Medikamentenunverträglichkeit gegen Aspirin hat.
 
-**FHIR Condition resource query from patient record** (Eintrag einer Aspirin-Intoleranz in Problemliste)
+**FHIR Condition resource query from patient record** ([Eintrag einer Aspirin-Intoleranz in Problemliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Usecase-3.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-i8ls{background-color:#ffffff;border-color:#000000;color:#333333;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-xxl9{background-color:#ffffff;border-color:#000000;color:#333333;text-align:left;vertical-align:middle}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -217,14 +206,15 @@ Szenario: Ein Patient kommt in die Notaufnahme und klagt über Klingeln, Klirren
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Eintrag einer Aspirin-Intoleranz in Allergieliste)
+**FHIR AllergyIntolerance resource query of patient record** ([Eintrag einer Aspirin-Intoleranz in Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-3.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -275,8 +265,8 @@ Szenario: Ein Patient kommt in die Notaufnahme und klagt über Klingeln, Klirren
     <td class="tg-0lax">mild</td>
   </tr>
   <tr>
-    <td class="tg-0lax">openEHR-exposureDescription</td>
-    <td class="tg-0lax">Einnahme per os Diuretikum</td>
+    <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -287,14 +277,13 @@ Szenario: Der Patient aus Szenario 1 plant einen Urlaub mit seiner Familie, der 
 
 Später schreibt der behandelnde Arzt eine Einweisungsverfügung für den Patienten und nimmt ihn zur Beobachtung auf die Station auf.  Der Arzt stellt fest, dass der Blutdruck des Patienten mit 195/100 zu hoch ist.  Der Arzt möchte keine aggressiven Maßnahmen ergreifen, sondern entscheidet, dass der Blutdruck langsam gesenkt werden sollte.  Er stellt fest, dass die Medikamentenliste des Patienten bereits zwei Arten von Blutdruckmedikamenten enthält, und gibt eine elektronische Verordnung für "Hygroton 50 mg po täglich" ein, ein beliebtes Mittel gegen Bluthochdruck mit langsamem Wirkungseintritt.  Als der Arzt die "Enter"-Taste drückt, um die Bestellung zu bestätigen, wird eine Pop-up-Warnung vom KIS generiert, die darauf hinweist, dass dieser Patient eine allergische Reaktion auf ein Thiazid-Diuretikum in Form von Nesselsucht gezeigt hat und dass Chlortalidon (Hygroton) mit hoher Wahrscheinlichkeit eine Kreuzreaktion hervorruft.  Beim Studieren der Warnmeldung stellt der Arzt fest, dass die unterstützenden Informationen der Problemliste und der Allergieliste entnommen wurden.  Während der frühere Eintrag in der Problemliste vorläufig war, ist der spätere Eintrag in der Allergieliste als wahrscheinliche Allergie und mäßiges Risiko zu bezeichnen.  Die KIS-Arzneimittelinteraktionssoftware hat die chemische Zusammensetzung von Hydrochlorothiazid und Hygroton (Chlortalidon) abgeglichen und festgestellt, dass sie ähnlich sind.  Er entscheidet, dass die Informationen glaubwürdig sind, und ändert seine Bestellung in ein Medikament, das wahrscheinlich keine allergische Reaktion auslöst.
 
-**FHIR AllergyIntolerance resource query of patient record** (Abfrage der wahrscheinlichen Thiazidallergie aus der Allergieliste)
+**FHIR AllergyIntolerance resource query of patient record** ([Abfrage der wahrscheinlichen Thiazidallergie aus der Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-2.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -342,10 +331,14 @@ Später schreibt der behandelnde Arzt eine Einweisungsverfügung für den Patien
     <td class="tg-cly1">reaction.severity</td>
     <td class="tg-cly1">moderate</td>
   </tr>
+    <tr>
+      <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
+  </tr>
 </tbody>
 </table>
 
-**FHIR Condition resource query from imported patient record** (Abfrage der möglichen Thiazidallergie aus der Problemliste)
+**FHIR Condition resource query from imported patient record** ([Abfrage der möglichen Thiazidallergie aus der Problemliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Visit2-Usecase-1.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -353,8 +346,7 @@ Später schreibt der behandelnde Arzt eine Einweisungsverfügung für den Patien
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -399,7 +391,7 @@ Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -440,14 +432,13 @@ Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource** (Eintrag der bestätigten allergischen Neigung zu Dermatophagoides farinae-Protein in die Allergieliste)
+**FHIR AllergyIntolerance resource** ([Eintrag der bestätigten allergischen Neigung zu Katzenhaar-Protein in die Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-5.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -485,7 +476,7 @@ Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik
   </tr>
   <tr>
     <td class="tg-cly1">reaction.substance</td>
-    <td class="tg-cly1">2600152009 Cat dander (substance)</td>
+    <td class="tg-cly1">260152009 Cat dander (substance)</td>
   </tr>
   <tr>
     <td class="tg-cly1">reaction.allergyintolerance-certainty</td>
@@ -523,8 +514,7 @@ Jahre später wird der Junge von einem Dermatologen zur Behandlung von Akne unte
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -561,16 +551,15 @@ Jahre später wird der Junge von einem Dermatologen zur Behandlung von Akne unte
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Eintrag einer bestätigten Erdnuss-Öl-Allergie in Allergieliste)
+**FHIR AllergyIntolerance resource** ([Eintrag einer bestätigten Erdnuss-Öl-Allergie in Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-6.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -621,8 +610,8 @@ Jahre später wird der Junge von einem Dermatologen zur Behandlung von Akne unte
     <td class="tg-cly1">severe</td>
   </tr>
   <tr>
-    <td class="tg-cly1">reaction.openEHR-exposureDescription</td>
-    <td class="tg-cly1">per os</td>
+      <td class="tg-0a7q">reaction.exposureRoute</td>
+    <td class="tg-0a7q">26643006 "Oral route (qualifier)</td>
   </tr>
 </tbody>
 </table>
@@ -639,7 +628,6 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
@@ -678,7 +666,7 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 </tbody>
 </table>
 
-**FHIR Condition resource query from patient record** (Eintrag einer Latex-Allergie in Problemliste)
+**FHIR Condition resource query from patient record** ([Eintrag einer Latex-Allergie in Problemliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/Condition-CH-AllergyIntolerance-Condition-Usecase-7.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -686,7 +674,7 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -719,7 +707,7 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 </tbody>
 </table>
 
-**FHIR AllergyIntolerance resource query of patient record** (Eintrag eine Latex-Allergie in Allergieliste)
+**FHIR AllergyIntolerance resource query of patient record** ([Eintrag eine Latex-Allergie in Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-7.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
@@ -727,8 +715,7 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -786,6 +773,10 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
     <td class="tg-cly1">reaction.openEHR-exposureDescription</td>
     <td class="tg-cly1">Arbeit auf IPS</td>
   </tr>
+  <tr>
+    <td class="tg-cly1">reaction.exposureRoute</td>
+    <td class="tg-cly1">6064005 Topical route (qualifier)</td>
+  </tr>
 </tbody>
 </table>
 
@@ -793,16 +784,15 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 
 Szenario:  Eine Krankenschwester führt eine Aufnahmeuntersuchung bei einem Patienten durch, der neu in der Praxis ist.  Im Rahmen des klinischen Gesprächs erkundigt er sich nach Medikamenten und anderen Allergien.  Die Patientin berichtet, dass sie auf keine Medikamente, Lebensmittel, Chemikalien oder Tiere allergisch ist.  Die Krankenschwester öffnet die "Allergieliste" im KIS und dokumentiert "Keine bekannten Allergien", womit elektronisch bestätigt wird, dass die Krankenschwester sich bei der Patientin erkundigt hat und dass die Anamnese zum aufgezeichneten Datum und Zeitpunkt negativ bestätigt wurde.  Dies erfüllt die Kriterien für die Entscheidungshilfe, wonach Allergien dokumentiert werden müssen, bevor Medikamentenverordnungen geschrieben werden, und wird in der KIS-Allergieliste als bestätigte Abwesenheit von unerwünschten Reaktionen kodiert.
 
-**FHIR AllergyIntolerance resource query of patient record** (Eintrag keine bekannte Allergie in Allergieliste)
+**FHIR AllergyIntolerance resource query of patient record** ([Eintrag keine bekannte Allergie in Allergieliste](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/branches/master/AllergyIntolerance-CH-AllergyIntolerance-Usecase-8.html))
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
 .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
 .tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
-.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
 <thead>
@@ -835,26 +825,6 @@ Szenario:  Eine Krankenschwester führt eine Aufnahmeuntersuchung bei einem Pati
   <tr>
     <td class="tg-lboi">category</td>
     <td class="tg-lboi">--</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.substance</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.certainty</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.manifestation</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.severity</td>
-    <td class="tg-cly1">---</td>
-  </tr>
-  <tr>
-    <td class="tg-cly1">reaction.exposureRoute</td>
-    <td class="tg-cly1">---</td>
   </tr>
 </tbody>
 </table>
