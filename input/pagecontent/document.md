@@ -13,3 +13,10 @@ This exchange format is defined as a document type that corresponds to a Bundle 
 
 {% include img.html img="Table_IPAG.png" caption="Fig.: IPAG report ch-allergyintolerance elements" width="40%" %}
 
+#### Example instance
+* CH-AllergyIntolerance-Document-Example: [XML](Bundle-ch-allergyintolerance-document-example.xml.html), [JSON](Bundle-ch-allergyintolerance-document-example.json.html)
+
+
+
+#### Profile
+* [CH EMED Medication Treatment Plan Document Profile](StructureDefinition-ch-allergyintolerance-document-epr.html)

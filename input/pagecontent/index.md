@@ -1,6 +1,6 @@
 
 ### CH-AllergyIntolerance
-Swiss Implementation Guide for Allergy & Intolerance based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf), as well on [Allergy Intolerance IPS](http://hl7.org/fhir/uv/ips/StructureDefinition-AllergyIntolerance-uv-ips.html)  as near as reasonable and influenced further on the "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" which is or was still under contruction by the time of creating this IG.
+Swiss Implementation Guide for Allergy & Intolerance based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf), as well on [Allergy Intolerance IPS](http://hl7.org/fhir/uv/ips/StructureDefinition-AllergyIntolerance-uv-ips.html)  as near as reasonable and influenced further on the "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" which is or was still under construction by the time of creating this IG.
 
 <div markdown="1" class="stu-note">
 
@@ -20,9 +20,9 @@ The goal of this IG is
 
 The use of Must Support is in the sense of the [Guidelines for Swiss IG developments](https://github.com/hl7ch/ch-core/wiki/Guidelines-for-Swiss-IG-Developments):
 
-Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element."
+"Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element."
 
-The Must Support flags for the AllergyIntolerance resource have been set as in AllergyIntolerance IPS if also part of the IPAG recommendations. Besides that reaction.substance and category have been flaged because these fields play a importante role in the mentioned recommendations. 
+The Must Support flags for the AllergyIntolerance resource have been set as in AllergyIntolerance IPS if also part of the IPAG recommendations. Besides that reaction.substance and category have been flagged because these fields play a importante role in the mentioned recommendations. 
 
 The extensions defined by the interprofessional working group EPR (IPAG) have no must support flags in the present version but are easily identified in the differential view of the artifact.
 The expectation is that allergy specialists tend to provide more detailed information applying these extended reaction details, whereas the common MD will document rather the must support attributes.
@@ -31,7 +31,7 @@ For the Condition resource the must support flags have been set as in [Condition
 
 #### Value Sets
 
-The value sets for coding of allergies, intolerances and hypersensities and related conditions are based on the historically most common values documented in the swiss realm and stated as a definite list of findings, as well as the correspondent substances in the value set for reaction.substance. 
+The value sets for coding of allergies, intolerances and hypersensities and related conditions are based on the historically most common values documented in the swiss realm and stated as a defined list of findings, as well as the correspondent substances in the value set for reaction.substance, reviewed by the Swiss Society for Allergology and Immunology SGAI-SSAI. 
 
 Whereas this is explicitly desired by the professional representatives it is different than stated in IPS for example, where the binding is based on expanded value sets, but which has had very little real world feedback until to date. Experience and feedback is welcome therefore in this respect.
 
