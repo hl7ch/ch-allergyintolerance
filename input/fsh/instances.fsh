@@ -17479,7 +17479,7 @@ Usage: #definition
 
 Instance: CHAllergyIntoleranceValueSet
 InstanceOf: $shareablevalueset
-Title: "CHAllergyIntoleranceReactionManifestationValueSet"
+Title: "CHAllergyIntoleranceValueSet"
 Description: "CH Allergy intolerance codng value set. This value set includes codes values  from SNOMED Clinical Terms® for no known [xy] allergies AND findings AND substances for the documentation of allergy or intolerance"
 Usage: #definition
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.1.11.82--20200925110235"

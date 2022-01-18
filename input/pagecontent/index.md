@@ -1,6 +1,12 @@
 
 ### CH-AllergyIntolerance
-Swiss Implementation Guide for Allergy & Intolerance based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf), as well on [Allergy Intolerance IPS](http://hl7.org/fhir/uv/ips/StructureDefinition-AllergyIntolerance-uv-ips.html)  as near as reasonable and influenced further on the [Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance](https://confluence.ihtsdotools.org/download/attachments/137249355/Allergy%20Guide%20v20211021%20combined%20BG.docx?version=3&modificationDate=1640026961000&api=v2) which is or was still under contruction by the time of creating this IG.
+Swiss Implementation Guide for Allergy & Intolerance based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf), as well on [Allergy Intolerance IPS](http://hl7.org/fhir/uv/ips/StructureDefinition-AllergyIntolerance-uv-ips.html)  as near as reasonable and influenced further on the "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" which is or was still under construction by the time of creating this IG.
+
+<div markdown="1" class="stu-note">
+
+[Significant Changes, Open and Closed Issues](changelog.html)
+
+</div>
 
 **Download**: You can download this implementation guide in npm format from [here](package.tgz).
 
@@ -12,18 +18,20 @@ The goal of this IG is
 
 #### Must Support
 
-The Must Support flags have been set as in AllergyIntolerance IPS plus reaction.substance which has its own value set for substances, whereas the value set for AllergyIntolerance.code is based on the corresponding findings, which can be used also to document conditions with relation to allergies or intolerances.
+The use of Must Support is in the sense of the [Guidelines for Swiss IG developments](https://github.com/hl7ch/ch-core/wiki/Guidelines-for-Swiss-IG-Developments):
 
-In general there is a tendency to use less must support flags and to clarify their usage.
-The use of Must Support is in the sense of the [Guidelines for Swiss IG developments](https://github.com/hl7ch/ch-core/wiki/Guidelines-for-Swiss-IG-Developments).
+"Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element."
 
-In this sense a Minimal Data Set has not (yet) been provided. The extensions defined by the interprofessional working group EPR (IPAG) have no must support flags in the present version but are easily identified in the differential view of the artifact.
+The Must Support flags for the AllergyIntolerance resource have been set as in AllergyIntolerance IPS if also part of the IPAG recommendations. Besides that reaction.substance and category have been flagged because these fields play a importante role in the mentioned recommendations. 
 
+The extensions defined by the interprofessional working group EPR (IPAG) have no must support flags in the present version but are easily identified in the differential view of the artifact.
 The expectation is that allergy specialists tend to provide more detailed information applying these extended reaction details, whereas the common MD will document rather the must support attributes.
+
+For the Condition resource the must support flags have been set as in [Condition IPS](https://hl7.org/fhir/uv/ips/StructureDefinition-Condition-uv-ips.html).
 
 #### Value Sets
 
-The value sets for coding of allergies, intolerances and hypersensities and related conditions are based on the historically most common values documented in the swiss realm and stated as a definite list of findings, as well as the correspondent substances in the value set for reaction.substance. 
+The value sets for coding of allergies, intolerances and hypersensities and related conditions are based on the historically most common values documented in the swiss realm and stated as a defined list of findings, as well as the correspondent substances in the value set for reaction.substance, reviewed by the Swiss Society for Allergology and Immunology SGAI-SSAI. 
 
 Whereas this is explicitly desired by the professional representatives it is different than stated in IPS for example, where the binding is based on expanded value sets, but which has had very little real world feedback until to date. Experience and feedback is welcome therefore in this respect.
 
@@ -35,4 +43,4 @@ Respective examples provided in the Implementation Guide for Use of SNOMED CT in
 
 #### Copyright
 
-This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.
+This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact Swiss NRC, www.e-health-suisse.ch/snomedct and snomed@e-health-suisse.ch
