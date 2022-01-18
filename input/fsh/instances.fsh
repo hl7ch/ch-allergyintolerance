@@ -1,4 +1,33 @@
 
+
+
+Instance: CH-AllergyIntolerance-Document-Example
+InstanceOf: CHAllergyIntoleranceDocumentEPR
+Title: "CH-AllergyIntolerance-Document-Example"
+Description: "Example for Bundle"
+Usage: #example
+* id = "ch-allergyintolerance-document-example"
+* meta.lastUpdated = "2022-01-15T14:30:48.139+00:00"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:2eadef87-8850-46e5-9557-1e08dcfaa759"
+* type = #document
+* timestamp = "2022-01-12T18:00:00+01:00"
+* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/CH-AllergyIntoleranceComposition"
+* entry[=].resource = CH-AllergyIntolerance-Composition-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmueller"
+* entry[=].resource = CH-AllergyIntolerance-Patient-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt"
+* entry[=].resource = CH-AllergyIntolerance-Practitioner-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Hausarzt"
+* entry[=].resource = CH-AllergyIntolerance-Organization-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Custodian"
+* entry[=].resource = CH-AllergyIntolerance-Custodian-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"
+* entry[=].resource = CH-AllergyIntolerance-PatientRecipient-Inline-Instance
+* entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/CHAllergyIntoleranceInstance"
+* entry[=].resource = CH-AllergyIntolerance-Usecase-5-Inline-Instance
+
+
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
@@ -9,11 +38,11 @@ Usage: #example
 * extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
 * extension.valueReference = Reference(ElisabethBroennimannByBFH)
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"
+* identifier.value = "urn:uuid:4356b15f-4061-49d9-80bf-b84d23113a6a"
 * status = #final
 * type.coding[0] = $sct#722446000 "Allergy record (record artifact)"
 * subject = Reference(ElisabethBroennimannByBFH)
-* date = "2012-02-04T14:00:00+01:00"
+* date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
 * author[=] = Reference(FamilienHausarzt)
@@ -25,11 +54,142 @@ Usage: #example
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
-/*
-* section.text.status = #generated
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table>\n          <thead>\n            <tr>\n              <th>Präpartename</th>\n              <th>Wirkstoffname</th>\n              <th>Galenische Form</th>\n              <th>Dosis pro Einheit</th>\n              <th>Dosierung</th>\n              <th>Dos.Morgen</th>\n              <th>Dos.Mittag</th>\n              <th>Dos.Abend</th>\n              <th>Dos.Nacht</th>\n              <th>Verabreichungsweg</th>\n              <th>Kommentar</th>\n              <th>Anwendungsdauer</th>\n              <th>Behandlungsgrund</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr id=\"mtp.1\">\n              <td id=\"mtp.1.brandedmedication\">Norvasc</td>\n              <td id=\"mtp.1.ingredient\">Amlodipin</td>\n              <td id=\"mtp.1.packageform\">Tbl</td>\n              <td id=\"mtp.1.dosequantity\">10 mg</td>\n              <td id=\"mtp.1.dosageintakemode\">Morgens und abends je 1 Tablette nehmen</td>\n              <td id=\"mtp.1.dosagemorning\">1</td>\n              <td id=\"mtp.1.dosagelunch\">0</td>\n              <td id=\"mtp.1.dosageevening\">1</td>\n              <td id=\"mtp.1.dosagenight\">0</td>\n              <td id=\"mtp.1.routecode\">oral</td>\n              <td id=\"mtp.1.note\"/>\n              <td id=\"mtp.1.datefromto\"/>\n              <td id=\"mtp.1.reason\">Bluthochdruck</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
-*/
 * section.entry = Reference(CH-AllergyIntolerance-IPAG-Recommendation-Table-1)
+
+Instance: CH-AllergyIntolerance-Composition-Inline-Instance
+InstanceOf: Composition
+Usage: #inline
+* id = "ch-allergyintolerance-composition-example"
+* language = #de-CH
+* extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
+* extension.valueReference = Reference(MonikaWegmuellerRecipient)
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:4356b15f-4061-49d9-80bf-b84d23113a6a"
+* status = #final
+* type.coding[0] = $sct#722446000 "Allergy record (record artifact)"
+* subject = Reference(MonikaWegmueller)
+* date = "2022-01-12T17:00:00+01:00"
+* author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
+* author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
+* author[=] = Reference(FamilienHausarzt)
+* author[+] = Reference(Hausarzt)
+* title = "Allergies and adverse reactions Document"
+* confidentiality = #N
+* confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
+* custodian = Reference(Custodian)
+* section.title = "Allergy Intolerance"
+* section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section.entry = Reference(CH-AllergyIntolerance-Usecase-5-Inline-Instance)
+
+Instance: CH-AllergyIntolerance-Patient-Inline-Instance
+InstanceOf: Patient
+Usage: #inline
+* id = "MonikaWegmueller"
+* identifier.type = $v2-0203#MR
+* identifier.system = "urn:oid:2.999.1"
+* identifier.value = "11111111"
+* name.family = "Wegmüller"
+* name.given = "Monika"
+* gender = #female
+* birthDate = "1943-05-15"
+* address.line = "Wiesenstr. 12"
+* address.city = "Zürich"
+* address.postalCode = "8003"
+* address.country = "CH"
+
+Instance: CH-AllergyIntolerance-Practitioner-Inline-Instance
+InstanceOf: Practitioner
+Usage: #inline
+* id = "FamilienHausarzt"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name.family = "Hausarzt"
+* name.given = "Familien"
+* address.line = "Krankenstrasse 2"
+* address.city = "Zürich"
+* address.postalCode = "8005"
+* address.country = "CH"
+
+Instance: CH-AllergyIntolerance-Organization-Inline-Instance
+InstanceOf: Organization
+Usage: #inline
+* id = "Hausarzt"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name = "Hausarzt"
+* address.line = "Krankenstrasse 2"
+* address.city = "Zürich"
+* address.postalCode = "8005"
+* address.country = "CH"
+
+Instance: CH-AllergyIntolerance-Custodian-Inline-Instance
+InstanceOf: Organization
+Usage: #inline
+* id = "Custodian"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234438"
+* name = "Hausarzt"
+
+Instance: CH-AllergyIntolerance-PatientRecipient-Inline-Instance
+InstanceOf: Patient
+Usage: #inline
+* id = "MonikaWegmuellerRecipient"
+* name.family = "Wegmüller"
+* name.given = "Monika"
+* address.line = "Wiesenstr. 12"
+* address.city = "Zürich"
+* address.postalCode = "8003"
+* address.country = "CH"
+
+Instance: CH-AllergyIntolerance-Usecase-5-Inline-Instance
+InstanceOf: AllergyIntolerance
+Usage: #inline
+* clinicalStatus = $allergyintolerance-clinical#active "Active"
+* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+* type = #allergy
+* category = #biologic
+* criticality = #low
+* code = $sct#232346004 "Allergy to cat dander (finding)"
+* patient.reference = "Patient/MonikaWegmueller"
+* reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
+* reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
+* reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
+* reaction.extension[=].valueString = "Animal shelter"
+* reaction.substance = $sct#260152009 "Cat dander (substance)"
+* reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
+* reaction.severity = #mild
+
+Instance: ElisabethBroennimannByBFH
+InstanceOf: $ch-core-patient
+Usage: #example
+* meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b>id</b>: ElisabethBroennimannByBFH\n      </p>\n      <p>\n        <b>meta</b>: \n      </p>\n      <p>\n        <b>name</b>: Elisabeth Brönnimann-Bertholet \n      </p>\n      <p>\n        <b>telecom</b>: ph: +41 32 321 61 11(HOME), elisabeth@broennimann.today\n      </p>\n      <p>\n        <b>gender</b>: FEMALE\n      </p>\n      <p>\n        <b>birthDate</b>: May 3, 1937\n      </p>\n      <p>\n        <b>address</b>: Kreuzweg 11 Biel/Bienne 2500 (HOME)\n      </p>\n      <p>\n        <b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '2' = '2', given as 'verheiratet'}; {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus code 'M' = 'Married', given as 'married'})</span>\n      </p>\n    </div>"
+* name.family = "Brönnimann-Bertholet"
+* name.given = "Elisabeth"
+* telecom[0].system = #phone
+* telecom[=].value = "+41 32 321 61 11"
+* telecom[=].use = #home
+* telecom[+].system = #email
+* telecom[=].value = "elisabeth@broennimann.today"
+* gender = #female
+* birthDate = "1937-05-03"
+* address.use = #home
+* address.line = "Kreuzweg 11"
+* address.city = "Biel/Bienne"
+* address.postalCode = "2500"
+* maritalStatus.coding[0] = $ech-11-maritalstatus#2 "verheiratet"
+* maritalStatus.coding[+] = $v3-MaritalStatus#M "married"
+* generalPractitioner.reference = "Practitioner/AgparMarc"
+
+Instance: AgparMarc
+InstanceOf: $ch-core-practitioner
+Usage: #example
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000050717"
+* name.family = "Agpar"
+* name.given = "Marc"
 
 Instance: Hausarzt
 InstanceOf: CHCoreOrganizationEPR
@@ -66,6 +226,36 @@ Usage: #definition
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000234438"
 * name = "Hausarzt"
+
+Instance: MonikaWegmueller
+InstanceOf: CHCorePatientEPR
+Title: "Monika Wegmueller"
+Description: "Example for Patient"
+Usage: #definition
+* identifier.type = $v2-0203#MR
+* identifier.system = "urn:oid:2.999.1"
+* identifier.value = "11111111"
+* name.family = "Wegmüller"
+* name.given = "Monika"
+* gender = #female
+* birthDate = "1943-05-15"
+* address.line = "Wiesenstr. 12"
+* address.city = "Zürich"
+* address.postalCode = "8003"
+* address.country = "CH"
+
+
+Instance: MonikaWegmuellerRecipient
+InstanceOf: CHCorePatient
+Title: "Monika Wegmueller as Information Recipient"
+Description: "Example for Patient"
+Usage: #definition
+* name.family = "Wegmüller"
+* name.given = "Monika"
+* address.line = "Wiesenstr. 12"
+* address.city = "Zürich"
+* address.postalCode = "8003"
+* address.country = "CH"
 
 Instance: CH-AllergyIntolerance-IPAG-Recommendation-Table-1
 InstanceOf: $ch-allergyintolerance
@@ -178,13 +368,14 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-5
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+/* contained = CH-AllergyIntolerance-Usecase-5-Inline-Instance*/
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #allergy
 * category = #biologic
 * criticality = #low
 * code = $sct#232346004 "Allergy to cat dander (finding)"
-* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* patient.reference = "Patient/MonikaWegmueller"
 * reaction.extension[0].url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty"
 * reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
@@ -260,37 +451,6 @@ Usage: #example
 * code = $sct#716186003 "No known allergy (situation)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
 
-
-Instance: ElisabethBroennimannByBFH
-InstanceOf: $ch-core-patient
-Usage: #example
-* meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b>id</b>: ElisabethBroennimannByBFH\n      </p>\n      <p>\n        <b>meta</b>: \n      </p>\n      <p>\n        <b>name</b>: Elisabeth Brönnimann-Bertholet \n      </p>\n      <p>\n        <b>telecom</b>: ph: +41 32 321 61 11(HOME), elisabeth@broennimann.today\n      </p>\n      <p>\n        <b>gender</b>: FEMALE\n      </p>\n      <p>\n        <b>birthDate</b>: May 3, 1937\n      </p>\n      <p>\n        <b>address</b>: Kreuzweg 11 Biel/Bienne 2500 (HOME)\n      </p>\n      <p>\n        <b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '2' = '2', given as 'verheiratet'}; {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus code 'M' = 'Married', given as 'married'})</span>\n      </p>\n    </div>"
-* name.family = "Brönnimann-Bertholet"
-* name.given = "Elisabeth"
-* telecom[0].system = #phone
-* telecom[=].value = "+41 32 321 61 11"
-* telecom[=].use = #home
-* telecom[+].system = #email
-* telecom[=].value = "elisabeth@broennimann.today"
-* gender = #female
-* birthDate = "1937-05-03"
-* address.use = #home
-* address.line = "Kreuzweg 11"
-* address.city = "Biel/Bienne"
-* address.postalCode = "2500"
-* maritalStatus.coding[0] = $ech-11-maritalstatus#2 "verheiratet"
-* maritalStatus.coding[+] = $v3-MaritalStatus#M "married"
-* generalPractitioner.reference = "Practitioner/AgparMarc"
-
-Instance: AgparMarc
-InstanceOf: $ch-core-practitioner
-Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000050717"
-* name.family = "Agpar"
-* name.given = "Marc"
 
 Instance: allergyintolerance-clinical-supplement
 InstanceOf: CodeSystem
