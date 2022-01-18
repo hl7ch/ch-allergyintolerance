@@ -11,11 +11,11 @@ status: active
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2021-06-17
-version: 0.2.0
+date: 2022-01-18
+version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 1 Ballot
+releaseLabel: STU 1
 publisher:
   name: HL7 Switzerland
 contact:
@@ -29,7 +29,7 @@ dependencies:
     version: 1.0.0
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
     id: ips
-  ch.fhir.ig.ch-epr-term: 2.0.5
+
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
