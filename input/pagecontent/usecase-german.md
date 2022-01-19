@@ -496,7 +496,7 @@ Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik
   </tr>
   <tr>
     <td class="tg-cly1">openEHR-exposureDescription</td>
-    <td class="tg-cly1">Animal shelter</td>
+    <td class="tg-cly1">Tierheim</td>
   </tr>
 </tbody>
 </table>
