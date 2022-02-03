@@ -17480,7 +17480,7 @@ Usage: #definition
 Instance: CHAllergyIntoleranceValueSet
 InstanceOf: $shareablevalueset
 Title: "CHAllergyIntoleranceValueSet"
-Description: "CH Allergy intolerance codng value set. This value set includes codes values  from SNOMED Clinical Terms® for no known [xy] allergies AND findings AND substances for the documentation of allergy or intolerance"
+Description: "CH Allergy intolerance coding value set. This value set includes codes values  from SNOMED Clinical Terms® for no known [xy] allergies AND findings AND substances for the documentation of allergy or intolerance"
 Usage: #definition
 * meta.source = "http://art-decor.org/fhir/ValueSet/2.16.756.5.30.1.1.11.82--20200925110235"
 * url = "http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceValueSet"
@@ -17493,7 +17493,7 @@ Usage: #definition
 * contact.name = "FHIR project team"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.hl7.ch/" 
-* description = "Value set including translations of CHAllergyIntolerance reaction manifestation"
+* description = "Value set including translations for CHAllergyIntolerance coding."
 * jurisdiction = urn:iso:std:iso:3166#CH
 * compose.include.system = "http://snomed.info/sct"
 * compose.include.concept[0].code = #716186003
@@ -17580,7 +17580,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "aespletare"
 */
-* compose.include.concept[0].code = #11861000122107
+* compose.include.concept[+].code = #11861000122107
 * compose.include.concept[=].display = "Allergy to pantoprazole (finding)"
 /*
 * compose.include.concept[=].designation[+].language = #en-US
