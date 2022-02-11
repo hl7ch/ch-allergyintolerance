@@ -1,5 +1,4 @@
-**Note**
-The translations of most of the ValueSets are pending. The relevant language for them at the moment is **english**.
+
 
 ## Background
 Based on the recommendations of the international expert group ["Allergies/Hypersensitivity and Intolerance Clinical Reference Group"](https://confluence.ihtsdotools.org/pages/viewpage.action?pageId=40143192), the value sets for this exchange format were compiled according to their "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance".
