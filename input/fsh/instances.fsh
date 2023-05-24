@@ -333,7 +333,7 @@ Usage: #example
 * reaction.substance = $sct#387525002 "Hydrochlorothiazide (substance)"
 * reaction.manifestation[0] = $sct#126485001 "Urticaria (disorder)"
 * reaction.severity = #moderate
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Condition-Usecase-3
 InstanceOf: ch-allergyintolerance-condition
