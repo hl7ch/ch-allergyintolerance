@@ -5,7 +5,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Value Sets
 * [Issue 66](https://github.com/hl7ch/ch-allergyintolerance/issues/66) - Correction of two codes
 
-
 ### STU 1 Ballot
 
 #### Added
