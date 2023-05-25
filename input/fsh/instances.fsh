@@ -19239,7 +19239,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à la zopiclone"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen zopiclon"
+* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia allo zopiclone"
 
@@ -43320,7 +43320,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à la zopiclone"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen zopiclon"
+* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia allo zopiclone"
 
