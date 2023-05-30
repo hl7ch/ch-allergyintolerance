@@ -77,7 +77,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * extension ^slicing.discriminator[0].path = "url"
 * extension ^slicing.rules = #open
 /* * extension[setId] ^short = "Set ID" */
-* extension[versionNumber] ^short = "Version number"
+/* * extension[versionNumber] ^short = "Version number" */
 * extension[informationRecipient] ^short = "A recipient of this document (person or organization)"
 * extension[dataEnterer] ^short = "Person who entered information into this document if it is a person other than the author"
 * identifier ^short = "Identification number of the document"
