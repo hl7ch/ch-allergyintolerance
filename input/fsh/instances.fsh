@@ -50,7 +50,7 @@ Usage: #example
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -76,7 +76,7 @@ Usage: #inline
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -333,7 +333,7 @@ Usage: #example
 * reaction.substance = $sct#387525002 "Hydrochlorothiazide (substance)"
 * reaction.manifestation[0] = $sct#126485001 "Urticaria (disorder)"
 * reaction.severity = #moderate
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Condition-Usecase-3
 InstanceOf: ch-allergyintolerance-condition
@@ -361,9 +361,9 @@ Usage: #example
 * reaction.extension[=].valueString = "oral taken diuretic"*/
 * reaction.substance = $sct#387458008 "Aspirin (substance)"
 * reaction.manifestation[0] = $sct#60862001 "Tinnitus (finding)"
-* reaction.manifestation[+] = $sct#418363000 "Itching of skin(finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
 * reaction.severity = #mild
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Usecase-5
 InstanceOf: $ch-allergyintolerance
@@ -399,7 +399,7 @@ Usage: #example
 * reaction.substance = $sct#417889008 "Arachis oil (substance)"
 * reaction.manifestation[0] = $sct#39579001 "Anaphylaxis (disorder)"
 * reaction.severity = #severe
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
 
 /*Instance: CH-AllergyIntolerance-Observation-Usecase-7
 InstanceOf: Observation
@@ -419,7 +419,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
+* severity = $sct#6736007 "Moderate (qualifier)"
 * code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
@@ -437,11 +437,11 @@ Usage: #example
 * reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
 * reaction.extension[=].valueString = "Works in ICU"
-* reaction.substance = $sct#1003751008 "Hevea brasiliensis latex (substance)"
+* reaction.substance = $sct#1003751008 "Hevea barasiliensis latex (substance)"
 * reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
-* reaction.manifestation[+] = $sct#418363000 "Itching of skin (finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
 * reaction.severity = #mild
-* reaction.exposureRoute = $sct#6064005 "Topical route (qualifier value)"
+* reaction.exposureRoute = $sct#6064005 "Topical route (qualifier)"
 
 Instance: CH-AllergyIntolerance-Usecase-8
 InstanceOf: $ch-allergyintolerance
@@ -10915,7 +10915,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "nitrofurazone"
 
-* compose.include.concept[+].code = #387189002
+* compose.include.concept[+].code = #87189002
 * compose.include.concept[=].display = "Gemfibrozil (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
@@ -17444,7 +17444,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "iotrolan"
 
 * compose.include.concept[+].code = #767234009
-* compose.include.concept[=].display = "Gadolinium and gadolinium compound (substance)"
+* compose.include.concept[=].display = "Gadolinium and/or gadolinium compound (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Gadolinium and gadolinium compound"
@@ -19239,7 +19239,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à la zopiclone"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
+* compose.include.concept[=].designation[=].value = "Allergie gegen zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia allo zopiclone"
 
@@ -19251,7 +19251,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à l'amobarbital"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen Amobarbital"
+* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia all’amobarbital"
 
@@ -24547,7 +24547,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia alle noci"
 
-* compose.include.concept[+].code = #294031004
+* compose.include.concept[+].code = #94031004
 * compose.include.concept[=].display = "Allergy to xylometazoline (finding)"
 
 * compose.include.concept[=].designation[0].language = #en-US
@@ -34987,7 +34987,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "nitrofurazone"
 
-* compose.include.concept[+].code = #387189002
+* compose.include.concept[+].code = #87189002
 * compose.include.concept[=].display = "Gemfibrozil (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
@@ -41516,7 +41516,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "iotrolan"
 
 * compose.include.concept[+].code = #767234009
-* compose.include.concept[=].display = "Gadolinium and gadolinium compound (substance)"
+* compose.include.concept[=].display = "Gadolinium and/or gadolinium compound (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Gadolinium and gadolinium compound"
@@ -43320,7 +43320,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à la zopiclone"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
+* compose.include.concept[=].designation[=].value = "Allergie gegen zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia allo zopiclone"
 
@@ -43332,7 +43332,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #fr-CH
 * compose.include.concept[=].designation[=].value = "allergie à l'amobarbital"
 * compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen Amobarbital"
+* compose.include.concept[=].designation[=].value = "Allergie gegen Zopiclon"
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia all’amobarbital"
 
@@ -48628,7 +48628,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia alle noci"
 
-* compose.include.concept[+].code = #294031004
+* compose.include.concept[+].code = #94031004
 * compose.include.concept[=].display = "Allergy to xylometazoline (finding)"
 
 * compose.include.concept[=].designation[0].language = #en-US
