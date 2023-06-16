@@ -50,7 +50,7 @@ Usage: #example
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal"
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -76,7 +76,7 @@ Usage: #inline
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal"
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -333,7 +333,7 @@ Usage: #example
 * reaction.substance = $sct#387525002 "Hydrochlorothiazide (substance)"
 * reaction.manifestation[0] = $sct#126485001 "Urticaria (disorder)"
 * reaction.severity = #moderate
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Condition-Usecase-3
 InstanceOf: ch-allergyintolerance-condition
@@ -361,9 +361,9 @@ Usage: #example
 * reaction.extension[=].valueString = "oral taken diuretic"*/
 * reaction.substance = $sct#387458008 "Aspirin (substance)"
 * reaction.manifestation[0] = $sct#60862001 "Tinnitus (finding)"
-* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching of skin (finding)"
 * reaction.severity = #mild
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Usecase-5
 InstanceOf: $ch-allergyintolerance
@@ -399,7 +399,7 @@ Usage: #example
 * reaction.substance = $sct#417889008 "Arachis oil (substance)"
 * reaction.manifestation[0] = $sct#39579001 "Anaphylaxis (disorder)"
 * reaction.severity = #severe
-* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier)"
+* reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
 
 /*Instance: CH-AllergyIntolerance-Observation-Usecase-7
 InstanceOf: Observation
@@ -419,7 +419,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate (qualifier)"
+* severity = $sct#6736007 "Moderate (qualifier value)"
 * code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
@@ -437,11 +437,11 @@ Usage: #example
 * reaction.extension[=].valueCodeableConcept = $allergyintolerance-certainty#confirmed "Confirmed"
 * reaction.extension[+].url = "http://hl7.org/fhir/StructureDefinition/openEHR-exposureDescription"
 * reaction.extension[=].valueString = "Works in ICU"
-* reaction.substance = $sct#1003751008 "Hevea barasiliensis latex (substance)"
+* reaction.substance = $sct#1003751008 "Hevea brasiliensis latex (substance)"
 * reaction.manifestation[0] = $sct#271807003 "Eruption of skin (disorder)"
-* reaction.manifestation[+] = $sct#418363000 "Itching (finding)"
+* reaction.manifestation[+] = $sct#418363000 "Itching of skin (finding)"
 * reaction.severity = #mild
-* reaction.exposureRoute = $sct#6064005 "Topical route (qualifier)"
+* reaction.exposureRoute = $sct#6064005 "Topical route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Usecase-8
 InstanceOf: $ch-allergyintolerance
