@@ -19,4 +19,4 @@ This exchange format is defined as a document type that corresponds to a Bundle 
 
 
 #### Profile
-* [CH EMED Medication Treatment Plan Document Profile](StructureDefinition-ch-allergyintolerance-document-epr.html)
+* [CH Allergy Intolerance Document Profile](StructureDefinition-ch-allergyintolerance-document-epr.html)
