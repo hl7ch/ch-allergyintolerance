@@ -419,7 +419,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate (qualifier value)"
+* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
