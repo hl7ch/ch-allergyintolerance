@@ -6,6 +6,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue 66](https://github.com/hl7ch/ch-allergyintolerance/issues/66) - Error in DE translation corrected
 * [Issue 67](https://github.com/hl7ch/ch-allergyintolerance/issues/67) - Correction of two codes
 
+#### Fixed
+* [Issue 75](https://github.com/hl7ch/ch-allergyintolerance/issues/75) - Link name adjusted
+  
 ### STU 1 Ballot
 
 #### Added
