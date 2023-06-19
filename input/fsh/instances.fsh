@@ -677,7 +677,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance category"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #supplement
+* content = #complete
 * supplements = $allergyintolerance-category
 * concept[0].code = #food
 * concept[=].display = "Food"
