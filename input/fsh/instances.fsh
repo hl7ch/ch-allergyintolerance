@@ -467,7 +467,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance clinical status"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #complete
+* content = #supplement
 * supplements = $allergyintolerance-clinical
 * concept[0].code = #active
 * concept[=].display = "Active"
@@ -509,7 +509,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance verification status"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #complete
+* content = #supplement
 * supplements = $allergyintolerance-verification
 * concept[0].code = #unconfirmed
 * concept[=].display = "Unconfirmed"
@@ -559,7 +559,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance type"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #complete
+* content = #supplement
 * supplements = $allergyintolerance-type
 * concept[0].code = #allergy
 * concept[=].display = "Allergy"
@@ -593,7 +593,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance criticality status"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #complete
+* content = #supplement
 * supplements = $allergyintolerance-criticality
 * concept[0].code = #low
 * concept[=].display = "Low Risk"
@@ -635,7 +635,7 @@ Usage: #definition
 * contact.telecom.value = "https://www.hl7.ch/" 
 * description = "Code supplement with translations of CHAllergyIntolerance severity status"
 * jurisdiction = urn:iso:std:iso:3166#CH
-* content = #complete
+* content = #supplement
 * supplements = $allergyintolerance-severity
 * concept[0].code = #mild
 * concept[=].display = "Mild"
