@@ -9,7 +9,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Fixed
 * [Issue 75](https://github.com/hl7ch/ch-allergyintolerance/issues/75) - Link name adjusted
 
-### Changed / Updated
+#### Changed / Updated
 * [Issue 77](https://github.com/hl7ch/ch-allergyintolerance/issues/77) - Change license for IG to CC0 1.0
 
 ### STU 1 Ballot
