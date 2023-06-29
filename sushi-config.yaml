@@ -8,14 +8,14 @@ name: CH-AllergyIntolerance
 title: "CH-AllergyIntolerance (R4)"
 description: Implementation guide CH-AllergyIntolerance (R4)
 status: active
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2022-02-11
-version: 1.1.0
+date: 2023-06-29
+version: 2.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 2
+releaseLabel: ballot
 publisher:
   name: HL7 Switzerland
 contact:
@@ -24,7 +24,8 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-core: 4.0.0-ballot
+  hl7.terminology: 5.1.0
   hl7.fhir.uv.ips:
     version: 1.0.0
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
@@ -53,4 +54,3 @@ pages:
     title: Terminology
   changelog.md:
     title: Change Log
-  

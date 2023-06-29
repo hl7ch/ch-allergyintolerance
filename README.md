@@ -240,7 +240,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * ^contact[0].telecom[0].system = #url
 * ^contact[0].telecom[0].value = "https://www.hl7.ch"
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 * . ^short = "CH Allergy Intolerance  Composition"
 
 * type = $SCT#722446000 "Allergy record (record artifact)"
@@ -266,7 +266,7 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * ^contact[0].telecom[0].system = #url
 * ^contact[0].telecom[0].value = "https://www.hl7.ch"
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 * . ^short = "CH Allergy Intolerance  Document"
 
 * entry[Composition] 1..1

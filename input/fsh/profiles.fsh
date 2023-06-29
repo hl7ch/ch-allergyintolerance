@@ -70,7 +70,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * ^contact[0].telecom[0].system = #url
 * ^contact[0].telecom[0].value = "https://www.hl7.ch"
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 * . ^short = "CH Allergy Intolerance  Composition"
 * language ^short = "Language of the document"
 * extension ^slicing.discriminator[0].type = #value
@@ -158,7 +158,7 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * ^contact[0].telecom[0].system = #url
 * ^contact[0].telecom[0].value = "https://www.hl7.ch"
 * ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC-BY-SA-4.0"
+* ^copyright = "CC0-1.0"
 * . ^short = "CH Allergy Intolerance  Document"
 * identifier 1..
 * identifier ^short = "Identification number of the document"
