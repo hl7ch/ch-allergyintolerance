@@ -3,13 +3,15 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 2 Ballot
 
 #### Value Sets
-* [Issue 66](https://github.com/hl7ch/ch-allergyintolerance/issues/66) - Error in DE translation corrected
+* [Issue 66](https://github.com/hl7ch/ch-allergyintolerance/issues/66) - Mistake in the german translation
 * [Issue 67](https://github.com/hl7ch/ch-allergyintolerance/issues/67) - Correction of two codes
-* Change license for ImplementationGuide / StructureDefinition to CC0 1.0 Universal (CC0 1.0)
 
 #### Fixed
 * [Issue 75](https://github.com/hl7ch/ch-allergyintolerance/issues/75) - Link name adjusted
-  
+
+#### Changed / Updated
+* [Issue 77](https://github.com/hl7ch/ch-allergyintolerance/issues/77) - Change license for IG to CC0 1.0
+
 ### STU 1 Ballot
 
 #### Added
