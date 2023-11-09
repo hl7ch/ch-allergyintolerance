@@ -22261,7 +22261,7 @@ Usage: #definition
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Allergy to carbimazole"
 * compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "allergyie au carbimazole"
+* compose.include.concept[=].designation[=].value = "allergie au carbimazole"
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Allergie gegen Carbimazol"
 * compose.include.concept[=].designation[+].language = #it-CH
@@ -41678,7 +41678,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Keine bekannte Allergie gegen Tiere"
 * compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "nessuna allergia  agli animali nota "
+* compose.include.concept[=].designation[=].value = "nessuna allergia agli animali nota "
 
 * compose.include.concept[+].code = #428197003
 * compose.include.concept[=].display = "No known insect allergy (situation)"
@@ -45814,7 +45814,7 @@ Usage: #definition
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Allergy to ceftriaxone"
 * compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "Allergy to ceftriaxone"
+* compose.include.concept[=].designation[=].value = "allergie to ceftriaxone"
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Allergie gegen Ceftriaxon"
 * compose.include.concept[=].designation[+].language = #it-CH
@@ -46762,7 +46762,7 @@ Usage: #definition
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Allergy to clomifene"
 * compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "allergie au clomifène "
+* compose.include.concept[=].designation[=].value = "allergie au clomifène"
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Allergie gegen Clomifen"
 * compose.include.concept[=].designation[+].language = #it-CH
@@ -47764,18 +47764,6 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia alla carota"
 
-* compose.include.concept[+].code = #42017400
-* compose.include.concept[=].display = "Allergy to wheat (finding)"
-
-* compose.include.concept[=].designation[0].language = #en-US
-* compose.include.concept[=].designation[=].value = "Allergy to wheat"
-* compose.include.concept[=].designation[+].language = #fr-CH
-* compose.include.concept[=].designation[=].value = "allergie aux céréales"
-* compose.include.concept[=].designation[+].language = #de-CH
-* compose.include.concept[=].designation[=].value = "Allergie gegen Weizen"
-* compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "allergia al grano"
-
 * compose.include.concept[+].code = #420174000
 * compose.include.concept[=].display = "Allergy to wheat (finding)"
 
@@ -48628,7 +48616,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "allergia alle noci"
 
-* compose.include.concept[+].code = #94031004
+* compose.include.concept[+].code = #294031004
 * compose.include.concept[=].display = "Allergy to xylometazoline (finding)"
 
 * compose.include.concept[=].designation[0].language = #en-US
@@ -49192,7 +49180,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "reazione avversa a mezzo di contrasto della tomografia a risonanza magnetica"
 
-* compose.include.concept[+].code = #16224591000119100
+* compose.include.concept[+].code = #16224591000119103
 * compose.include.concept[=].display = "Allergy to honey bee venom (finding)"
 
 * compose.include.concept[=].designation[0].language = #en-US
