@@ -34975,7 +34975,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "nitrofurazone"
 
-* compose.include.concept[+].code = #87189002
+* compose.include.concept[+].code = #387189002
 * compose.include.concept[=].display = "Gemfibrozil (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
