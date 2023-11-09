@@ -834,7 +834,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "tosse"
 * compose.include.concept[+].code = #51599000
-* compose.include.concept[=].display = "Edema of larynx "
+* compose.include.concept[=].display = "Edema of larynx (disorder)"
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Edema of larynx"
 * compose.include.concept[=].designation[+].language = #fr-CH
@@ -864,7 +864,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "rinite"
 * compose.include.concept[+].code = #73442001
-* compose.include.concept[=].display = "Stevens-Johnson syndrome"
+* compose.include.concept[=].display = "Stevens-Johnson syndrome (disorder)"
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Stevens-Johnson syndrome"
 * compose.include.concept[=].designation[+].language = #fr-CH
@@ -49293,7 +49293,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "tosse"
 * compose.include.concept[+].code = #51599000
-* compose.include.concept[=].display = "Edema of larynx "
+* compose.include.concept[=].display = "Edema of larynx (disorder)"
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Edema of larynx"
 * compose.include.concept[=].designation[+].language = #fr-CH
@@ -49323,7 +49323,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #it-CH
 * compose.include.concept[=].designation[=].value = "rinite"
 * compose.include.concept[+].code = #73442001
-* compose.include.concept[=].display = "Stevens-Johnson syndrome"
+* compose.include.concept[=].display = "Stevens-Johnson syndrome (disorder)"
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Stevens-Johnson syndrome"
 * compose.include.concept[=].designation[+].language = #fr-CH
