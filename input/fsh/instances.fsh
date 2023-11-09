@@ -12164,7 +12164,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "pisello"
 
 * compose.include.concept[+].code = #260196009
-* compose.include.concept[=].display = "European hornet venom"
+* compose.include.concept[=].display = "European hornet venom (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "European hornet venom"
@@ -17240,7 +17240,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "mollusco marino"
 
 * compose.include.concept[+].code = #765098000
-* compose.include.concept[=].display = "Abalone (substance"
+* compose.include.concept[=].display = "Abalone (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Abalone"
@@ -36224,7 +36224,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "pisello"
 
 * compose.include.concept[+].code = #260196009
-* compose.include.concept[=].display = "European hornet venom"
+* compose.include.concept[=].display = "European hornet venom (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "European hornet venom"
@@ -41300,7 +41300,7 @@ Usage: #definition
 * compose.include.concept[=].designation[=].value = "mollusco marino"
 
 * compose.include.concept[+].code = #765098000
-* compose.include.concept[=].display = "Abalone (substance"
+* compose.include.concept[=].display = "Abalone (substance)"
 
 * compose.include.concept[=].designation[0].language = #en-US
 * compose.include.concept[=].designation[=].value = "Abalone"
