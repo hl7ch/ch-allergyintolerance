@@ -7,7 +7,10 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue 67](https://github.com/hl7ch/ch-allergyintolerance/issues/67) - Correction of two codes
 
 #### Fixed
-* [Issue 75](https://github.com/hl7ch/ch-allergyintolerance/issues/75) - Link name adjusted
+* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
+* [Issue 79](https://github.com/hl7ch/ch-allergyintolerance/issues/79) - Typo corrected
+* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
+* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
 
 #### Changed / Updated
 * [Issue 77](https://github.com/hl7ch/ch-allergyintolerance/issues/77) - Change license for IG to CC0 1.0
