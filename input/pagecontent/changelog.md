@@ -2,15 +2,14 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 ### STU 2 Ballot
 
-#### Value Sets
-* [Issue 66](https://github.com/hl7ch/ch-allergyintolerance/issues/66) - Mistake in the german translation
-* [Issue 67](https://github.com/hl7ch/ch-allergyintolerance/issues/67) - Correction of two codes
-
 #### Fixed
-* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
-* [Issue 79](https://github.com/hl7ch/ch-allergyintolerance/issues/79) - Typo corrected
-* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
-* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo corrected
+* [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo in codes adjusted in CHAllergyIntoleranceReactionManifestationValueSet
+* [Issue 79](https://github.com/hl7ch/ch-allergyintolerance/issues/79) - Typo in codes adjusted in CHAllergyIntoleranceReactionSubstanceValueSet
+* [Issue 80](https://github.com/hl7ch/ch-allergyintolerance/issues/80) - Typo in codes adjusted in CHAllergyIntoleranceConditionValueSet
+* [Issue 81](https://github.com/hl7ch/ch-allergyintolerance/issues/81) - Typo in codes adjusted in CHAllergyIntoleranceValueSet
+* [Issue 82](https://github.com/hl7ch/ch-allergyintolerance/issues/82) - Typo in codes adjusted in CHAllergyIntoleranceReactionSubstanceValueSet
+* [Issue 83](https://github.com/hl7ch/ch-allergyintolerance/issues/83) - Typo in codes adjusted in CHAllergyIntoleranceConditionValueSet
+* [Issue 88](https://github.com/hl7ch/ch-allergyintolerance/issues/88) - Typo in codes adjusted in Use Case 8
 
 #### Changed / Updated
 * [Issue 77](https://github.com/hl7ch/ch-allergyintolerance/issues/77) - Change license for IG to CC0 1.0
