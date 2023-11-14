@@ -12,7 +12,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue 88](https://github.com/hl7ch/ch-allergyintolerance/issues/88) - Typo in codes adjusted in Use Case 8
 
 #### Changed / Updated
-* [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - added IG Fragements to the home page below
+* [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragements to the home page below
 
 ### STU 1 Ballot
 
