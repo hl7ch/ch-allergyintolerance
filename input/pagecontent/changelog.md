@@ -10,6 +10,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue 82](https://github.com/hl7ch/ch-allergyintolerance/issues/82) - Typo in codes adjusted in CHAllergyIntoleranceReactionSubstanceValueSet
 * [Issue 83](https://github.com/hl7ch/ch-allergyintolerance/issues/83) - Typo in codes adjusted in CHAllergyIntoleranceConditionValueSet
 * [Issue 88](https://github.com/hl7ch/ch-allergyintolerance/issues/88) - Typo in codes adjusted in Use Case 8
+* [Issue 85](https://github.com/hl7ch/ch-allergyintolerance/issues/85) - Typo in codes adjusted in Use Case 8
 
 #### Changed / Updated
 * [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragements to the home page below
