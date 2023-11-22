@@ -82,7 +82,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * extension[dataEnterer] ^short = "Person who entered information into this document if it is a person other than the author"
 * identifier ^short = "Identification number of the document"
 * status = #final (exactly)
-* type = $sct#722446000 "Allergy record (record artifact)"
+* type = $sct#722446000
 * type ^short = "Document type"
 * subject ^short = "A patient for whom this document instance was created"
 * date ^short = "The document's creation date and time"
