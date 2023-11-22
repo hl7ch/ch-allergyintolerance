@@ -117,7 +117,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].title 1..1
 * section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranza' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
 * section[allergyIntolerance].code 1..
-* section[allergyIntolerance].code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section[allergyIntolerance].code = $loinc#48765-2
 * section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole-epr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
 * section[allergyIntolerance].author ^short = "The author of the section (person or device) if different from the author/timestamp of the document"
 * section[allergyIntolerance].author.extension 0..1
@@ -135,7 +135,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[annotation].title 1..1
 * section[annotation].title ^short = "'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english                         or titles in other languages are also allowed"
 * section[annotation].code 1..
-* section[annotation].code = $loinc#48767-8 "Annotation comment Imp"
+* section[annotation].code = $loinc#48767-8
 * section[annotation].text 1..1
 * section[annotation].text ^short = "Human readable text of this section"
 /* section[annotation].entry 0..*
