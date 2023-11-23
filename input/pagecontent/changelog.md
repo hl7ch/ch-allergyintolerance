@@ -1,6 +1,13 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Ballot
+### STU 2 Ballot - v2.0.0 (2023)
+
+### Open Issues
+During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
+
+* [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
+* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintollerance
+* [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
 
 #### Fixed
 * [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo in codes adjusted in CHAllergyIntoleranceReactionManifestationValueSet

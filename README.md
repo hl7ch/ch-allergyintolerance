@@ -1,4 +1,13 @@
-# ch-allergyintolerance
+# CH AllergyIntolerance
+
+CH AllergyIntolerance FHIR IG for Switzerland, see also [fhir.ch](https://fhir.ch).
+
+* [CI Build](http://build.fhir.org/ig/hl7ch/ch-allergyintolerance/index.html) 
+
+## Ballots
+* Resolution Desks
+   * [HL7 Switzerland STU2 Ballot (v2.0.0-ballot)](https://github.com/hl7ch/ch-allergyintolerance/blob/master/ballots/2.0.0_STU2-ballot.md)
+
 CH Allergy Intolerance
 
 Working history
