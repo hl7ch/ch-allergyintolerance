@@ -4,7 +4,7 @@ Swiss Implementation Guide for Allergy & Intolerance based on the [recommendatio
 
 <div markdown="1" class="stu-note">
 
-[Significant Changes, Open and Closed Issues](changelog.html)
+[Significant Changes, open and closed issues](changelog.html)
 
 </div>
 
