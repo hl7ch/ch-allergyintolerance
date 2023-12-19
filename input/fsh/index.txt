@@ -1,6 +1,0 @@
-Name                                          Type       File
-CHAllergyIntolerance                          Profile    profiles.fsh
-CHAllergyIntoleranceSubstanceCondition        ValueSet   valueSets.fsh
-CHAllergyIntoleranceCompositionEPR            Profile    profiles.fsh
-CHAllergyIntoleranceDocumentEPR               Profile    profiles.fsh
-CH-AllergyIntolerance-IPAG-Recommendation-Table-1 Instance instances.fsh
