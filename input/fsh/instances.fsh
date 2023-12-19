@@ -1,6 +1,3 @@
-
-
-
 Instance: CH-AllergyIntolerance-Document-Example
 InstanceOf: CHAllergyIntoleranceDocumentEPR
 Title: "CH-AllergyIntolerance-Document-Example"
@@ -12,20 +9,20 @@ Usage: #example
 * identifier.value = "urn:uuid:2eadef87-8850-46e5-9557-1e08dcfaa759"
 * type = #document
 * timestamp = "2022-01-12T18:00:00+01:00"
-* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/CH-AllergyIntoleranceComposition"
-* entry[=].resource = CH-AllergyIntolerance-Composition-Inline-Instance
+* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/AllergyIntoleranceComposition"
+* entry[=].resource = AllergyIntoleranceComposition
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmueller"
-* entry[=].resource = CH-AllergyIntolerance-Patient-Inline-Instance
+* entry[=].resource = MonikaWegmueller
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt"
-* entry[=].resource = CH-AllergyIntolerance-Practitioner-Inline-Instance
+* entry[=].resource = FamilienHausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Hausarzt"
-* entry[=].resource = CH-AllergyIntolerance-Organization-Inline-Instance
+* entry[=].resource = Hausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Custodian"
-* entry[=].resource = CH-AllergyIntolerance-Custodian-Inline-Instance
+* entry[=].resource = Custodian
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"
-* entry[=].resource = CH-AllergyIntolerance-PatientRecipient-Inline-Instance
-* entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/CHAllergyIntoleranceInstance"
-* entry[=].resource = CH-AllergyIntolerance-Usecase-5-Inline-Instance
+* entry[=].resource = MonikaWegmuellerRecipient
+* entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/AllergyToCatDander"
+* entry[=].resource = AllergyToCatDander
 
 
 Instance: CH-AllergyIntolerance-Composition-Example
@@ -56,10 +53,11 @@ Usage: #example
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section.entry = Reference(CH-AllergyIntolerance-IPAG-Recommendation-Table-1)
 
-Instance: CH-AllergyIntolerance-Composition-Inline-Instance
+Instance: AllergyIntoleranceComposition
 InstanceOf: Composition
-Usage: #inline
-* id = "ch-allergyintolerance-composition-example"
+Title: "AllergyIntoleranceComposition"
+Usage: #example
+Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
 * language = #de-CH
 * extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
 * extension.valueReference = Reference(MonikaWegmuellerRecipient)
@@ -80,71 +78,12 @@ Usage: #inline
 * custodian = Reference(Custodian)
 * section.title = "Allergy Intolerance"
 * section.code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section.entry = Reference(CH-AllergyIntolerance-Usecase-5-Inline-Instance)
+* section.entry = Reference(AllergyToCatDander)
 
-Instance: CH-AllergyIntolerance-Patient-Inline-Instance
-InstanceOf: Patient
-Usage: #inline
-* id = "MonikaWegmueller"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.999.1"
-* identifier.value = "11111111"
-* name.family = "Wegmüller"
-* name.given = "Monika"
-* gender = #female
-* birthDate = "1943-05-15"
-* address.line = "Wiesenstr. 12"
-* address.city = "Zürich"
-* address.postalCode = "8003"
-* address.country = "CH"
-
-Instance: CH-AllergyIntolerance-Practitioner-Inline-Instance
-InstanceOf: Practitioner
-Usage: #inline
-* id = "FamilienHausarzt"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234438"
-* name.family = "Hausarzt"
-* name.given = "Familien"
-* address.line = "Krankenstrasse 2"
-* address.city = "Zürich"
-* address.postalCode = "8005"
-* address.country = "CH"
-
-Instance: CH-AllergyIntolerance-Organization-Inline-Instance
-InstanceOf: Organization
-Usage: #inline
-* id = "Hausarzt"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234438"
-* name = "Hausarzt"
-* address.line = "Krankenstrasse 2"
-* address.city = "Zürich"
-* address.postalCode = "8005"
-* address.country = "CH"
-
-Instance: CH-AllergyIntolerance-Custodian-Inline-Instance
-InstanceOf: Organization
-Usage: #inline
-* id = "Custodian"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234438"
-* name = "Hausarzt"
-
-Instance: CH-AllergyIntolerance-PatientRecipient-Inline-Instance
-InstanceOf: Patient
-Usage: #inline
-* id = "MonikaWegmuellerRecipient"
-* name.family = "Wegmüller"
-* name.given = "Monika"
-* address.line = "Wiesenstr. 12"
-* address.city = "Zürich"
-* address.postalCode = "8003"
-* address.country = "CH"
-
-Instance: CH-AllergyIntolerance-Usecase-5-Inline-Instance
+Instance: AllergyToCatDander
 InstanceOf: AllergyIntolerance
-Usage: #inline
+Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #allergy
@@ -163,6 +102,7 @@ Usage: #inline
 Instance: ElisabethBroennimannByBFH
 InstanceOf: $ch-core-patient
 Usage: #example
+Description: "Example for Patient"
 * meta.source = "https://www.ti.bfh.ch/de/bachelor/medizininformatik.html"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <p>\n        <b>id</b>: ElisabethBroennimannByBFH\n      </p>\n      <p>\n        <b>meta</b>: \n      </p>\n      <p>\n        <b>name</b>: Elisabeth Brönnimann-Bertholet \n      </p>\n      <p>\n        <b>telecom</b>: ph: +41 32 321 61 11(HOME), elisabeth@broennimann.today\n      </p>\n      <p>\n        <b>gender</b>: FEMALE\n      </p>\n      <p>\n        <b>birthDate</b>: May 3, 1937\n      </p>\n      <p>\n        <b>address</b>: Kreuzweg 11 Biel/Bienne 2500 (HOME)\n      </p>\n      <p>\n        <b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus code '2' = '2', given as 'verheiratet'}; {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus code 'M' = 'Married', given as 'married'})</span>\n      </p>\n    </div>"
@@ -186,6 +126,7 @@ Usage: #example
 Instance: AgparMarc
 InstanceOf: $ch-core-practitioner
 Usage: #example
+Description: "Example for Practitioner"
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000050717"
 * name.family = "Agpar"
@@ -260,6 +201,7 @@ Usage: #definition
 Instance: CH-AllergyIntolerance-IPAG-Recommendation-Table-1
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#unconfirmed "Unconfirmed"
 * type = #allergy
@@ -290,11 +232,12 @@ Usage: #example
 * reaction.description = "Itching of Skin during 24hours, 3 times vomitus"
 * reaction.onset = "2019-01-05"
 * reaction.severity = #moderate
-* reaction.note.text = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <span id=\"co1\">\n\t\t\t\t\t\trespiratory tract infection whilst taking\n        </span>\n      </div>"
+* reaction.note.text = "respiratory tract infection whilst taking"
 
 Instance: CH-AllergyIntolerance-Condition-Visit1-Usecase-1
 InstanceOf: ch-allergyintolerance-condition
 Usage: #example
+Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#problem-list-item
@@ -306,6 +249,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Condition-Visit2-Usecase-1
 InstanceOf: ch-allergyintolerance-condition
 Usage: #example
+Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#problem-list-item
@@ -319,6 +263,7 @@ abatementDateTime  = "2022-02-07"
 Instance: CH-AllergyIntolerance-Usecase-2
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * extension.url = "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips"
 * extension.valueDateTime = "2022-02-07"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -338,6 +283,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Condition-Usecase-3
 InstanceOf: ch-allergyintolerance-condition
 Usage: #example
+Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#differential
 * category = $condition-category#encounter-diagnosis
@@ -348,6 +294,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-3
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #intolerance
@@ -368,7 +315,8 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-5
 InstanceOf: $ch-allergyintolerance
 Usage: #example
-/* contained = CH-AllergyIntolerance-Usecase-5-Inline-Instance*/
+Description: "Example for AllergyIntolerance"
+/* contained = AllergyToCatDander*/
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #allergy
@@ -387,6 +335,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-6
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #allergy
@@ -404,6 +353,7 @@ Usage: #example
 /*Instance: CH-AllergyIntolerance-Observation-Usecase-7
 InstanceOf: Observation
 Usage: #example
+Description: "Example for Observation"
 * status = #final
 * category = $observation-category#laboratory
 * code = $loinc#58778-2 "Peanut recombinant (rAra h) 2 IgE Ab [Units/volume] in Serum"
@@ -416,6 +366,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Condition-Usecase-7
 InstanceOf: ch-allergyintolerance-condition
 Usage: #example
+Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
@@ -426,6 +377,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-7
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * type = #allergy
@@ -446,6 +398,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Usecase-8
 InstanceOf: $ch-allergyintolerance
 Usage: #example
+Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * code = $sct#716186003 "No known allergy (situation)"
@@ -458,6 +411,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-clinical-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceClinicalStatus"
+* title = "Allergy Intolerance Clinical Status"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -500,6 +454,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-verification-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceVerificationStatus"
+* title = "Allergy Intolerance Verification Status"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -550,6 +505,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-type-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceType"
+* title = "Allergy Intolerance Type"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -584,6 +540,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-criticality-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceCriticalityStatus"
+* title = "Allergy Intolerance Criticality Status"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -626,6 +583,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-severity-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceSeverityStatus"
+* title = "Allergy Intolerance Severity Status"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -668,6 +626,7 @@ Usage: #definition
 * url = "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-category-supplement"
 * version = "20210615"
 * name = "AllergyIntoleranceCategory"
+* title = "Allergy Intolerance Category"
 * status = #draft
 * experimental = true
 * date = "2021-06-15"
@@ -17602,7 +17561,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Keine bekannte Allergie gegen Tiere"
 * compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "nessuna allergia agli animali nota "
+* compose.include.concept[=].designation[=].value = "nessuna allergia agli animali nota"
 
 * compose.include.concept[+].code = #428197003
 * compose.include.concept[=].display = "No known insect allergy (situation)"
@@ -41666,7 +41625,7 @@ Usage: #definition
 * compose.include.concept[=].designation[+].language = #de-CH
 * compose.include.concept[=].designation[=].value = "Keine bekannte Allergie gegen Tiere"
 * compose.include.concept[=].designation[+].language = #it-CH
-* compose.include.concept[=].designation[=].value = "nessuna allergia agli animali nota "
+* compose.include.concept[=].designation[=].value = "nessuna allergia agli animali nota"
 
 * compose.include.concept[+].code = #428197003
 * compose.include.concept[=].display = "No known insect allergy (situation)"
