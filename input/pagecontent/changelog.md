@@ -1,6 +1,8 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Ballot - v2.0.0 (2023)
+### STU 2 Ballot - v2.0.1 (2023)
+
+* [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
 ### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
