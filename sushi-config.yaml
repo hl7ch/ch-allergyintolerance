@@ -27,6 +27,7 @@ contact:
         use: work
 dependencies:
   ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-term: current # after publication of core not necessary
   hl7.terminology: 5.4.0
   hl7.fhir.uv.ips: 1.1.0
 
