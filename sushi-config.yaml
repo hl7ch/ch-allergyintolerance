@@ -18,13 +18,16 @@ copyrightYear: 2021+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
+  url: https://www.hl7.ch/
 contact:
-  name: eHealth Suisse
-  telecom:
-    system: url
-    value: https://www.hl7.ch
+  - name: HL7 Switzerland
+    telecom:
+      - system: url
+        value: https://www.hl7.ch/
+        use: work
 dependencies:
   ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-term: current # can be removed after publication of core
   hl7.terminology: 5.4.0
   hl7.fhir.uv.ips: 1.1.0
 

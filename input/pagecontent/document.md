@@ -18,4 +18,4 @@ This exchange format is defined as a document type that corresponds to a Bundle 
 
 
 ### Profile
-* [CH Allergy Intolerance Document Profile](StructureDefinition-ch-allergyintolerance-document-epr.html)
+* [CH AllergyIntolerance Document](StructureDefinition-ch-allergyintolerance-document-epr.html)

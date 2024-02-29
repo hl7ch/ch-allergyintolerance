@@ -8,9 +8,9 @@ CH AllergyIntolerance FHIR IG for Switzerland, see also [fhir.ch](https://fhir.c
 * Resolution Desks
    * [HL7 Switzerland STU2 Ballot (v2.0.0-ballot)](https://github.com/hl7ch/ch-allergyintolerance/blob/master/ballots/2.0.0_STU2-ballot.md)
 
-CH Allergy Intolerance
+***
 
-Working history
+# Working history
 ------------------------------------------------------------------
 version 0.1.0 
 following IPAG recommendations, based on IPS as near as reasonable
@@ -36,7 +36,7 @@ PractitionerUvIps profile removed from index
 
 ProblemSeverityUvIps ValueSet not yet removed from valuesets
 
-QuantityIPS profile reintroduced just befor RageIPS as referenced in profiles
+QuantityIPS profile reintroduced just before RageIPS as referenced in profiles
 
 SnomedIntlGps ValueSet removed from index (Description: """SNOMED International Global Patient Set (GPS) value set.    The value set includes all of the codes from the SNOMED International Global Patient Set (GPS)    subset of SNOMED CT.  The current version of the value set contains all concepts (21,782) from    the September 2019 release of the GPS (based on the July 2019 SNOMED CT International Edition    release) plus seven recently added concepts for Coronavirus (from the March 2020 Interim    International Release) (total 21,789 concepts).   )
 
@@ -254,7 +254,7 @@ Description: "Definition of the composition for the allergy intolerance document
 
 * type = $SCT#722446000 "Allergy record (record artifact)"
 
-* section[card].title ^short = "'Allergie und Intoleranz ' in german ... -> check the translations t.b.d
+* section[card].title ^short = "'Allergie und Intoleranz' in german ... -> check the translations t.b.d
 * section[card].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 
 * section[dispense].entry only Reference(CHAllergyIntolerance)
@@ -288,7 +288,7 @@ error The type "CHAllergyIntoleranceCompositionEPR" does not match any of the al
   File: C:\Workspace\Sushi\CH\CH-AllergyIntolerance\input\fsh\profiles.fsh
   Line: 176
 
-checking again and again - but although type = $SCT#722446000 "Allergy record (record artifact)" is in http://fhir.ch/ig/ch-epr-term/ValueSet-DocumentEntry.typeCode.html it is not recongnized...
+checking again and again - but although type = $SCT#722446000 "Allergy record (record artifact)" is in http://fhir.ch/ig/ch-epr-term/ValueSet-DocumentEntry.typeCode.html it is not recognized...
 
 trying 419891008	Record artifact (record artifact)
 same problem..
@@ -327,7 +327,7 @@ problem persists...
 commenting out CHAllergyIntoleranceDocumentEPR
 
 
-Solution thanks to Michaele Ziegler, ahdis: using Canonical:
+Solution thanks to Michaela Ziegler, ahdis: using Canonical:
 * entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
 
 => now OK
@@ -370,28 +370,11 @@ new
 ValueSet: CHAllergyIntoleranceSubstanceValueSet
 Id: ch-allergy-intolerance-substance-value-set
 Title: "CH Allergy Intolerance Substance Value Set"
-Description: "CH Allergy intolerance substance value set. This value set includes codes from SNOMED Clinical Terms® substances for the documentation of substancies of allergy or intolerance reactions"
+Description: "CH Allergy intolerance substance value set. This value set includes codes from SNOMED Clinical Terms® substances for the documentation of substances of allergy or intolerance reactions"
 
 * reaction.substance from CHAllergyIntoleranceSubstanceValueSet (preferred)
 
-pre coordinated values added to reaction.substance and code, but no post coodinated values (awwaiting them to be added as precoordinated o^codes by SNOMED CT)
+pre coordinated values added to reaction.substance and code, but no post coordinated values (awaiting them to be added as precoordinated o^codes by SNOMED CT)
 
-fixing some minor instance (expamples) issues.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fixing some minor instance (examples) issues.
 

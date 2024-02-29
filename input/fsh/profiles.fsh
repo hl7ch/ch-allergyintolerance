@@ -1,15 +1,9 @@
 Profile: CHAllergyIntolerance
 Parent: AllergyIntolerance
 Id: ch-allergyintolerance
-Title: "CH Allergy Intolerance"
+Title: "CH AllergyIntolerance"
 Description: "This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare transaction or similar as an instance of an AllergyIntolerance resource constrained by this profile.
 It documents the relevant allergies or intolerances for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."
-* ^version = "0.1.0"
-* ^status = #draft
-* ^publisher = "HL7 Switzerland"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "https://www.hl7.ch"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#CH
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
 * extension contains $ext-abatement-dateTime-uv-ips named abatement-datetime ..1 MS
@@ -60,18 +54,9 @@ It documents the relevant allergies or intolerances for a patient, describing th
 Profile: CHAllergyIntoleranceCompositionEPR
 Parent: CHCoreCompositionEPR
 Id: ch-allergyintolerance-composition-epr
-Title: "CH Allergy Intolerance Composition Profile"
+Title: "CH AllergyIntolerance Composition"
 Description: "Definition of the composition for the allergy intolerance document"
-* ^version = "0.1.0"
-* ^experimental = false
-* ^date = "2021-04-09"
-* ^publisher = "HL7 Switzerland"
-* ^contact[0].name = "HL7 Switzerland"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "https://www.hl7.ch"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC0-1.0"
-* . ^short = "CH Allergy Intolerance  Composition"
+* . ^short = "CH AllergyIntolerance  Composition"
 * language ^short = "Language of the document"
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "url"
@@ -118,7 +103,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranza' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
 * section[allergyIntolerance].code 1..
 * section[allergyIntolerance].code = $loinc#48765-2
-* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole-epr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or CHCorePractitionerRoleEpr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
 * section[allergyIntolerance].author ^short = "The author of the section (person or device) if different from the author/timestamp of the document"
 * section[allergyIntolerance].author.extension 0..1
 * section[allergyIntolerance].author.extension only EPRTime
@@ -148,18 +133,9 @@ Description: "Definition of the composition for the allergy intolerance document
 Profile: CHAllergyIntoleranceDocumentEPR
 Parent: CHCoreDocumentEPR
 Id: ch-allergyintolerance-document-epr
-Title: "CH Allergy Intolerance Document Profile"
+Title: "CH AllergyIntolerance Document"
 Description: "Definition of the bundle for the allergy intolerance document"
-* ^version = "0.1.0"
-* ^experimental = false
-* ^date = "2021-04-09"
-* ^publisher = "HL7 Switzerland"
-* ^contact[0].name = "HL7 Switzerland"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "https://www.hl7.ch"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#CH
-* ^copyright = "CC0-1.0"
-* . ^short = "CH Allergy Intolerance  Document"
+* . ^short = "CH AllergyIntolerance Document"
 * identifier 1..
 * identifier ^short = "Identification number of the document"
 * identifier.system 1..
@@ -177,14 +153,8 @@ Description: "Definition of the bundle for the allergy intolerance document"
 Profile: CHAllergyIntoleranceCondition
 Parent: Condition
 Id: ch-allergyintolerance-condition
-Title: "CH Allergy Intolerance Condition"
+Title: "CH AllergyIntolerance Condition"
 Description: "This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance as a problem-list item or a encounter-diagnosis entry in the Swiss realm - in adaption of the respective usecases provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance."
-* ^version = "0.1.0"
-* ^status = #draft
-* ^publisher = "HL7 Switzerland"
-* ^contact[0].telecom[0].system = #url
-* ^contact[0].telecom[0].value = "https://www.hl7.ch"
-* ^jurisdiction[0] = urn:iso:std:iso:3166#CH
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
 * clinicalStatus 0..1 MS
