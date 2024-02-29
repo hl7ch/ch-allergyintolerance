@@ -3,11 +3,11 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 3 Ballot - v3.0.0-ballot (2024)
 
 #### Changed / Updated
+* [#91](https://github.com/hl7ch/ch-allergyintolerance/issues/91): Move terminology (CS/VS) to CH Term
 * [#92](https://github.com/hl7ch/ch-allergyintolerance/issues/92): Update title numbering (incl. fixing some typos)
 * [#93](https://github.com/hl7ch/ch-allergyintolerance/issues/93): Update to current version of IPS IG (v1.0.0 -> v1.1.0)
 
-### STU 2 Ballot - v2.0.1 (2023)
-
+### STU 2 - v2.0.1 (2023-12-28)
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
 ### Open Issues
@@ -30,7 +30,7 @@ During the ballot, the following comments came in, which will be taken into acco
 #### Changed / Updated
 * [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragments to the home page below
 
-### STU 1 Ballot
+### STU 1 - v1.0.0 (2022-02-11)
 
 #### Added
 Navigation within the Implementation Guide for a better usability:
@@ -42,11 +42,11 @@ Navigation within the Implementation Guide for a better usability:
 	* [Home](index.html) 
 
 Clarification about the use of and implementation of AllergyIntolerance IG:
-* [Issue 26](https://github.com/hl7ch/ch-allergyintolerance/issues/26) - Artifacts Summary: Beschreibung der beiden Profile "CH Allergy Intolerance" und "CH Allergy Intolerance Condition" ist weitgehend identisch
+* [Issue 26](https://github.com/hl7ch/ch-allergyintolerance/issues/26) - Artifacts Summary: Beschreibung der beiden Profile "CH AllergyIntolerance" und "CH AllergyIntolerance Condition" ist weitgehend identisch
 	* [Artifacts](artifacts.html) 
-* [Issue 31](https://github.com/hl7ch/ch-allergyintolerance/issues/31) - Provide Use Cases -- CH Allergy Intolerance
-* [Issue 23](https://github.com/hl7ch/ch-allergyintolerance/issues/23) - CH Allergy Intolerance Condition: Beispiel fehlt
-* [Issue 17](https://github.com/hl7ch/ch-allergyintolerance/issues/17) - CH Allergy Intolerance Condition
+* [Issue 31](https://github.com/hl7ch/ch-allergyintolerance/issues/31) - Provide Use Cases -- CH AllergyIntolerance
+* [Issue 23](https://github.com/hl7ch/ch-allergyintolerance/issues/23) - CH AllergyIntolerance Condition: Beispiel fehlt
+* [Issue 17](https://github.com/hl7ch/ch-allergyintolerance/issues/17) - CH AllergyIntolerance Condition
 * [Issue 14](https://github.com/hl7ch/ch-allergyintolerance/issues/14) - Examples are missing
 	* [Use Cases](usecase-english.html) 
 	* [Example AllergyIntolerance](StructureDefinition-ch-allergyintolerance-examples.html) 
@@ -59,20 +59,20 @@ Clarification about the use of and implementation of AllergyIntolerance IG:
 #### Changed / Updated
 Removed own extensions, replaced through existing ones:
 * [Issue 16](https://github.com/hl7ch/ch-allergyintolerance/issues/16) - Extensions
-	* [CH Allergy Intolerance](StructureDefinition-ch-allergyintolerance.html) 
+	* [CH AllergyIntolerance](StructureDefinition-ch-allergyintolerance.html) 
 * [Issue 15](https://github.com/hl7ch/ch-allergyintolerance/issues/15) - Condition abatement date
-	* [CH Allergy Intolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) 
+	* [CH AllergyIntolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) 
 
 References to CH Core profiles:
-* [Issue 21](https://github.com/hl7ch/ch-allergyintolerance/issues/21) - CH Allergy Intolerance
-	* [CH Allergy Intolerance](StructureDefinition-ch-allergyintolerance.html) 
+* [Issue 21](https://github.com/hl7ch/ch-allergyintolerance/issues/21) - CH AllergyIntolerance
+	* [CH AllergyIntolerance](StructureDefinition-ch-allergyintolerance.html) 
 	
 Content and integration of value sets:
 * [Issue 37](https://github.com/hl7ch/ch-allergyintolerance/issues/37) - Allergy or non-allergic hypersensivity to vancomycin
-* [Issue 35](https://github.com/hl7ch/ch-allergyintolerance/issues/35) - CH Allergy Intolerance Value Set
+* [Issue 35](https://github.com/hl7ch/ch-allergyintolerance/issues/35) - CH AllergyIntolerance Value Set
 * [Issue 32](https://github.com/hl7ch/ch-allergyintolerance/issues/32) - Put Allergy value set to extensible
-* [Issue 28](https://github.com/hl7ch/ch-allergyintolerance/issues/28) - make value set extensible? CH Allergy Intolerance Value Set
-* [Issue 27](https://github.com/hl7ch/ch-allergyintolerance/issues/27) - CH Allergy Intolerance: Binding code zu Snomed CT
+* [Issue 28](https://github.com/hl7ch/ch-allergyintolerance/issues/28) - make value set extensible? CH AllergyIntolerance Value Set
+* [Issue 27](https://github.com/hl7ch/ch-allergyintolerance/issues/27) - CH AllergyIntolerance: Binding code zu Snomed CT
 	* [CHAllergyIntoleranceValueSet](ValueSet-CHAllergyIntoleranceValueSet.html) 
 	* [CHAllergyIntoleranceReactionSubstanceValueSet](ValueSet-CHAllergyIntoleranceReactionSubstanceValueSet.html) 
 * [Issue 29](https://github.com/hl7ch/ch-allergyintolerance/issues/29) - manifestation value set: define extensional and extensible value set
@@ -80,10 +80,10 @@ Content and integration of value sets:
 
 Use of must support:
 * [Issue 30](https://github.com/hl7ch/ch-allergyintolerance/issues/30) - AllergyIntolerance.category must be supported
-* [Issue 24](https://github.com/hl7ch/ch-allergyintolerance/issues/24) - CH Allergy Intolerance: zu viele Elemente als "Must Support" gekennzeichnet
-	* [CH Allergy Intolerance](StructureDefinition-ch-allergyintolerance.html) 
-* [Issue 25](https://github.com/hl7ch/ch-allergyintolerance/issues/25) - CH Allergy Intolerance Condition: zu viele Elemente als "Must Support" gekennzeichnet
-	* [CH Allergy Intolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) 
+* [Issue 24](https://github.com/hl7ch/ch-allergyintolerance/issues/24) - CH AllergyIntolerance: zu viele Elemente als "Must Support" gekennzeichnet
+	* [CH AllergyIntolerance](StructureDefinition-ch-allergyintolerance.html) 
+* [Issue 25](https://github.com/hl7ch/ch-allergyintolerance/issues/25) - CH AllergyIntolerance Condition: zu viele Elemente als "Must Support" gekennzeichnet
+	* [CH AllergyIntolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) 
 
 #### Fixed
 * [Issue 18](https://github.com/hl7ch/ch-allergyintolerance/issues/18) - Just typos
@@ -91,5 +91,5 @@ Use of must support:
 #### Refuted
 * [Issue 38](https://github.com/hl7ch/ch-allergyintolerance/issues/38) - short name for IG?
 * [Issue 36](https://github.com/hl7ch/ch-allergyintolerance/issues/36) - Need for arborescence in the valueset?
-* [Issue 34](https://github.com/hl7ch/ch-allergyintolerance/issues/34) - CH Allergy Intolerance Composition Profile
+* [Issue 34](https://github.com/hl7ch/ch-allergyintolerance/issues/34) - CH AllergyIntolerance Composition Profile
 * [Issue 33](https://github.com/hl7ch/ch-allergyintolerance/issues/33) - type indication not useful -- allergyintolerance-type-supplement
