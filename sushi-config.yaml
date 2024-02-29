@@ -41,13 +41,13 @@ pages:
   index.md:
     title: Home
   document.md:
-    title: Document
+    title: Allergy Intolerance Document
   usecase-english.md:
-    title: Use cases
+    title: Clinical Use Case Scenarios
   usecase-french.md:
-    title: Les cas d’utilisation 
+    title: Scénarios cliniques relatifs à des cas d’utilisation
   usecase-german.md:
-    title: Anwendungsfälle   
+    title: Klinische Anwendungsfall-Szenarien   
   profiles.md:
     title: Profiles
   terminology.md:

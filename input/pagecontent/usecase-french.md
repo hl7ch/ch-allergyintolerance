@@ -1,8 +1,7 @@
-# Scénarios cliniques relatifs à des cas d’utilisation
 
 Les cas d’utilisation ont été adaptés à partir de l’« Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance » de l’[Allergies/Hypersensitivity and Intolerance Clinical Reference Group](https://confluence.ihtsdotools.org/pages/viewpage.action?pageId=40143192) de Snomed CT.
 
-## Cas d’utilisation n° 1 : Documentation d’une réaction indésirable au principe actif d’un médicament
+### Cas d’utilisation n° 1 : Documentation d’une réaction indésirable au principe actif d’un médicament
 Scénario : Un médecin accueille un patient à la clinique pour des soins ambulatoires de routine. Le patient a déjà reçu un traitement contre le diabète et l’hypertension. De l’hydrochlorothiazide 25 mg lui a été récemment prescrit contre son hypertension. Le patient informe le médecin qu’il a développé, quelques semaines plus tôt, de l’urticaire, et le médecin lui confirme lors de l’examen la présence d’une urticaire généralisée. Un réexamen complet ne révèle pas d’autre cause et le médecin croit que le patient présente peut-être une réaction urticarienne à l’hydrochlorothiazide. Il n’en est pas tout à fait sûr et conseille au patient d’arrêter le traitement par le thiazide et d’utiliser de la diphénhydramine (antihistaminique) pour soulager ses maux. Le médecin prescrit au patient une dose plus élevée de losartan pour contrôler son hypertension. Il fixe un rendez-vous de suivi au patient une semaine plus tard et ajoute son appréciation dans la liste des problèmes : « réaction urticarienne, possible allergie au thiazide ». Une semaine plus tard, le patient revient pour son examen de suivi : tant les démangeaisons que l’éruption cutanée ont entièrement disparu. Le patient confirme que la réaction a diminué dans les jours qui ont suivi l’arrêt du traitement. Le médecin ajoute à la liste des problèmes la remarque « allergie à l’hydrochlorothiazide : urticaire ; modérément critique, probable ».
 
 **FHIR Condition resource query from patient record** ([inscription d’une urticaire pour cause d’allergie potentielle au thiazide dans la liste des problèmes](Condition-CH-AllergyIntolerance-Condition-Visit1-Usecase-1.html))
@@ -92,7 +91,7 @@ Scénario : Un médecin accueille un patient à la clinique pour des soins ambul
 </tbody>
 </table>
 
-## Cas d’utilisation n° 2 : Documentation d’une allergie aux médicaments dans la liste des allergies et déclenchement d’un message d’alerte pour le professionnel de la santé
+### Cas d’utilisation n° 2 : Documentation d’une allergie aux médicaments dans la liste des allergies et déclenchement d’un message d’alerte pour le professionnel de la santé
 Scénario : L’infirmière de la clinique téléphone au patient du scénario 1 une semaine plus tard et lui communique les résultats des tests effectués durant sa visite. Elle s’informe sur son urticaire et le patient lui confirme qu’elle a disparu avec l’interruption du traitement diurétique. Selon les protocoles définis par la clinique, elle ouvre le dossier informatique du patient et procède à une nouvelle inscription dans la liste des allergies utilisée par le système d’information hospitalier (SIH) pour émettre des alertes de prescription clinique. Le logiciel parcourt une série de questions : quelle a été la substance déclenchante, quels symptômes ou résultats sont apparus lors de la réaction, quel a été le type de réaction, quel en a été le degré de gravité et de criticité, et comment se présente le statut de vérification. L’infirmière répond aux questions et une mention d’allergie s’affiche dans la liste : « hydrochlorothiazide ; allergie ; degré de gravité moyen ; faible degré de criticité ; symptômes – urticaire ».
 Des années plus tard, le patient consulte un autre médecin de la même organisation, pour se faire conseiller sur le traitement d’une hypertension résistante. Le deuxième médecin décide qu’un inhibiteur de l’ECA/médicament à base de thiazide conviendrait au patient. Quand il établit une ordonnance pour du « CO-LISINOPRIL Mepha Tabl 20/12.5 » et confirme l’ordonnance électronique, un message d’alerte s’affiche et l’invite à réagir, le mettant en garde contre une allergie à l’hydrochlorothiazide, soit un des ingrédients du médicament qu’il souhaite prescrire. L’avertissement est généré par le logiciel du SIH, qui se réfère à la liste des allergies. Le médecin annule la commande et choisit un autre agent antihypertenseur.
 
@@ -161,7 +160,7 @@ Des années plus tard, le patient consulte un autre médecin de la même organis
 </tbody>
 </table>
 
-## Cas d’utilisation n° 3 : Documentation d’une intolérance médicamenteuse
+### Cas d’utilisation n° 3 : Documentation d’une intolérance médicamenteuse
 
 Scénario : Un patient arrive aux urgences et se plaint de bourdonnements, de tintements et de sifflements dans ses oreilles. Le patient ne saurait dire quand ces bruits sont apparus et n’a pas été exposé à un environnement bruyant. Il a des antécédents, avec des douleurs dorsales chroniques, une insuffisance cardiaque et de l’arthrite. En parcourant la liste des médicaments consommés par le patient, le médecin constate qu’il prend 12 tablettes d’aspirine par jour. Le médecin soupçonne le patient de souffrir d’acouphènes dus à l’aspirine. Il l’invite à réduire sa consommation d’aspirine et à prendre contact avec le rhumatologue qui la lui a prescrite. Le médecin d’urgence note dans le SIH, dans la liste des diagnostics et des allergies, que le patient souffre d’une intolérance médicamenteuse à l’aspirine.
 
@@ -271,7 +270,7 @@ Scénario : Un patient arrive aux urgences et se plaint de bourdonnements, de ti
 </tbody>
 </table>
 
-## Cas d’utilisation n° 4 : Utilisation commune de données sur les allergies aux médicaments
+### Cas d’utilisation n° 4 : Utilisation commune de données sur les allergies aux médicaments
 
 Scénario : Le patient du scénario 1 prévoit de faire avec sa famille des vacances en camping à travers le pays. Pour préparer son voyage, il parle à son médecin et se fait remettre sur une clé USB un résumé électronique des dossiers médicaux de toute la famille. Son médecin lui signale que le logiciel utilisé inclut une liseuse électronique et possède un format standard qui en permet l’importation dans un autre SIH, en cas de prise en charge comme patient. Les vacances se passent bien jusqu’au jour où, loin de chez lui, le patient ressent lors d’une randonnée des douleurs à la poitrine qui nécessitent son admission dans le plus proche centre d’urgences médicales. Il remet la clé USB avec le résumé de son dossier informatique au médecin du service des urgences. L’établissement en question utilise un SIH qui accepte d’intégrer, une fois extraits, les résumés électroniques basés sur FHIR. L’infirmière des urgences charge ainsi la clé USB et reprend dans le dossier local la copie électronique des listes des problèmes, des allergies et des médicaments. Les différences inhérentes aux modèles d’information respectifs des prestataires de SIH sont corrigées au passage : la liste des allergies est complétée par les informations tirées de la liste des problèmes et de la liste de diagnostics.
 
@@ -379,7 +378,7 @@ Plus tard, le médecin traitant rédige une décision d’admission du patient e
 </tbody>
 </table>
 
-## Cas d’utilisation n° 5 : Documentation d’une allergie aux animaux
+### Cas d’utilisation n° 5 : Documentation d’une allergie aux animaux
 
 Scénario : Un médecin voit un patient venant pour la première fois dans sa clinique ambulatoire pour un examen de routine. Le patient explique au médecin qu’il souffre d’éruptions cutanées accompagnées de démangeaisons aux bras et au visage. Le médecin procède à quelques tests sanguins et à une série de tests cutanés, qui révèlent une forte réaction à la protéine présente sur les poils de chat, avec un taux élevé d’anticorps IgE. Le patient confirme qu’il travaille dans un refuge pour animaux où il est en contact avec des chats. Le médecin ouvre le protocole des allergies et documente dans la liste des allergies du SIH la tendance allergique du patient aux poils de chat, avec pour symptômes des éruptions cutanées accompagnées de démangeaisons, et un faible degré de criticité et de gravité.
 
@@ -501,7 +500,7 @@ Scénario : Un médecin voit un patient venant pour la première fois dans sa cl
 </tbody>
 </table>
 
-## Cas d’utilisation n° 6 : Documentation d’une allergie à une substance non médicamenteuse, qui déclenche une réaction croisée avec un médicament
+### Cas d’utilisation n° 6 : Documentation d’une allergie à une substance non médicamenteuse, qui déclenche une réaction croisée avec un médicament
 
 Scénario : La mère d’un patient explique au médecin que son enfant réagit violemment à la consommation d’arachides, avec comme symptômes une urticaire généralisée, une respiration haletante et de l’hypotension, et qu’il faut lui administrer de l’adrénaline pour le réanimer. Le médecin effectue un test sanguin qui révèle de fortes concentrations d’anticorps IgE contre la protéine Ara h2 présente dans l’huile d’arachide, agent sensibilisant lors d’une allergie clinique à l’arachide. Le médecin inscrit dans le dossier informatique du patient une allergie à l’arachide, en indiquant comme symptômes l’anaphylaxie, de l’urticaire et une respiration haletante, et en qualifiant le degré de criticité d’élevé et le degré de gravité de la réaction de « sévère ».
 Des années plus tard, le même patient devenu adolescent consulte un dermatologue pour un problème d’acné. Dans son plan de traitement, le médecin établit une ordonnance électronique pour des capsules d’isotrétinoïne. Au stade de la confirmation, le logiciel du SIH procède à un contrôle des allergies, et un message d’alerte prioritaire signale que les capsules renferment de l’huile d’arachide non raffinée et donc susceptible de renfermer de la protéine d’arachide, contre-indiquée chez ce patient. Le médecin annule sa commande et opte pour une autre préparation.
@@ -616,7 +615,7 @@ Des années plus tard, le même patient devenu adolescent consulte un dermatolog
 </tbody>
 </table>
 
-## Cas d’utilisation n° 7 : Documentation d’une réaction allergique à d’autres substances non médicamenteuses
+### Cas d’utilisation n° 7 : Documentation d’une réaction allergique à d’autres substances non médicamenteuses
 
 Scénario : Une infirmière diplômée consulte son médecin de famille, car elle ressent à tout moment des éruptions cutanées généralisée et des démangeaisons. Elle travaille dans une unité de soins intensifs où elle a constamment affaire à des produits chimiques et des désinfectants, assiste aux interventions chirurgicales et pose des cathéters aux patients. Lors de l’anamnèse, elle confirme avoir constaté des éruptions cutanées sur ses mains après avoir manipulé des cathéters en latex. Elle signale encore avoir développé dans le passé une réaction allergique grave aux papayes et ne consommer depuis lors des fruits qu’avec modération. Le médecin soupçonne une allergie au latex avec des réactions d’allergies alimentaires croisées et lui prescrit un test de recherche d’anticorps de type IgE dirigés contre le latex d’hévéa. Le test sérologique est fortement positif, et le médecin signale à l’infirmière ses résultats en la mettant en garde contre d’autres aliments susceptibles de déclencher des réactions croisées. Tandis qu’il documente la rencontre clinique, il inscrit l’allergie au latex dans la liste des allergies.
 Le logiciel du SIH aide à sélectionner les aliments, les produits chimiques ou les produits biologiques d’origine animale pouvant être identifiés comme substances responsables, en vue de leur inscription dans la liste des allergies ou pour l’inscription dans le dossier d’une réaction indésirable.
@@ -780,7 +779,7 @@ Le logiciel du SIH aide à sélectionner les aliments, les produits chimiques ou
 </tbody>
 </table>
 
-## Cas d’utilisation n° 8 : Documentation de l’absence d’allergie connue
+### Cas d’utilisation n° 8 : Documentation de l’absence d’allergie connue
 
 Scénario : Une infirmière procède à l’examen initial d’une nouvelle patiente au cabinet. Lors de l’entretien clinique, elle s’enquiert des médicaments consommés ou d’autres allergies. La patiente signale n’être allergique à aucun médicament, aliment, produit chimique ou animal. L’infirmière ouvre la « liste des allergies » du SIH et documente « aucune allergie connue », afin qu’il y ait dans le système une confirmation électronique qu’elle s’est informée auprès de la patiente et qu’à la date et à l’heure indiquées, l’anamnèse s’est révélée négative. Cette opération constitue une aide à la décision, sachant que les allergies doivent être documentées avant que toute ordonnance médicale ne soit rédigée. Elle est codée dans la liste des allergies du SIH en tant qu’absence confirmée de réactions indésirables.
 

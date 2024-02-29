@@ -1,5 +1,10 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU 3 Ballot - v3.0.0-ballot (2024)
+
+#### Changed / Updated
+* [#92](https://github.com/hl7ch/ch-allergyintolerance/issues/92): Update title numbering (incl. fixing some typos)
+
 ### STU 2 Ballot - v2.0.1 (2023)
 
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
@@ -8,7 +13,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
 
 * [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
-* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintollerance
+* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
 * [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
 
 #### Fixed
@@ -22,7 +27,7 @@ During the ballot, the following comments came in, which will be taken into acco
 * [Issue 85](https://github.com/hl7ch/ch-allergyintolerance/issues/85) - For Best practice for patternCodeableConcept, fixed value were removed from the display value.
 
 #### Changed / Updated
-* [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragements to the home page below
+* [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragments to the home page below
 
 ### STU 1 Ballot
 

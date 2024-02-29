@@ -241,7 +241,7 @@ Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * code = $sct#126485001 "Urticaria (disorder)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 * onsetDateTime = "2021-12"
@@ -253,7 +253,7 @@ Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * code = $sct#860765003 "Allergy to thiazide (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 /* build error: con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Rule 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed
