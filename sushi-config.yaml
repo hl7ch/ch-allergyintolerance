@@ -5,13 +5,13 @@
 id: ch.fhir.ig.ch-allergyintolerance
 canonical: http://fhir.ch/ig/ch-allergyintolerance
 name: CH-AllergyIntolerance
-title: "CH-AllergyIntolerance (R4)"
-description: Implementation guide CH-AllergyIntolerance (R4)
+title: "CH AllergyIntolerance (R4)"
+description: Implementation guide CH AllergyIntolerance (R4)
 status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2023-12-28
+date: 2024-02-29
 version: 3.0.0-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -24,7 +24,7 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-core: 4.0.1
+  ch.fhir.ig.ch-core: current
   hl7.terminology: 5.4.0
   hl7.fhir.uv.ips:
     version: 1.0.0
@@ -54,6 +54,17 @@ pages:
     title: Terminology
   changelog.md:
     title: Change Log
+
+menu:
+  Home: index.html
+  Document: document.html
+  Use Case:
+    English: usecase-english.html
+    French: usecase-french.html
+    German: usecase-german.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html
 
 parameters:
   excludettl: true

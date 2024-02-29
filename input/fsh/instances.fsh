@@ -28,7 +28,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
-Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
+Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 Usage: #example
 * id = "ch-allergyintolerance-composition-example"
 * language = #de-CH
@@ -57,7 +57,7 @@ Instance: AllergyIntoleranceComposition
 InstanceOf: Composition
 Title: "AllergyIntoleranceComposition"
 Usage: #example
-Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
+Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 * language = #de-CH
 * extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
 * extension.valueReference = Reference(MonikaWegmuellerRecipient)
