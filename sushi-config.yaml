@@ -26,10 +26,7 @@ contact:
 dependencies:
   ch.fhir.ig.ch-core: current
   hl7.terminology: 5.4.0
-  hl7.fhir.uv.ips:
-    version: 1.0.0
-    uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-    id: ips
+  hl7.fhir.uv.ips: 1.1.0
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
@@ -53,7 +50,7 @@ pages:
   terminology.md:
     title: Terminology
   changelog.md:
-    title: Change Log
+    title: Changelog
 
 menu:
   Home: index.html

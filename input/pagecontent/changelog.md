@@ -4,6 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 * [#92](https://github.com/hl7ch/ch-allergyintolerance/issues/92): Update title numbering (incl. fixing some typos)
+* [#93](https://github.com/hl7ch/ch-allergyintolerance/issues/93): Update to current version of IPS IG (v1.0.0 -> v1.1.0)
 
 ### STU 2 Ballot - v2.0.1 (2023)
 
