@@ -73,10 +73,10 @@ Content and integration of value sets:
 * [Issue 32](https://github.com/hl7ch/ch-allergyintolerance/issues/32) - Put Allergy value set to extensible
 * [Issue 28](https://github.com/hl7ch/ch-allergyintolerance/issues/28) - make value set extensible? CH AllergyIntolerance Value Set
 * [Issue 27](https://github.com/hl7ch/ch-allergyintolerance/issues/27) - CH AllergyIntolerance: Binding code zu Snomed CT
-	* [CHAllergyIntoleranceValueSet](ValueSet-CHAllergyIntoleranceValueSet.html) 
-	* [CHAllergyIntoleranceReactionSubstanceValueSet](ValueSet-CHAllergyIntoleranceReactionSubstanceValueSet.html) 
+	* CHAllergyIntoleranceValueSet
+	* CHAllergyIntoleranceReactionSubstanceValueSet
 * [Issue 29](https://github.com/hl7ch/ch-allergyintolerance/issues/29) - manifestation value set: define extensional and extensible value set
-	* [CHAllergyIntoleranceReactionManifestationValueSet](ValueSet-CHAllergyIntoleranceReactionManifestationValueSet.html) 
+	* CHAllergyIntoleranceReactionManifestationValueSet
 
 Use of must support:
 * [Issue 30](https://github.com/hl7ch/ch-allergyintolerance/issues/30) - AllergyIntolerance.category must be supported
