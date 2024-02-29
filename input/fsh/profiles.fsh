@@ -1,5 +1,5 @@
 Profile: CHAllergyIntolerance
-Parent: AllergyIntolerance
+Parent: CHCoreAllergyIntolerance
 Id: ch-allergyintolerance
 Title: "CH AllergyIntolerance"
 Description: "This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare transaction or similar as an instance of an AllergyIntolerance resource constrained by this profile.
@@ -9,43 +9,25 @@ It documents the relevant allergies or intolerances for a patient, describing th
 * extension contains $ext-abatement-dateTime-uv-ips named abatement-datetime ..1 MS
 * extension[abatement-datetime] ^short = "Abatement datetime"
 * extension[abatement-datetime] ^definition = "The date or estimated date that the condition resolved or went into remission."
-/* clinicalStatus only CodeableConceptIPS */
 * clinicalStatus MS
-/* verificationStatus only CodeableConceptIPS */
 * verificationStatus MS
 * type MS
 * category MS
 * criticality MS
-* code 1..1 MS
-/* code only CodeableConceptIPS */
+* code 1.. MS
 * code from $CHAllergyIntoleranceValueSet (extensible)
-* patient only Reference(CHCorePatient)
 * onsetDateTime only dateTime
 * onsetDateTime MS
-* recorder only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
-* asserter only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
 * reaction MS
-* reaction.extension contains $ext-allergyintolerance-certainty named certainty 0..1
-* reaction.extension[certainty] ^short = "certainty: Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event."
-/* reaction.extension[certainty] ^binding.extension.url = $vs-allergyintolerance-certainty
-* reaction.extension[certainty] ^binding.extension.valueString = "CertaintyAllergyIntolerance" 
-*/
-* reaction.extension contains $ext-allergyintolerance-duration named duration 0..1
+* reaction.extension[certainty] ^short = "Statement about the degree of clinical certainty that the specific substance was the cause of the manifestation in this reaction event."
 * reaction.extension[duration] ^short = "The amount of time that the Adverse Reaction persisted"
-* reaction.extension contains $ext-openEHR-location named location 0..1
 * reaction.extension[location] ^short = "The anatomical location / body site(s) where the symptoms manifested"
-* reaction.extension contains $ext-openEHR-exposureDate named exposureDate 0..1
 * reaction.extension[exposureDate] ^short = "Record of the date and/or time of the first exposure to the Substance for this Reaction Event."
-* reaction.extension contains $ext-openEHR-exposureDuration named exposureDuration 0..1
 * reaction.extension[exposureDuration] ^short = "The amount of time the individual was exposed to the Substance"
-* reaction.extension contains $ext-openEHR-exposureDescription named exposureDescription 0..1
 * reaction.extension[exposureDescription] ^short = "Text description about exposure to the Substance"
-* reaction.extension contains $ext-openEHR-management named management 0..1
 * reaction.extension[management] ^short = "Text description about the clinical management provided."
 * reaction.substance MS
-/* reaction.substance only CodeableConceptIPS */
 * reaction.substance from $CHAllergyIntoleranceReactionSubstanceValueSet (extensible)
-/* reaction.manifestation only CodeableConceptIPS */
 * reaction.manifestation from $CHAllergyIntoleranceReactionManifestationValueSet (extensible)
 * reaction.manifestation MS 
 * reaction.onset MS
@@ -151,21 +133,20 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
 
 Profile: CHAllergyIntoleranceCondition
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-allergyintolerance-condition
 Title: "CH AllergyIntolerance Condition"
 Description: "This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance as a problem-list item or a encounter-diagnosis entry in the Swiss realm - in adaption of the respective usecases provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance."
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
-* clinicalStatus 0..1 MS
-* verificationStatus 0..1 MS
-* category 0.. MS
-* severity 0..1 MS
-* code 1..1 MS
+* clinicalStatus MS
+* verificationStatus MS
+* category MS
+* severity MS
+* code 1.. MS
 * code from $CHAllergyIntoleranceConditionValueSet (extensible)
-* bodySite 0..* MS
+* bodySite MS
 * subject only Reference(CHCorePatient)
-* recorder only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
 * onset[x] MS
 * onset[x] ^slicing.discriminator.type = #type
 * onset[x] ^slicing.discriminator.path = "$this"
@@ -186,6 +167,5 @@ Description: "This profile represents the constraints applied to the Condition r
 * abatementPeriod only Period
 * abatementPeriod ^sliceName = "abatementPeriod"
 * abatementPeriod ^mustSupport = false
-* asserter only Reference(CHCorePractitioner or CHCorePractitionerRole or CHCorePatient or RelatedPerson)
 * asserter MS
 * asserter ^definition = "Individual who is making the condition statement.\r\nInformation source."
