@@ -5,13 +5,13 @@
 id: ch.fhir.ig.ch-allergyintolerance
 canonical: http://fhir.ch/ig/ch-allergyintolerance
 name: CH-AllergyIntolerance
-title: "CH-AllergyIntolerance (R4)"
-description: Implementation guide CH-AllergyIntolerance (R4)
+title: "CH AllergyIntolerance (R4)"
+description: Implementation guide CH AllergyIntolerance (R4)
 status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2023-12-28
+date: 2024-02-29
 version: 3.0.0-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -38,19 +38,30 @@ pages:
   index.md:
     title: Home
   document.md:
-    title: Document
+    title: Allergy Intolerance Document
   usecase-english.md:
-    title: Use cases
+    title: Clinical Use Case Scenarios
   usecase-french.md:
-    title: Les cas d’utilisation 
+    title: Scénarios cliniques relatifs à des cas d’utilisation
   usecase-german.md:
-    title: Anwendungsfälle   
+    title: Klinische Anwendungsfall-Szenarien   
   profiles.md:
     title: Profiles
   terminology.md:
     title: Terminology
   changelog.md:
     title: Changelog
+
+menu:
+  Home: index.html
+  Document: document.html
+  Use Case:
+    English: usecase-english.html
+    French: usecase-french.html
+    German: usecase-german.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html
 
 parameters:
   excludettl: true

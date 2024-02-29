@@ -28,7 +28,7 @@ Usage: #example
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
-Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
+Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 Usage: #example
 * id = "ch-allergyintolerance-composition-example"
 * language = #de-CH
@@ -57,7 +57,7 @@ Instance: AllergyIntoleranceComposition
 InstanceOf: Composition
 Title: "AllergyIntoleranceComposition"
 Usage: #example
-Description: "Example for Composition of a CH-AllergyIntolerance Composition for the Swiss EPR"
+Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 * language = #de-CH
 * extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
 * extension.valueReference = Reference(MonikaWegmuellerRecipient)
@@ -241,7 +241,7 @@ Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#unconfirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * code = $sct#126485001 "Urticaria (disorder)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 * onsetDateTime = "2021-12"
@@ -253,7 +253,7 @@ Description: "Example for Condition"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#provisional
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * code = $sct#860765003 "Allergy to thiazide (finding)"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 /* build error: con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Rule 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed

@@ -1,8 +1,8 @@
 # Klinische Anwendungsfall-Szenarien
 
-Die Usecases sind adaptiert vom "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" der [Allergies/Hypersensitivity and Intolerance Clinical Reference Group](https://confluence.ihtsdotools.org/pages/viewpage.action?pageId=40143192) of Snomed CT.
+Die Use cases sind adaptiert vom "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" der [Allergies/Hypersensitivity and Intolerance Clinical Reference Group](https://confluence.ihtsdotools.org/pages/viewpage.action?pageId=40143192) of Snomed CT.
 
-## Usecase 1: Dokumentation einer unerwünschten Reaktion auf einen Medikamentenwirkstoff
+### Use case 1: Dokumentation einer unerwünschten Reaktion auf einen Medikamentenwirkstoff
 Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routineversorgung.  Der Patient wurde bereits wegen Diabetes und Bluthochdruck behandelt.  Kürzlich wurden dem Patienten 25 mg Hydrochlorothiazid gegen seinen Bluthochdruck verschrieben. Er teilt dem Arzt mit, dass er vor einigen Wochen eine Nesselsucht entwickelt habe, und bei der Untersuchung bestätigt der Arzt das Vorhandensein einer generalisierten Urtikaria.  Eine Überprüfung des Systems ergibt keine anderen Ursachen und der Arzt glaubt, dass der Patient möglicherweise eine urtikarielle Reaktion auf Hydrochlorothiazid zeigt.  Er ist sich dessen nicht ganz sicher und rät dem Patienten, das Thiazid abzusetzen und Diphenhydramin (Antihistaminikum) zur Linderung einzusetzen.  Der Arzt gibt dem Patienten eine höhere Dosis Losartan zur Blutdruckkontrolle.  Er meldet den Patienten in einer Woche zur Nachuntersuchung an und fügt seine Einschätzung in der Problemliste hinzu: "Urtikarielle Reaktion, mögliche Thiazid-Allergie". Eine Woche später kommt der Patient zur Nachuntersuchung, wobei der Juckreiz und der Ausschlag vollständig verschwunden sind.  Er berichtet, dass die Reaktion innerhalb weniger Tage nach Absetzen des Thiazids abgeklungen ist.  Der Arzt fügt der Problemliste den Vermerk "Hydrochlorothiazid-Allergie: Urtikaria; mässig kritisch, wahrscheinlich" hinzu.
 
 **FHIR Condition resource query from patient record** ([Eintrag einer Urtikaria wegen einer möglichen Thiazidallergie in Problemliste](Condition-CH-AllergyIntolerance-Condition-Visit1-Usecase-1.html))
@@ -92,7 +92,7 @@ Szenario: Ein Arzt empfängt einen Patienten in der Klinik zur ambulanten Routin
 </tbody>
 </table>
 
-## Usecase 2: Dokumentation einer Arzneimittelallergie in der Allergieliste und Auslösung einer Warnmeldung für die Gesundheitsfachperson
+### Use case 2: Dokumentation einer Arzneimittelallergie in der Allergieliste und Auslösung einer Warnmeldung für die Gesundheitsfachperson
 Szenario: Die Krankenschwester der Klinik ruft den Patienten aus Szenario 1 eine Woche später an und teilt ihm die Testergebnisse seines Besuchs mit.  Sie erkundigt sich nach der Urtikaria, und der Patient bestätigt, dass diese mit dem Absetzen des Diuretikums verschwunden ist.  Gemäss den Klinikprotokollen greift sie auf die elektronische Patientenakte zu und nimmt einen neuen Eintrag in der Allergieliste vor, die vom KIS für die Ausgabe von klinischen Verordnungswarnungen verwendet wird.  Die Software durchläuft eine Reihe von Fragen: Was war der auslösende Wirkstoff, welche Symptome oder Befunde traten bei der Reaktion auf, welche Art von Reaktion trat auf, wie hoch war der Schweregrad, die Kritikalität und wie der Verifizierungsstatus.  Die Krankenschwester beantwortet die Fragen, und in der Liste erscheint ein Allergieeintrag: "Hydrochlorothiazid; Allergie; mittlerer Schweregrad; geringer Kritikalitätsgrad; Symptome - Urtikaria".
 Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation auf, um sich über die Behandlung einer resistenten Hypertonie beraten zu lassen.  Der zweite Arzt entscheidet, dass ein ACE-Hemmer/Thiazid-Medikament für den Patienten geeignet ist.  Als der Arzt eine Verordnung für " CO-LISINOPRIL Mepha Tabl 20/12.5" erstellt und die elektronische Verordnung bestätigt, erscheint eine Warnmeldung, die eine Reaktion des Arztes erfordert und ihn vor einer Allergie gegen Hydrochlorothiazid warnt, das ein Bestandteil des Medikaments ist, das er verordnen will.  Die Warnung wird von der KIS-Software generiert, die die Allergieliste als Referenz verwendet. Der Arzt zieht die Bestellung zurück und wählt ein anderes blutdrucksenkendes Mittel.
 
@@ -161,7 +161,7 @@ Jahre später sucht der Patient einen anderen Arzt innerhalb der Organisation au
 </tbody>
 </table>
 
-## Usecase 3: Dokumentation einer Medikamentenunverträglichkeit
+### Use case 3: Dokumentation einer Medikamentenunverträglichkeit
 
 Szenario: Ein Patient kommt in die Notaufnahme und klagt über Klingeln, Klirren und Pfeifen in seinen Ohren. Der Patient kann nicht genau sagen, wann die Geräusche entstanden sind, und er war keiner lauten Umgebung ausgesetzt. Der Patient hat eine Vorgeschichte mit chronischen Rückenschmerzen, Herzinsuffizienz und Arthritis. Bei der Durchsicht der Medikamentenliste des Patienten stellt der Arzt fest, dass der Patient täglich 12 Tabletten Aspirin einnimmt. Der Arzt vermutet, dass der Patient an einem aspirininduzierten Tinnitus leidet. Der Patient wird aufgefordert, seine Aspirindosis zu verringern und sich mit seinem Rheumatologen, der das Aspirin verschrieben hat, in Verbindung zu setzen. Im KIS vermerkt der Notfallarzt in der Diagnose- und Allergieliste, dass der Patient eine Medikamentenunverträglichkeit gegen Aspirin hat.
 
@@ -271,7 +271,7 @@ Szenario: Ein Patient kommt in die Notaufnahme und klagt über Klingeln, Klirren
 </tbody>
 </table>
 
-## Usecase 4: Gemeinsame Nutzung von Daten über Arzneimittelallergien
+### Use case 4: Gemeinsame Nutzung von Daten über Arzneimittelallergien
 
 Szenario: Der Patient aus Szenario 1 plant einen Urlaub mit seiner Familie, der aus einem Campingausflug quer durchs Land besteht.  Zur Vorbereitung der Reise spricht er mit seinem Arzt und lässt sich eine elektronische Zusammenfassung seiner Krankenakte auf einem USB-Stick für sich, seine Frau und seine Kinder aushändigen. Sein Arzt teilt ihm mit, dass die Software für die Zusammenfassung ein elektronisches Lesegerät sowie ein Standardformat enthält, das in ein anderes KIS für die Patientenversorgung importiert werden kann.  Der Urlaub verläuft glücklich, bis der Patient viele Kilometer von zu Hause entfernt beim Wandern Schmerzen in der Brust bekommt und in die örtliche Notaufnahme eingeliefert wird.  Er übergibt den USB-Stick mit seiner elektronischen Aktenzusammenfassung dem Arzt der Notaufnahme, dessen Krankenhaus ein KIS einsetzt, das FHIR-extrahierte elektronische Aktenzusammenfassungen zur Integration in das KIS vor Ort akzeptieren kann.  Die Pflegefachfrau in der Notaufnahme lädt den USB-Stick und übernimmt die elektronische Kopie der Problemliste, der Allergien und der Medikamentenliste in die Akte vor Ort.  Der Softwareextrakt gleicht die Unterschiede im Informationsmodell der verschiedenen KIS-Anbieter ab, indem er die Allergieliste mit den Informationen in der Problemliste und der Diagnosenliste abgleicht.
 
@@ -379,7 +379,7 @@ Später schreibt der behandelnde Arzt eine Einweisungsverfügung für den Patien
 </tbody>
 </table>
 
-## Usecase 5: Dokumentation einer Tierallergie
+### Use case 5: Dokumentation einer Tierallergie
 
 Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik zur Routineuntersuchung.  Der Patient berichtet dem Arzt, dass er einen Ausschlag und wiederkehrenden Juckreiz entwickelt hat, der sich auf die Arme und das Gesicht beschränkt.  Der Arzt führt einige Bluttests und eine Reihe von Hauttests durch, die eine intensive Reaktion auf Katzenhaar-Proteine mit hohen IgE-Antikörperspiegeln zeigen. Der Patient bestätigt, dass er in einem Tierheim arbeitet und dort auch Katzen ausgesetzt ist. Der Arzt öffnet das Allergieprotokoll und dokumentiert die allergische Neigung auf Katzenhaar mit den Symptomen Hautausschlag und Juckreiz, Kritikalität und Schweregrad von niedrig in der KIS-Allergieliste.
 
@@ -501,7 +501,7 @@ Szenario: Ein Arzt sieht einen Patienten zum ersten Mal in der ambulanten Klinik
 </tbody>
 </table>
 
-## Usecase 6: Dokumentation einer Allergie gegen einen nicht-medikamentösen Stoff, der mit einem Arzneimittel kreuzreagiert
+### Use case 6: Dokumentation einer Allergie gegen einen nicht-medikamentösen Stoff, der mit einem Arzneimittel kreuzreagiert
 
 Szenario: Die Mutter eines Patienten berichtet dem Arzt ihres Kindes, dass das Kind auf den Verzehr von Erdnüssen heftig mit Symptomen wie generalisiertem Nesselausschlag, Keuchen und Hypotonie reagiert, die den Einsatz von Adrenalin zur Wiederbelebung erfordern.  Der Arzt führt einen Bluttest durch, der hohe Konzentrationen von IgE-Antikörpern gegen das Erdnussprotein Arachis h2 nachweist, das im Erdnussöl (Arachis-Öl) enthalten ist - dem Sensibilisierungsstoff für die klinische Erdnussallergie.  Der Arzt trägt eine Erdnussallergie in die elektronische Patientenakte ein, wobei er Anaphylaxie, Nesselsucht und Keuchen als Reaktionssymptome angibt, die Kritikalität als hoch und den Schweregrad der Reaktion als "schwer" einstuft.  
 Jahre später wird der Junge von einem Dermatologen zur Behandlung von Akne untersucht.  Als Teil des Behandlungsplans gibt der Arzt ein elektronisches Rezept für Isotretinoin-Kapseln ein.  Als der Arzt die Verordnung bestätigt, führt die KIS-Software einen Allergieabgleich durch und gibt eine Warnung hoher Priorität aus, dass die Kapseln Erdnussöl enthalten, das nicht hoch raffiniert ist und daher möglicherweise Erdnussprotein enthält und für den Patienten kontraindiziert ist.  Der Arzt storniert die Bestellung und wählt ein alternatives Präparat aus.
@@ -616,7 +616,7 @@ Jahre später wird der Junge von einem Dermatologen zur Behandlung von Akne unte
 </tbody>
 </table>
 
-## Usecase 7: Dokumentation einer allergischen Reaktion auf andere nicht-medikamentöse Stoffe
+### Use case 7: Dokumentation einer allergischen Reaktion auf andere nicht-medikamentöse Stoffe
 
 Szenario:  Eine diplomierte Krankenschwester stellt sich bei ihrem Hausarzt vor, weil sie immer wieder unter einem generalisierten Ausschlag und Juckreiz leidet.  Sie arbeitet auf einer Intensivstation und hat ständig mit Chemikalien und Desinfektionsmitteln zu tun, assistiert bei chirurgischen Eingriffen und führt Katheterversorgungen für ihre Patienten durch.  Im Rahmen der Anamnese bestätigt sie, dass sie nach dem Umgang mit Latexkathetern einen Ausschlag an ihren Händen bemerkt hat.  Außerdem berichtet sie von einer schweren allergischen Reaktion auf Papaya in der Vergangenheit und ist deshalb vorsichtig mit dem Verzehr von Obst.  Der Arzt vermutet eine Latexallergie, die mit Nahrungsmitteln kreuzreagiert, und ordnet einen IgE-Test auf Hevea-Latex-Antikörper an.  Der serologische Test ist stark positiv, und der Arzt teilt der Krankenschwester seinen Befund mit und warnt sie vor anderen Lebensmitteln, die eine Kreuzreaktion auslösen könnten.  Während er die klinische Begegnung dokumentiert, trägt er eine Latexallergie in die Allergieliste ein.
 Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tierischen biologischen Produkten als Substanzen, die als Ausgangsstoffe für einen Eintrag in die Allergieliste oder für die Erfassung einer unerwünschten Reaktion identifiziert werden können.
@@ -780,7 +780,7 @@ Die KIS-Software unterstützt die Auswahl von Lebensmitteln, Chemikalien und tie
 </tbody>
 </table>
 
-## Usecase 8: Dokumentation von 'Keine bekannten Allergien'
+### Use case 8: Dokumentation von 'Keine bekannten Allergien'
 
 Szenario: Eine Krankenschwester führt eine Aufnahmeuntersuchung bei einer Patientin durch, die neu in der Praxis ist. Im Rahmen des klinischen Gesprächs erkundigt sie sich nach Medikamenten und anderen Allergien. Die Patientin berichtet, dass sie auf keine Medikamente, Lebensmittel, Chemikalien oder Tiere allergisch ist. Die Krankenschwester öffnet die "Allergieliste" im KIS und dokumentiert "Keine bekannten Allergien", womit elektronisch bestätigt wird, dass die Krankenschwester sich bei der Patientin erkundigt hat und dass die Anamnese zum aufgezeichneten Datum und Zeitpunkt negativ bestätigt wurde. Dies erfüllt die Kriterien für die Entscheidungshilfe, wonach Allergien dokumentiert werden müssen, bevor Medikamentenverordnungen geschrieben werden, und wird in der KIS-Allergieliste als bestätigte Abwesenheit von unerwünschten Reaktionen kodiert.
 

@@ -1,5 +1,7 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# Reference to draft CodeSystem
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reaction-event-certainty|1.0.0
+
+# Defined in DocumentEntry.typeCode (CH Term)
+None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#722446000)
