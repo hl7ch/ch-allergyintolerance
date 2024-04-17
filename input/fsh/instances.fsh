@@ -207,7 +207,7 @@ Description: "Example for AllergyIntolerance"
 * type = #allergy
 * category = #medication
 * criticality = #low
-* code = $sct#764146007 "Penicillin"
+* code = $sct#76414600 "Penicillin (substance)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
 * onsetDateTime = "2019-01-06"
 * lastOccurrence = "2019-01-05"
