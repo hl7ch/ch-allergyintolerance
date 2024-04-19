@@ -207,7 +207,7 @@ Description: "Example for AllergyIntolerance"
 * type = #allergy
 * category = #medication
 * criticality = #low
-* code = $sct#764146007 "Penicillin (substance)"
+* code = http://snomed.info/sct#91936005 "Allergy to penicillin (finding)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
 * onsetDateTime = "2019-01-06"
 * lastOccurrence = "2019-01-05"
