@@ -81,7 +81,7 @@ Description: "Example for Composition of a CH AllergyIntolerance Composition for
 * section.entry = Reference(AllergyToCatDander)
 
 Instance: AllergyToCatDander
-InstanceOf: $ch-allergyintolerance
+InstanceOf: ch-allergyintolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
