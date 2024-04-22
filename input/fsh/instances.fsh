@@ -24,7 +24,6 @@ Usage: #example
 * entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/AllergyToCatDander"
 * entry[=].resource = AllergyToCatDander
 
-
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
@@ -184,7 +183,6 @@ Usage: #definition
 * address.city = "Zürich"
 * address.postalCode = "8003"
 * address.country = "CH"
-
 
 Instance: MonikaWegmuellerRecipient
 InstanceOf: CHCorePatient
