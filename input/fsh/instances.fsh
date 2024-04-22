@@ -199,7 +199,7 @@ Usage: #definition
 * address.country = "CH"
 
 Instance: CH-AllergyIntolerance-IPAG-Recommendation-Table-1
-InstanceOf: $ch-allergyintolerance
+InstanceOf: ch-allergyintolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
