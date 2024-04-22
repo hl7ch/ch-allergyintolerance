@@ -23,6 +23,8 @@ Usage: #example
 * entry[=].resource = MonikaWegmuellerRecipient
 * entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/AllergyToCatDander"
 * entry[=].resource = AllergyToCatDander
+* entry[+].fullUrl = "http://test.fhir.ch/r4/PractitionerRole/CHAllergyIntoleranceCompositionEPR"
+* entry[=].resource = CHAllergyIntoleranceCompositionEPR
 
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
