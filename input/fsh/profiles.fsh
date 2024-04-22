@@ -57,7 +57,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * author.extension 0..1
 * author.extension only EPRTime
 * author.extension ^short = "Timestamp of the authorship/data input"
-* title ^short = "'Allergie Intoleranzen' in german or 'allergie intolérance' in french or 'allergie intolleranze' in italian or 'Allergy Intolerance' in english or titles in other languages are also allowed"
+* title ^short = "'Allergie Intoleranzen' in german or 'allergie intolérance' in french or 'allergie intolleranza' in italian or 'Allergy Intolerance' in english or titles in other languages are also allowed"
 * confidentiality.extension ^slicing.discriminator[0].type = #value
 * confidentiality.extension ^slicing.discriminator[0].path = "url"
 * confidentiality.extension ^slicing.rules = #open
