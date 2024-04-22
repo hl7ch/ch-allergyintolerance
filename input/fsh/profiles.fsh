@@ -82,7 +82,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].extension ^slicing.discriminator[0].path = "url"
 * section[allergyIntolerance].extension ^slicing.rules = #open
 * section[allergyIntolerance].title 1..1
-* section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranza' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
+* section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranze' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
 * section[allergyIntolerance].code 1..
 * section[allergyIntolerance].code = $loinc#48765-2
 * section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or CHCorePractitionerRoleEpr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
