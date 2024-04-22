@@ -81,7 +81,7 @@ Description: "Example for Composition of a CH AllergyIntolerance Composition for
 * section.entry = Reference(AllergyToCatDander)
 
 Instance: AllergyToCatDander
-InstanceOf: http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance
+InstanceOf: CHCoreAllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
