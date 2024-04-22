@@ -199,7 +199,7 @@ Usage: #definition
 * address.country = "CH"
 
 Instance: CH-AllergyIntolerance-IPAG-Recommendation-Table-1
-InstanceOf: ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -261,7 +261,7 @@ abatementDateTime  = "2022-02-07"
 */
 
 Instance: CH-AllergyIntolerance-Usecase-2
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * extension.url = "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips"
@@ -292,7 +292,7 @@ Description: "Example for Condition"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
 Instance: CH-AllergyIntolerance-Usecase-3
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -313,7 +313,7 @@ Description: "Example for AllergyIntolerance"
 * reaction.exposureRoute = $sct#26643006 "Oral route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Usecase-5
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 /* contained = AllergyToCatDander*/
@@ -333,7 +333,7 @@ Description: "Example for AllergyIntolerance"
 * reaction.severity = #mild
 
 Instance: CH-AllergyIntolerance-Usecase-6
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -375,7 +375,7 @@ Description: "Example for Condition"
 * subject.reference = "Patient/ElisabethBroennimannByBFH"
 
 Instance: CH-AllergyIntolerance-Usecase-7
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
@@ -396,7 +396,7 @@ Description: "Example for AllergyIntolerance"
 * reaction.exposureRoute = $sct#6064005 "Topical route (qualifier value)"
 
 Instance: CH-AllergyIntolerance-Usecase-8
-InstanceOf: $ch-allergyintolerance
+InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
