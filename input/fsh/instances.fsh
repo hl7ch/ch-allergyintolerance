@@ -15,8 +15,6 @@ Usage: #example
 * entry[=].resource = MonikaWegmueller
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt"
 * entry[=].resource = FamilienHausarzt
-/* entry[+].fullUrl = "http://test.fhir.ch/r4/PractitionerRole/FamilienHausarztAtHausarzt"
-* entry[=].resource = FamilienHausarztAtHausarzt */
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Hausarzt"
 * entry[=].resource = Hausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Custodian"
@@ -159,14 +157,6 @@ Usage: #example
 * address.city = "Zürich"
 * address.postalCode = "8005"
 * address.country = "CH"
-
-Instance: FamilienHausarztAtHausarzt
-InstanceOf: CHCorePractitionerRoleEpr
-Title: "Familien Hausarzt @ Hausarzt"
-Description: "Example for PractitionerRole"
-Usage: #example
-* practitioner.reference = "Practitioner/FamilienHausarzt"
-* organization.reference = "Organization/Hausarzt"
 
 Instance: Custodian
 InstanceOf: CHCoreOrganizationEPR
