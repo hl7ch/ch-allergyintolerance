@@ -9,8 +9,8 @@ Usage: #example
 * identifier.value = "urn:uuid:2eadef87-8850-46e5-9557-1e08dcfaa759"
 * type = #document
 * timestamp = "2022-01-12T18:00:00+01:00"
-* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/AllergyIntoleranceCompositionEPR"
-* entry[=].resource = AllergyIntoleranceCompositionEPR
+* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/AllergyIntoleranceComposition"
+* entry[=].resource = AllergyIntoleranceComposition
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmueller"
 * entry[=].resource = MonikaWegmueller
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt"
@@ -27,7 +27,7 @@ Usage: #example
 * entry[=].resource = AllergyToCatDander
 
 Instance: CH-AllergyIntolerance-Composition-Example
-InstanceOf: AllergyIntoleranceCompositionEPR
+InstanceOf: CHAllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
 Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 Usage: #example
