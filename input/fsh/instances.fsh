@@ -161,7 +161,7 @@ Usage: #example
 * address.country = "CH"
 
 Instance: FamilienHausarztAtHausarzt
-InstanceOf: CHEMEDPractitionerRole
+InstanceOf: CHCorePractitionerRoleEPR
 Title: "Familien Hausarzt @ Hausarzt"
 Description: "Example for PractitionerRole"
 Usage: #example
