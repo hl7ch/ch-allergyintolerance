@@ -9,12 +9,14 @@ Usage: #example
 * identifier.value = "urn:uuid:2eadef87-8850-46e5-9557-1e08dcfaa759"
 * type = #document
 * timestamp = "2022-01-12T18:00:00+01:00"
-* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/AllergyIntoleranceComposition"
+* entry[0].fullUrl = "http://test.fhir.ch/r4/Composition/AllergyIntoleranceCompositionEPR"
 * entry[=].resource = AllergyIntoleranceComposition
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmueller"
 * entry[=].resource = MonikaWegmueller
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt"
 * entry[=].resource = FamilienHausarzt
+* entry[+].fullUrl = "http://test.fhir.ch/r4/PractitionerRole/FamilienHausarztAtHausarzt"
+* entry[=].resource = FamilienHausarztAtHausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Hausarzt"
 * entry[=].resource = Hausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Custodian"
@@ -23,8 +25,6 @@ Usage: #example
 * entry[=].resource = MonikaWegmuellerRecipient
 * entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/AllergyToCatDander"
 * entry[=].resource = AllergyToCatDander
-* entry[+].fullUrl = "http://test.fhir.ch/r4/PractitionerRole/CHAllergyIntoleranceCompositionEPR"
-* entry[=].resource = CHAllergyIntoleranceCompositionEPR
 
 Instance: CH-AllergyIntolerance-Composition-Example
 InstanceOf: CHAllergyIntoleranceCompositionEPR
@@ -159,6 +159,14 @@ Usage: #example
 * address.city = "Zürich"
 * address.postalCode = "8005"
 * address.country = "CH"
+
+Instance: FamilienHausarztAtHausarzt
+InstanceOf: CHEMEDPractitionerRole
+Title: "Familien Hausarzt @ Hausarzt"
+Description: "Example for PractitionerRole"
+Usage: #example
+* practitioner.reference = "Practitioner/FamilienHausarzt"
+* organization.reference = "Organization/Hausarzt"
 
 Instance: Custodian
 InstanceOf: CHCoreOrganizationEPR
