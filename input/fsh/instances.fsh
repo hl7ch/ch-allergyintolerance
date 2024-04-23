@@ -27,7 +27,7 @@ Usage: #example
 * entry[=].resource = AllergyToCatDander
 
 Instance: CH-AllergyIntolerance-Composition-Example
-InstanceOf: CHAllergyIntoleranceCompositionEPR
+InstanceOf: AllergyIntoleranceCompositionEPR
 Title: "CH-AllergyIntolerance-Composition-Example"
 Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 Usage: #example
