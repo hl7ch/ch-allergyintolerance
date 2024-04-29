@@ -36,13 +36,12 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:4356b15f-4061-49d9-80bf-b84d23113a6a"
 * status = #final
-* type.coding[0] = $sct#722446000 "Allergy record (record artifact)"
+* type = $sct#722446000 "Allergy record (record artifact)"
 * subject = Reference(ElisabethBroennimannByBFH)
 * date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
-* author[=] = Reference(FamilienHausarzt)
-* author[+] = Reference(Hausarzt)
+* author = Reference(FamilienHausarztAtHausarzt)
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -131,32 +130,36 @@ Description: "Example for Practitioner"
 * name.family = "Agpar"
 * name.given = "Marc"
 
+Instance: FamilienHausarztAtHausarzt
+InstanceOf: CHCorePractitionerRoleEpr
+Title: "Familien Hausarzt @ Hausarzt"
+Description: "Example for CH IPS PractitionerRole, conforms to CH Core and IPS"
+Usage: #example
+* practitioner = Reference(FamilienHausarzt)
+* organization = Reference(Hausarzt)
+
 Instance: Hausarzt
 InstanceOf: CHCoreOrganizationEPR
 Title: "Hausarzt"
 Description: "Example for Organization"
 Usage: #definition
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234438"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000121219"
 * name = "Hausarzt"
 * address.line = "Krankenstrasse 2"
 * address.city = "Zürich"
 * address.postalCode = "8005"
-* address.country = "CH"
+* address.country = "CH""
 
 Instance: FamilienHausarzt
 InstanceOf: CHCorePractitionerEPR
 Title: "Familien Hausarzt"
 Description: "Example for Practitioner"
 Usage: #example
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234438"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000121219"
 * name.family = "Hausarzt"
 * name.given = "Familien"
-* address.line = "Krankenstrasse 2"
-* address.city = "Zürich"
-* address.postalCode = "8005"
-* address.country = "CH"
 
 Instance: Custodian
 InstanceOf: CHCoreOrganizationEPR
