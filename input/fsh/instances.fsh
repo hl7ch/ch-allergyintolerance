@@ -149,7 +149,7 @@ Usage: #definition
 * address.line = "Krankenstrasse 2"
 * address.city = "Zürich"
 * address.postalCode = "8005"
-* address.country = "CH""
+* address.country = "CH"
 
 Instance: FamilienHausarzt
 InstanceOf: CHCorePractitionerEPR
