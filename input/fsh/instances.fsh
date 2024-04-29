@@ -404,3 +404,16 @@ Description: "Example for AllergyIntolerance"
 * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
 * code = $sct#716186003 "No known allergy (situation)"
 * patient.reference = "Patient/ElisabethBroennimannByBFH"
+
+Instance: ExAllergy
+InstanceOf: CHAllergyIntolerance
+Title: "ExAllergyIntolerance"
+Description: "Example AllergyIntolerance"
+Usage: #example
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:0028b459-11f0-4d8a-8d37-5276f88ddb06"
+* clinicalStatus = $allergyintolerance-clinical#active
+* code = $sct#213020009 "Allergy to egg protein (finding)"
+* patient.reference = "Patient/ElisabethBroennimannByBFH"
+* recordedDate = "2004-07-11T00:00:00+02:00"
+* recorder.reference = "PractitionerRole/FamilienHausarztAtHausarzt"
