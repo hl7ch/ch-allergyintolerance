@@ -135,7 +135,7 @@ Description: "Example for Practitioner"
 Instance: FamilienHausarztAtHausarzt
 InstanceOf: CHCorePractitionerRoleEpr
 Title: "Familien Hausarzt @ Hausarzt"
-Description: "Example for CH IPS PractitionerRole, conforms to CH Core and IPS"
+Description: "Example for PractitionerRole"
 Usage: #example
 * practitioner = Reference(FamilienHausarzt)
 * organization = Reference(Hausarzt)

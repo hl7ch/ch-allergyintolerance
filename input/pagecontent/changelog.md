@@ -7,6 +7,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#92](https://github.com/hl7ch/ch-allergyintolerance/issues/92): Update title numbering (incl. fixing some typos)
 * [#93](https://github.com/hl7ch/ch-allergyintolerance/issues/93): Update to current version of IPS IG (v1.0.0 -> v1.1.0)
 * [#95](https://github.com/hl7ch/ch-allergyintolerance/issues/95): Use CH Core base profiles as parent (Condition, AllergyIntolerance)
+* [#99](https://github.com/hl7ch/ch-allergyintolerance/issues/99): In the profile CHAllergyIntoleranceCompositionEPR Typo at the title
 
 ### STU 2 - v2.0.1 (2023-12-28)
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
