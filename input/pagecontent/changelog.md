@@ -1,6 +1,6 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 3 Ballot - v3.0.0-ballot (2024)
+### STU 3 Ballot - v3.0.0-ballot (2024-05-17)
 
 #### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-allergyintolerance/issues/91): Move terminology (CS/VS) to CH Term

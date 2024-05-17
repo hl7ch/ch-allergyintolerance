@@ -5,3 +5,6 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reaction-eve
 
 # Defined in DocumentEntry.typeCode (CH Term)
 None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#722446000)
+
+# https://github.com/HL7/fhir-ig-publisher/issues/898
+The link 'StructureDefinition-originalText.html' for "originalText extension" cannot be resolved
