@@ -17,6 +17,8 @@ During the ballot, the following comments came in, which will be taken into acco
 * [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
 * [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
 * [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
+
+See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
  
 #### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-allergyintolerance/issues/91): Move terminology (CS/VS) to CH Term
@@ -34,6 +36,8 @@ During the ballot, the following comments came in, which will be taken into acco
 * [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
 * [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
 * [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
+
+See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
 
 #### Fixed
 * [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo in codes adjusted in CHAllergyIntoleranceReactionManifestationValueSet
