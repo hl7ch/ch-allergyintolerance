@@ -5,6 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Added
 
 #### Change / Update
+* [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
 * [#105](https://github.com/hl7ch/ch-allergyintolerance/issues/105): Typo fixed in use case 2
 
 #### Fixed
