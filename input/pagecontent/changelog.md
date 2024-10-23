@@ -1,5 +1,14 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU v3.0.0 - HL7 Switzerland STU 3 (2024)
+
+#### Added
+
+#### Change / Update
+* [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
+
+#### Fixed
+
 ### STU 3 Ballot - v3.0.0-ballot (2024-05-17)
 
 #### Changed / Updated
