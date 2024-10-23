@@ -12,8 +12,11 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 3 Ballot - v3.0.0-ballot (2024-05-17)
 
 #### Open Issues
+During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
 
-See also open issue on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
+* [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
+* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
+* [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
  
 #### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-allergyintolerance/issues/91): Move terminology (CS/VS) to CH Term
