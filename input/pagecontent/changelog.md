@@ -1,17 +1,27 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU v3.0.0 - HL7 Switzerland STU 3 (2024)
+### STU 3 - v3.0.0 (2024)
 
 #### Added
 
 #### Change / Update
 * [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
 * [#105](https://github.com/hl7ch/ch-allergyintolerance/issues/105): Typo fixed in use case 2
+* [#109](https://github.com/hl7ch/ch-allergyintolerance/issues/109): Add open issues section to changelog (STU 3 Ballot - v3.0.0-ballot)
 
 #### Fixed
 
 ### STU 3 Ballot - v3.0.0-ballot (2024-05-17)
 
+#### Open Issues
+During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
+
+* [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
+* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
+* [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
+
+See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
+ 
 #### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-allergyintolerance/issues/91): Move terminology (CS/VS) to CH Term
 * [#92](https://github.com/hl7ch/ch-allergyintolerance/issues/92): Update title numbering (incl. fixing some typos)
@@ -22,12 +32,14 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 2 - v2.0.1 (2023-12-28)
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
-### Open Issues
+#### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
 
 * [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
 * [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
 * [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
+
+See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
 
 #### Fixed
 * [Issue 78](https://github.com/hl7ch/ch-allergyintolerance/issues/78) - Typo in codes adjusted in CHAllergyIntoleranceReactionManifestationValueSet
