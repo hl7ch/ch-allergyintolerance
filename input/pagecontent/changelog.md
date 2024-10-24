@@ -1,6 +1,6 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU v3.0.0 - HL7 Switzerland STU 3 (2024)
+### STU 3 - v3.0.0 (2024)
 
 #### Added
 
