@@ -43,7 +43,7 @@ Usage: #example
 * date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
-* author = Reference(FamilienHausarztAtHausarzt)
+* author[=] = Reference(FamilienHausarztAtHausarzt)
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -69,8 +69,7 @@ Description: "Example for Composition of a CH AllergyIntolerance Composition for
 * date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
-* author[=] = Reference(FamilienHausarzt)
-* author[+] = Reference(Hausarzt)
+* author[=] = Reference(FamilienHausarztAtHausarzt)
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
