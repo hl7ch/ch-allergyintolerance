@@ -267,7 +267,7 @@ Instance: CH-AllergyIntolerance-Usecase-2
 InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
-* extension.url = "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips"
+* extension.url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement"
 * extension.valueDateTime = "2022-02-07"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#unconfirmed "Unconfirmed"
