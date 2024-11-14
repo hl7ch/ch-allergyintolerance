@@ -9,6 +9,10 @@ In this section, the relationship between adverse reactions and manifestations o
 * The first `reaction` records a moderate reaction during the patient’s first exposure, with eruption of skin as a symptom.
 * The second `reaction` documents a severe reaction during a later exposure, including dyspnea and lip swelling.
 
+{% fragment Composition/ch-allergyintolerance-composition-example JSON EXCEPT:type %}
+
+{% fragment AllergyIntolerance/CH-AllergyIntolerance-MultipleReactionEntries JSON EXCEPT:reaction %}
+
 ``` json
 {
 	"resourceType": "AllergyIntolerance",
