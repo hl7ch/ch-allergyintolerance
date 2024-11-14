@@ -26,10 +26,10 @@ contact:
         value: https://www.hl7.ch/
         use: work
 dependencies:
-  ch.fhir.ig.ch-core: 5.0.0-ballot
-  ch.fhir.ig.ch-term: 3.0.x
-  hl7.terminology: 5.5.0
+  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-term: current
   hl7.fhir.uv.ips: 1.1.0
+  hl7.terminology: 6.0.2
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
@@ -48,6 +48,8 @@ pages:
     title: Scénarios cliniques relatifs à des cas d’utilisation
   usecase-german.md:
     title: Klinische Anwendungsfall-Szenarien   
+  reaction-manifestation.md:
+    title: Adverse Reaction & Manifestation  
   profiles.md:
     title: Profiles
   terminology.md:
@@ -62,6 +64,8 @@ menu:
     English: usecase-english.html
     French: usecase-french.html
     German: usecase-german.html
+  Guidance: 
+    Adverse Reaction & Manifestation: reaction-manifestation.html  
   Profiles: profiles.html
   Terminology: terminology.html
   Artifacts: artifacts.html
