@@ -70,10 +70,6 @@ Description: "Definition of the composition for the allergy intolerance document
 * attester[legalAuthenticator].time ^short = "Timestamp of the signature"
 * attester[legalAuthenticator].party ^short = "Who attested the composition"
 * custodian ^short = "The organization in whose name the document has been created"
-* section ^slicing.discriminator.type = #pattern
-* section ^slicing.discriminator.path = "code"
-* section ^slicing.ordered = false
-* section ^slicing.rules = #open
 * section contains
     allergyIntolerance 1..1 and
     annotation 0..1
