@@ -4,10 +4,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
-
-* [#86](https://github.com/hl7ch/ch-allergyintolerance/issues/86): Split value set CHAllergyIntoleranceValueSet into different categories
-* [#87](https://github.com/hl7ch/ch-allergyintolerance/issues/87): Link between the condition and the allergyintolerance
-* [#89](https://github.com/hl7ch/ch-allergyintolerance/issues/89): Compensate for redundancy-related differences
 * [#106](https://github.com/hl7ch/ch-allergyintolerance/issues/106): Examples with deprecated SNOMED CT
 
 #### Added
