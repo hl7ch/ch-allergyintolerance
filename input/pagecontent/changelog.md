@@ -6,6 +6,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
 * [#106](https://github.com/hl7ch/ch-allergyintolerance/issues/106): Examples with deprecated SNOMED CT
 
+See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
+
 #### Added
 * [#104](https://github.com/hl7ch/ch-allergyintolerance/issues/104): Add guidance for adverse reaction & manifestation
 
