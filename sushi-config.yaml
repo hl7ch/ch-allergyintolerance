@@ -26,9 +26,9 @@ contact:
         value: https://www.hl7.ch/
         use: work
 dependencies:
-  ch.fhir.ig.ch-core: current
-  ch.fhir.ig.ch-term: current
-  hl7.fhir.uv.ips: 1.1.0
+  ch.fhir.ig.ch-core: current # 5.0.0
+  ch.fhir.ig.ch-term: current # 3.0.x
+  ch.fhir.ig.ch-ips: current
   hl7.terminology: 6.0.2
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

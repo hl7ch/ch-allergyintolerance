@@ -1,8 +1,8 @@
 Profile: CHAllergyIntolerance
-Parent: CHCoreAllergyIntolerance
+Parent: ChIpsAllergyIntolerance
 Id: ch-allergyintolerance
 Title: "CH AllergyIntolerance"
-Description: "This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context - in adaption of the definition by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare transaction or similar as an instance of an AllergyIntolerance resource constrained by this profile.
+Description: "This profile represents the constraints applied to the AllergyIntolerance resource in the Swiss context (based on CH IPS). A record of an allergy or intolerance is represented in the Swiss EPR, in a TransitionOfCare transaction or similar as an instance of an AllergyIntolerance resource constrained by this profile.
 It documents the relevant allergies or intolerances for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."
 * ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
 * . MS
@@ -38,7 +38,7 @@ Parent: CHCoreCompositionEPR
 Id: ch-allergyintolerance-composition-epr
 Title: "CH AllergyIntolerance Composition"
 Description: "Definition of the composition for the allergy intolerance document"
-* . ^short = "CH AllergyIntolerance  Composition"
+* . ^short = "CH AllergyIntolerance Composition"
 * language ^short = "Language of the document"
 * extension ^slicing.discriminator[0].type = #value
 * extension ^slicing.discriminator[0].path = "url"
@@ -129,39 +129,26 @@ Description: "Definition of the bundle for the allergy intolerance document"
 * entry[Composition].resource ^type.profile = Canonical(CHAllergyIntoleranceCompositionEPR)
 
 Profile: CHAllergyIntoleranceCondition
-Parent: CHCoreCondition
+Parent: ChIpsCondition
 Id: ch-allergyintolerance-condition
 Title: "CH AllergyIntolerance Condition"
 Description: "This profile represents the constraints applied to the Condition resource in the context of AllergyIntolerance as a problem-list item or a encounter-diagnosis entry in the Swiss realm - in adaption of the respective usecases provided in the Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance."
-* ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified by the IPS project of HL7 International."
-* . MS
-* clinicalStatus MS
-* verificationStatus MS
-* category MS
-* severity MS
-* code 1.. MS
+* ^purpose = "This profile constrains the representation of a record of an allergy or intolerance of the patient, in the context of a Swiss patient in adaption of the one specified in the CH IPS IG."
+* code 1.. 
 * code from $CHAllergyIntoleranceConditionValueSet (extensible)
-* bodySite MS
-* subject only Reference(CHCorePatient)
-* onset[x] MS
+* subject only Reference(ChIpsPatient)
 * onset[x] ^slicing.discriminator.type = #type
 * onset[x] ^slicing.discriminator.path = "$this"
 * onset[x] ^slicing.rules = #closed
 * onsetDateTime[onsetDateTime] only dateTime
 * onsetDateTime[onsetDateTime] ^sliceName = "onsetDateTime"
-* onsetDateTime[onsetDateTime] ^mustSupport = true
 * onsetPeriod[onsetPeriod] only Period
 * onsetPeriod[onsetPeriod] ^sliceName = "onsetPeriod"
-* onsetPeriod[onsetPeriod] ^mustSupport = false
-* abatement[x] MS
 * abatement[x] ^slicing.discriminator.type = #type
 * abatement[x] ^slicing.discriminator.path = "$this"
 * abatement[x] ^slicing.rules = #closed
 * abatementDateTime only dateTime
-* abatementDateTime MS
 * abatementDateTime ^sliceName = "abatementDateTime"
 * abatementPeriod only Period
 * abatementPeriod ^sliceName = "abatementPeriod"
-* abatementPeriod ^mustSupport = false
-* asserter MS
 * asserter ^definition = "Individual who is making the condition statement.\r\nInformation source."

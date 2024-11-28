@@ -43,7 +43,7 @@ Usage: #example
 * date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
-* author = Reference(FamilienHausarztAtHausarzt)
+* author[=] = Reference(FamilienHausarztAtHausarzt)
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -69,8 +69,7 @@ Description: "Example for Composition of a CH AllergyIntolerance Composition for
 * date = "2022-01-12T17:00:00+01:00"
 * author[0].extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-time"
 * author[=].extension.valueDateTime = "2012-02-04T14:00:00+01:00"
-* author[=] = Reference(FamilienHausarzt)
-* author[+] = Reference(Hausarzt)
+* author[=] = Reference(FamilienHausarztAtHausarzt)
 * title = "Allergies and adverse reactions Document"
 * confidentiality = #N
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
@@ -267,7 +266,7 @@ Instance: CH-AllergyIntolerance-Usecase-2
 InstanceOf: AllergyIntolerance
 Usage: #example
 Description: "Example for AllergyIntolerance"
-* extension.url = "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips"
+* extension.url = "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement"
 * extension.valueDateTime = "2022-02-07"
 * clinicalStatus = $allergyintolerance-clinical#active "Active"
 * verificationStatus = $allergyintolerance-verification#unconfirmed "Unconfirmed"

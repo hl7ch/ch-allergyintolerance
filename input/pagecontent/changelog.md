@@ -21,6 +21,12 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/
 
 #### Change / Update
 * [#109](https://github.com/hl7ch/ch-allergyintolerance/issues/109): Add open issues section to changelog (STU 3 Ballot - v3.0.0-ballot)
+* [#100](https://github.com/hl7ch/ch-allergyintolerance/issues/100) & [#170](https://github.com/hl7ch/ch-allergyintolerance/issues/107): Use CH IPS as base instead of directly HL7 IPS-UV -> changes due to this update:
+   * Update [Home](index.html) (Introduction, Must Support)
+   * Usage of CH IPS AllergyIntolerance & CH IPS Condition as parent profiles
+   * Remove MS flags in Condition profile
+   * Remove Allergy Abatement Extension and use base extension (see [HL7 IPS-UV changelog](https://hl7.org/fhir/uv/ips/2024Sep/changes.html#stu-200-ballot-update))
+   
 
 #### Fixed
 * [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
@@ -112,7 +118,7 @@ Content and integration of value sets:
 * [Issue 35](https://github.com/hl7ch/ch-allergyintolerance/issues/35) - CH AllergyIntolerance Value Set
 * [Issue 32](https://github.com/hl7ch/ch-allergyintolerance/issues/32) - Put Allergy value set to extensible
 * [Issue 28](https://github.com/hl7ch/ch-allergyintolerance/issues/28) - make value set extensible? CH AllergyIntolerance Value Set
-* [Issue 27](https://github.com/hl7ch/ch-allergyintolerance/issues/27) - CH AllergyIntolerance: Binding code zu Snomed CT
+* [Issue 27](https://github.com/hl7ch/ch-allergyintolerance/issues/27) - CH AllergyIntolerance: Binding code zu SNOMED CT
 	* CHAllergyIntoleranceValueSet
 	* CHAllergyIntoleranceReactionSubstanceValueSet
 * [Issue 29](https://github.com/hl7ch/ch-allergyintolerance/issues/29) - manifestation value set: define extensional and extensible value set
