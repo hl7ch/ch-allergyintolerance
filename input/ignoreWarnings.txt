@@ -9,12 +9,7 @@ None of the codings provided are in the value set 'Problem Type - IPS' (http://h
 # Swiss specific terminology
 None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|%
 None of the codings provided are in the value set 'AllergyIntolerance Certainty ValueSet' (http://hl7.org/fhir/ValueSet/reaction-event-certainty|%
-
-# Defined in DocumentEntry.typeCode (CH Term)
-None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|4.0.1), and a coding is recommended to come from this value set (codes = http://snomed.info/sct#722446000)
+None of the codings provided are in the value set 'CH AllergyIntolerance Reaction Manifestation' (http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet|%
 
 # Display values for Swiss languages
 There are no valid display names found for the code http://loinc.org#48765-2 for language(s) 'de-CH'. The display is 'Allergies and adverse reactions Document' the default language display
-
-# Extensible ValueSet
-None of the codings provided are in the value set 'CH AllergyIntolerance Reaction Manifestation' (http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet|3.0.1-ci-build), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://snomed.info/sct#699376002)

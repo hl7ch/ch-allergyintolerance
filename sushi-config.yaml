@@ -11,11 +11,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-05-17
-version: 3.0.0-ci-build
+date: 2024-12-17
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch/
@@ -29,7 +29,7 @@ dependencies:
   ch.fhir.ig.ch-core: current # 5.0.0
   ch.fhir.ig.ch-term: current # 3.0.x
   ch.fhir.ig.ch-ips: current
-  hl7.terminology: 6.0.2
+  hl7.terminology: 6.1.0
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

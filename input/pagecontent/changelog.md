@@ -1,39 +1,31 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
-### STU v3.0.0 - HL7 Switzerland STU 3 (2024)
 
-#### Added
-
-#### Change / Update
-* [#108](https://github.com/hl7ch/ch-allergyintolerance/issues/108): Add versioned links for VS/CS to CH Term
-
-#### Fixed
-
-### STU 3 - v3.0.0 (2024)
+### STU 3 Sequence - v3.0.0 (2024-12-17)
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
-* [#106](https://github.com/hl7ch/ch-allergyintolerance/issues/106): Examples with deprecated SNOMED CT
+* [#106](https://github.com/hl7ch/ch-allergyintolerance/issues/106): Examples with deprecated SNOMED CT codes
 
 See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/issues).
 
 #### Added
 * [#104](https://github.com/hl7ch/ch-allergyintolerance/issues/104): Add guidance for adverse reaction & manifestation
 
-#### Change / Update
+#### Changed / Updated
 * [#109](https://github.com/hl7ch/ch-allergyintolerance/issues/109): Add open issues section to changelog (STU 3 Ballot - v3.0.0-ballot)
 * [#100](https://github.com/hl7ch/ch-allergyintolerance/issues/100) & [#170](https://github.com/hl7ch/ch-allergyintolerance/issues/107): Use CH IPS as base instead of directly HL7 IPS-UV -> changes due to this update:
    * Update [Home](index.html) (Introduction, Must Support)
    * Usage of CH IPS AllergyIntolerance & CH IPS Condition as parent profiles
    * Remove MS flags in Condition profile
    * Remove Allergy Abatement Extension and use base extension (see [HL7 IPS-UV changelog](https://hl7.org/fhir/uv/ips/2024Sep/changes.html#stu-200-ballot-update))
-   
+* [#108](https://github.com/hl7ch/ch-allergyintolerance/issues/108): Add versioned links for VS/CS to CH Term   
 
 #### Fixed
 * [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
 * [#105](https://github.com/hl7ch/ch-allergyintolerance/issues/105): Typo fixed in use case 2
 * [#117](https://github.com/hl7ch/ch-allergyintolerance/issues/117): Replace deprecated discriminator (`pattern` -> `value`) resp. removal of the redundant slice definition (inherited from parent profile)
 
-### STU 3 Ballot - v3.0.0-ballot (2024-05-17)
+### STU 3 Sequence - v3.0.0-ballot (2024-05-17)
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH AllergyIntolerance:
@@ -51,7 +43,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/
 * [#95](https://github.com/hl7ch/ch-allergyintolerance/issues/95): Use CH Core base profiles as parent (Condition, AllergyIntolerance)
 * [#99](https://github.com/hl7ch/ch-allergyintolerance/issues/99): In the profile CHAllergyIntoleranceCompositionEPR Typo at the title
 
-### STU 2 - v2.0.1 (2023-12-28)
+### STU 2 Sequence - v2.0.1 (2023-12-28)
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
 #### Open Issues
@@ -76,7 +68,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/
 #### Changed / Updated
 * [Issue 84](https://github.com/hl7ch/ch-allergyintolerance/issues/84) - Added IG Fragments to the home page below
 
-### STU 1 - v1.0.0 (2022-02-11)
+### STU 1 Sequence - v1.0.0 (2022-02-11)
 
 #### Added
 Navigation within the Implementation Guide for a better usability:
