@@ -18,12 +18,14 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-allergyintolerance/
    * Usage of CH IPS AllergyIntolerance & CH IPS Condition as parent profiles
    * Remove MS flags in Condition profile
    * Remove Allergy Abatement Extension and use base extension (see [HL7 IPS-UV changelog](https://hl7.org/fhir/uv/ips/2024Sep/changes.html#stu-200-ballot-update))
-* [#108](https://github.com/hl7ch/ch-allergyintolerance/issues/108): Add versioned links for VS/CS to CH Term   
 
 #### Fixed
 * [#103](https://github.com/hl7ch/ch-allergyintolerance/issues/103): Typo corrected in use case (english)
 * [#105](https://github.com/hl7ch/ch-allergyintolerance/issues/105): Typo fixed in use case 2
 * [#117](https://github.com/hl7ch/ch-allergyintolerance/issues/117): Replace deprecated discriminator (`pattern` -> `value`) resp. removal of the redundant slice definition (inherited from parent profile)
+
+#### Issues resolved without amendment (in IG)
+* [#108](https://github.com/hl7ch/ch-allergyintolerance/issues/108): Versioned links for VS/CS to CH Term 
 
 ### STU 3 Sequence - v3.0.0-ballot (2024-05-17)
 
