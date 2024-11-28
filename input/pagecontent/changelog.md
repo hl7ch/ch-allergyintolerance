@@ -1,4 +1,12 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
+### STU v3.0.0 - HL7 Switzerland STU 3 (2024)
+
+#### Added
+
+#### Change / Update
+* [#108](https://github.com/hl7ch/ch-allergyintolerance/issues/108): Add versioned links for VS/CS to CH Term
+
+#### Fixed
 
 ### STU 3 - v3.0.0 (2024)
 
