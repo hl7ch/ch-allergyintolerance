@@ -1,5 +1,10 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU 4 Sequence - v4.0.0-ballot (2025-05)
+
+#### Fixed 
+* [#119](https://github.com/hl7ch/ch-allergyintolerance/issues/119): Add [expansion-parameter](https://build.fhir.org/codesystem-guide-parameter-code.html#:~:text=expansion%2Dparameter,as%20SNOMED%20CT) for the usage of SNOMED CT Swiss Extension
+
 ### STU 3 Sequence - v3.0.0 (2024-12-17)
 
 #### Open Issues
