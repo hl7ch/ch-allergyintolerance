@@ -1,5 +1,16 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU 3 Sequence - v.3.0.1 (2025-12-16)
+Updated dependencies to the latest Swiss Implementation Guide versions; applied corresponding IG updates and technical fixes required by the updated HL7 IG Publisher.
+* CH Core: 5.0.0 -> 6.0.0
+   * Remove extension 'Information Recipient' (see [CH Core #400](https://github.com/hl7ch/ch-core/issues/400))
+   * Remove slice name 'legalAuthenticator' (see [CH Core #379](https://github.com/hl7ch/ch-core/issues/379))
+   * Use introduced profile 'CH Core RelatedPerson' (see [CH Core #344](https://github.com/hl7ch/ch-core/issues/344))
+* CH IPS: 1.0.0 -> 2.0.0
+* [#120](https://github.com/hl7ch/ch-allergyintolerance/issues/120): Removed unused dependency (inserted by the other dependencies)
+* [#119](https://github.com/hl7ch/ch-allergyintolerance/issues/119): Add [expansion-parameter](https://build.fhir.org/codesystem-guide-parameter-code.html#:~:text=expansion%2Dparameter,as%20SNOMED%20CT) for the usage of SNOMED CT Swiss Extension
+* Add [pin-canonicals](http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html#:~:text=for%20further%20information-,pin%2Dcanonicals,-Pin%20Canonical%20Versions) parameter to define the handling of unversioned canonical references
+
 ### STU 3 Sequence - v3.0.0 (2024-12-17)
 
 #### Open Issues

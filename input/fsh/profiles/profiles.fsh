@@ -45,7 +45,6 @@ Description: "Definition of the composition for the allergy intolerance document
 * extension ^slicing.rules = #open
 /* * extension[setId] ^short = "Set ID" */
 /* * extension[versionNumber] ^short = "Version number" */
-* extension[informationRecipient] ^short = "A recipient of this document (person or organization)"
 * extension[dataEnterer] ^short = "Person who entered information into this document if it is a person other than the author"
 * identifier ^short = "Identification number of the document"
 * status = #final (exactly)
@@ -62,13 +61,6 @@ Description: "Definition of the composition for the allergy intolerance document
 * confidentiality.extension ^slicing.discriminator[0].path = "url"
 * confidentiality.extension ^slicing.rules = #open
 * confidentiality.extension[confidentialityCode] ^short = "Swiss realm of confidentiality code according to the Swiss EPR regulation"
-* attester ^slicing.discriminator[0].type = #value
-* attester ^slicing.discriminator[0].path = "mode"
-* attester ^slicing.rules = #open
-* attester ^short = "The authenticator of the document (person)"
-* attester[legalAuthenticator] ^short = "The legal authenticator of the document (person)"
-* attester[legalAuthenticator].time ^short = "Timestamp of the signature"
-* attester[legalAuthenticator].party ^short = "Who attested the composition"
 * custodian ^short = "The organization in whose name the document has been created"
 * section contains
     allergyIntolerance 1..1 and
@@ -81,7 +73,7 @@ Description: "Definition of the composition for the allergy intolerance document
 * section[allergyIntolerance].title ^short = "'Allergie und Intoleranzen' in german or 'alergie et intolérance' in french or 'allergia e intolleranze' in talian or 'Allergy Intolerance' in english                         or titles in other languages are also allowed"
 * section[allergyIntolerance].code 1..
 * section[allergyIntolerance].code = $loinc#48765-2
-* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or CHCorePractitionerRoleEpr or Device or CHCorePatientEPR or RelatedPerson or CHCoreOrganizationEPR)
+* section[allergyIntolerance].author only Reference(CHCorePractitionerEPR or CHCorePractitionerRoleEpr or Device or CHCorePatientEPR or CHCoreRelatedPerson or CHCoreOrganizationEPR)
 * section[allergyIntolerance].author ^short = "The author of the section (person or device) if different from the author/timestamp of the document"
 * section[allergyIntolerance].author.extension 0..1
 * section[allergyIntolerance].author.extension only EPRTime
