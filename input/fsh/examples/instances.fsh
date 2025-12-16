@@ -33,8 +33,6 @@ Description: "Example for Composition of a CH AllergyIntolerance Composition for
 Usage: #example
 * id = "ch-allergyintolerance-composition-example"
 * language = #de-CH
-* extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
-* extension.valueReference = Reference(ElisabethBroennimannByBFH)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:4356b15f-4061-49d9-80bf-b84d23113a6a"
 * status = #final
@@ -59,8 +57,6 @@ Title: "AllergyIntoleranceComposition"
 Usage: #example
 Description: "Example for Composition of a CH AllergyIntolerance Composition for the Swiss EPR"
 * language = #de-CH
-* extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
-* extension.valueReference = Reference(MonikaWegmuellerRecipient)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:4356b15f-4061-49d9-80bf-b84d23113a6a"
 * status = #final

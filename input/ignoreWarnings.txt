@@ -6,10 +6,19 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reaction-eve
 # It is suitable in the CH AllergyIntolerance use cases
 None of the codings provided are in the value set 'Problem Type - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips|%
 
-# Swiss specific terminology
+# Swiss specific terminology / display values
 None of the codings provided are in the value set 'FHIR Document Type Codes' (http://hl7.org/fhir/ValueSet/doc-typecodes|%
 None of the codings provided are in the value set 'AllergyIntolerance Certainty ValueSet' (http://hl7.org/fhir/ValueSet/reaction-event-certainty|%
 None of the codings provided are in the value set 'CH AllergyIntolerance Reaction Manifestation' (http://fhir.ch/ig/ch-allergyintolerance/ValueSet/CHAllergyIntoleranceReactionManifestationValueSet|%
+Wrong Display Name%
 
-# Display values for Swiss languages
-There are no valid display names found for the code http://loinc.org#48765-2 for language(s) 'de-CH'. The display is 'Allergies and adverse reactions Document' the default language display
+# Known IG Publisher issue (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458)
+The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# Information about pinned versions
+Pinned the version%
+
+# Caused through underlying structures (appearing in snapshot)
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|%
+The extension http://hl7.org/fhir/StructureDefinition/regex|%
