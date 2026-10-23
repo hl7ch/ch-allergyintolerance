@@ -4,7 +4,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ch.fhir.ig.ch-allergyintolerance
 canonical: http://fhir.ch/ig/ch-allergyintolerance
-name: CH-AllergyIntolerance
+name: CH_AllergyIntolerance
 title: "CH AllergyIntolerance (R4)"
 description: Implementation guide CH AllergyIntolerance (R4)
 status: active
@@ -12,7 +12,7 @@ license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
 date: 2025-12-17
-version: 3.0.2-ci-build
+version: 3.0.2
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

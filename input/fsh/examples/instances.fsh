@@ -21,8 +21,6 @@ Usage: #example
 * entry[=].resource = Hausarzt
 * entry[+].fullUrl = "http://test.fhir.ch/r4/Organization/Custodian"
 * entry[=].resource = Custodian
-* entry[+].fullUrl = "http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"
-* entry[=].resource = MonikaWegmuellerRecipient
 * entry[+].fullUrl = "http://test.fhir.ch/r4/AllergyIntolerance/AllergyToCatDander"
 * entry[=].resource = AllergyToCatDander
 

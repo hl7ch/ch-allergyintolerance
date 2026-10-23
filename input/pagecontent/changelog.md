@@ -1,5 +1,13 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU 3 Sequence - v3.0.2 (unreleased)
+Updated dependencies to the latest Swiss Implementation Guide versions; applied corresponding IG updates and technical fixes required by the updated HL7 IG Publisher.
+* [#122](https://github.com/hl7ch/ch-allergyintolerance/issues/122): Update dependencies
+   * CH Core: 6.0.0 -> 7.0.0
+      * Remove the short description of the slice 'dataEnterer', which was removed from CH Core Composition EPR (see [CH Core #447](https://github.com/hl7ch/ch-core/issues/447))
+   * CH IPS: 2.0.0 -> 2.0.1
+* Remove the unreferenced recipient Patient from the document example
+
 ### STU 3 Sequence - v.3.0.1 (2025-12-16)
 Updated dependencies to the latest Swiss Implementation Guide versions; applied corresponding IG updates and technical fixes required by the updated HL7 IG Publisher.
 * CH Core: 5.0.0 -> 6.0.0
