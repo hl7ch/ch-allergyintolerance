@@ -45,7 +45,6 @@ Description: "Definition of the composition for the allergy intolerance document
 * extension ^slicing.rules = #open
 /* * extension[setId] ^short = "Set ID" */
 /* * extension[versionNumber] ^short = "Version number" */
-* extension[dataEnterer] ^short = "Person who entered information into this document if it is a person other than the author"
 * identifier ^short = "Identification number of the document"
 * status = #final (exactly)
 * type = $sct#722446000

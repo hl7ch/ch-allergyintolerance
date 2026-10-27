@@ -1,4 +1,3 @@
-# Klinische Anwendungsfall-Szenarien
 
 Die Use cases sind adaptiert vom "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance" der [Allergies/Hypersensitivity and Intolerance Clinical Reference Group](https://confluence.ihtsdotools.org/pages/viewpage.action?pageId=40143192) of SNOMED CT.
 

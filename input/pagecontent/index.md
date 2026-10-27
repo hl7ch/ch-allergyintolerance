@@ -1,6 +1,6 @@
 
 ### Introduction
-Swiss implementation guide (IG) for allergies and intolerances based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf) and the implementation guide [CH IPS](https://fhir.ch/ig/ch-ips/1.0.0/index.html), which is closely aligned with the [HL7 IPS-UV specification](https://hl7.org/fhir/uv/ips/2024Sep/). The "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance", which was still in development at the time of the initial publication of this IG, has also been taken into account.
+Swiss implementation guide (IG) for allergies and intolerances based on the [recommendations of the interprofessional working group EPR (IPAG)](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/D/ipag-bericht-eallergien-intoleranzen.pdf) and the implementation guide [CH IPS](https://fhir.ch/ig/ch-ips/2.0.1/index.html), which is closely aligned with the [HL7 IPS-UV specification](https://hl7.org/fhir/uv/ips/2.0.1/). The "Implementation Guide for Use of SNOMED CT in Documentation of Allergy, Non-allergic Hypersensitivity and Intolerance", which was still in development at the time of the initial publication of this IG, has also been taken into account.
 
 <div markdown="1" class="stu-note">
 
@@ -8,7 +8,7 @@ Swiss implementation guide (IG) for allergies and intolerances based on the [rec
 
 </div>
 
-**Download**: You can download this implementation guide in npm format from [here](package.tgz).
+**Download**: You can download this implementation guide in npm format from [here](../package.tgz).
 
 ### Goal
 The goal of this IG is 
@@ -21,7 +21,7 @@ The goal of this IG is
 The use of Must Support is in the sense of the [Guidelines for Swiss IG developments](https://github.com/hl7ch/ch-core/wiki/Guidelines-for-Swiss-IG-Developments):   
 _"Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element."_
 
-[CH AllergyIntolerance](StructureDefinition-ch-allergyintolerance.html) and [CH AllergyIntolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) are based on the corresponding profiles of [CH IPS](https://fhir.ch/ig/ch-ips/1.0.0/index.html). CH IPS itself explicitly does not set any Must Support flags, but rather indicates that the same rules/elements apply as in HL7 IPS-UV (see [here](https://fhir.ch/ig/ch-ips/1.0.0/index.html#principles--design)). This therefore also applies to this IG CH AllergyIntolerance. This mechanism also prevents discrepancies/contradictions between the individual specifications.   
+[CH AllergyIntolerance](StructureDefinition-ch-allergyintolerance.html) and [CH AllergyIntolerance Condition](StructureDefinition-ch-allergyintolerance-condition.html) are based on the corresponding profiles of [CH IPS](https://fhir.ch/ig/ch-ips/2.0.1/index.html). CH IPS itself explicitly does not set any Must Support flags, but rather indicates that the same rules/elements apply as in HL7 IPS-UV (see [here](https://fhir.ch/ig/ch-ips/2.0.1/index.html#principles--design)). This therefore also applies to this IG CH AllergyIntolerance. This mechanism also prevents discrepancies/contradictions between the individual specifications.   
 However, for the AllergyIntolerance resource, Must Support flags have been explicitly set here for all those fields that are Must Support in HL7 IPS-UV and are also part of the **IPAG** recommendations (see also [here](document.html#assignment-ipag-report-to-ch-allergyintolerance-elements)). In addition, the fields `AllergyIntolerance.reaction.substance` and `AllergyIntolerance.category` were also flagged as Must Support because these fields play an important role in the above mentioned recommendations. 
 
 The extensions defined by the interprofessional working group EPR (IPAG) have no Must Support flags in the present version but are easily identified in the differential view of the artifact.   
